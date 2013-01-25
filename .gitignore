@@ -11,5 +11,30 @@
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
+/log
 /tmp
+
+# Ignore webrat.log
+webrat.log
+
+# Ignore all files from social network usage
+/public/images/tmp/*
+/public/system
+/documents
+
+# Ignore other unneeded files.
+*.swp
+*~
+.project
+.DS_Store
+
+# Ignore database.yml
+/config/database.yml
+
+# Ignore Sphinx files
+/config/development.sphinx.conf
+/config/production.sphinx.conf
+/db/sphinx/*
+
+# Ignore compiled assets
+/public/assets
