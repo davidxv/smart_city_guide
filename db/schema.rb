@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130173157) do
+ActiveRecord::Schema.define(:version => 20130130204154) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -211,19 +211,21 @@ ActiveRecord::Schema.define(:version => 20130130173157) do
 
   create_table "guides", :force => true do |t|
     t.integer  "activity_object_id"
-    t.integer  "location_id"
+    t.integer  "trip_id"
     t.string   "title"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "guides", ["activity_object_id"], :name => "index_guides_on_activity_object_id"
+  add_index "guides", ["trip_id"], :name => "index_guides_on_trip_id"
 
-  create_table "locations", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "guides_places", :id => false, :force => true do |t|
+    t.integer "guide_id", :null => false
+    t.integer "place_id", :null => false
   end
+
+  add_index "guides_places", ["guide_id", "place_id"], :name => "index_guides_places_on_guide_id_and_place_id", :unique => true
 
   create_table "notifications", :force => true do |t|
     t.string   "type"
@@ -256,9 +258,6 @@ ActiveRecord::Schema.define(:version => 20130130173157) do
     t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "location_id"
-    t.integer  "guide_id"
-    t.integer  "route_id"
   end
 
   add_index "places", ["activity_object_id"], :name => "index_places_on_activity_object_id"
@@ -335,7 +334,7 @@ ActiveRecord::Schema.define(:version => 20130130173157) do
 
   create_table "routes", :force => true do |t|
     t.integer  "activity_object_id"
-    t.integer  "location_id"
+    t.integer  "trip_id"
     t.integer  "guide_id"
     t.string   "title"
     t.datetime "created_at",         :null => false
@@ -344,7 +343,14 @@ ActiveRecord::Schema.define(:version => 20130130173157) do
 
   add_index "routes", ["activity_object_id"], :name => "index_routes_on_activity_object_id"
   add_index "routes", ["guide_id"], :name => "index_routes_on_guide_id"
-  add_index "routes", ["location_id"], :name => "index_routes_on_location_id"
+  add_index "routes", ["trip_id"], :name => "index_routes_on_trip_id"
+
+  create_table "routes_places", :id => false, :force => true do |t|
+    t.integer "route_id", :null => false
+    t.integer "place_id", :null => false
+  end
+
+  add_index "routes_places", ["route_id", "place_id"], :name => "index_routes_places_on_route_id_and_place_id", :unique => true
 
   create_table "sites", :force => true do |t|
     t.string   "type"
@@ -382,6 +388,19 @@ ActiveRecord::Schema.define(:version => 20130130173157) do
 
   add_index "ties", ["contact_id"], :name => "index_ties_on_contact_id"
   add_index "ties", ["relation_id"], :name => "index_ties_on_relation_id"
+
+  create_table "trips", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "trips_places", :id => false, :force => true do |t|
+    t.integer "trip_id",  :null => false
+    t.integer "place_id", :null => false
+  end
+
+  add_index "trips_places", ["trip_id", "place_id"], :name => "index_trips_places_on_trip_id_and_place_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false

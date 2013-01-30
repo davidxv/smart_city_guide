@@ -1,6 +1,7 @@
 class Route < ActiveRecord::Base
-  belongs_to :activity_object
-  belongs_to :location
+  include SocialStream::Models::Object
+  belongs_to :trip
   belongs_to :guide
+  has_and_belongs_to_many :places
   attr_accessible :title
 end
