@@ -1,2 +1,2 @@
-module RouteHelper
+module RoutesHelper
 end

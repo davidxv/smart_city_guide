@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe GuideController do
+describe GuidesController do
 
 end

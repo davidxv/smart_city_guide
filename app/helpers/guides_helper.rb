@@ -1,2 +1,2 @@
-module GuideHelper
+module GuidesHelper
 end
