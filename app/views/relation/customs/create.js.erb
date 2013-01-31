@@ -1,0 +1,10 @@
+<% if @custom.valid? %>
+  SocialStream.RelationCustom.create({
+    relation: {
+      id:   <%= @custom.id %>,
+      html: "<%= j render(@custom) %>"
+    }
+  });
+<% else %>
+<% end %>
+
