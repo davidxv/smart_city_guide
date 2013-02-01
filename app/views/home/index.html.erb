@@ -14,6 +14,7 @@
 	</div>
 </article>
 
+
 <article class="right_home">
 	<div class="planification">
 		<%= render :partial => "home/planification" %>
@@ -23,4 +24,5 @@
 			<%= render :partial => "activities/index", :locals => { :activities => current_subject.wall(:home).page(params[:page]), :owner => current_subject } %>
 	</div>
  </article>
+
 

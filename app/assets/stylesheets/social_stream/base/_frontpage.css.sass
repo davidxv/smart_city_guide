@@ -1,85 +1,13 @@
-.wrapper
-  @include grid-fluid(12, 0)
-#wrapper_body
-  @include grid-fluid(12, 0)
-
-#frontpage,
-#registration,
-#welcome
-  .left
-    @include makeColumnoMargin(6, 0)
-    display: inline
-    margin: 40px 0 0 30px
-    width: 430px
-
-  .right
-    @include makeColumn(5, 1)
-    display:inline-block
-      input
-        @include clearfix
-        &[type="password"]
-          width: 96%
-    .btn
-   
-      margin: 10px 25px 0 0
-      float: right 
-#welcome
-  .forgot
-    @include makeColumn(7, 4)
-    @include clearfix
-    h2
-      margin-left: -20px
+#frontpage
+  .login_frontpage
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-top: 150px
+    width: 380px
+  h1, h2, h3, label, a,
+    color: #FFF
     
-
-#remember
-  width: 150px
-  input
-    display: inline
-  label
-    display: inline-block
-    margin-top: 6px
-#header_search_form
-  margin-bottom: 0px
-
-#search
-  width: 100%
-  input
-    &[type="text"],
-      width: 97%
-  .thumbnail
-    width: 100%
-
-#registration,
-#new_user,
-#welcome
-  .reg-labels,
-  .forgot-pass,
-  .sig-in
-    @include clearfix
-  .options
-    a
-      margin-right: 6px
-
-  .sig-in
-    .btn
-      margin-top: -20px
-#registration
-  .welcome
-    text-align: center
-    .message
-      @include opacity (1)
-      font-size: 60px
-      font-weight: bold
-      margin: -219px 30px 0
-      .to
-        font-size: 40px
-        margin-top: 10px
-        line-height: 94px
-  .right
-    margin-top: 160px
-  .left
-    margin-top: 4px
-#login_data
-  @include clearfix
-  .btn
-    @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
+.fondo   
+  background-image: url(himalaya.jpg) 
+  background-repeat: repeat-y
