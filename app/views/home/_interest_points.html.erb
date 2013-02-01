@@ -41,32 +41,33 @@
 <div class="guide tabbable">
   <ul class="nav nav-tabs">
     <li class="active">
-      <a data-toggle="tab" href="#guide">guide</a>
+      <a data-toggle="tab" href="#guides">guides</a>
+    </li>
+        <li class="">
+      <a data-toggle="tab" href="#routes">routes</a>
     </li>
     <li class="">
       <a data-toggle="tab" href="#points">points</a>
     </li>
-    <li class="">
-      <a data-toggle="tab" href="#routes">route</a>
-    </li>
   </ul>
 
   <div class="tab-content">
-    <div id="guide" class="tab-pane active">
+    <div id="guides" class="tab-pane active">
       <ul class="thumbnails">
-      	<%= render :partial => "guide/item" %>
+      	<%= render :partial => "guides/item" %>
 			</ul>
+    </div>
+        <div id="routes" class="tab-pane ">
+      <ul class="thumbnails">
+        <%= render :partial => "routes/item" %>
+      </ul>
     </div>
     <div id="points" class="tab-pane ">
       <ul class="thumbnails">
       	<%= render :partial => "points/item" %>
 			</ul>
     </div>
-    <div id="routes" class="tab-pane ">
-      <ul class="thumbnails">
-      	<%= render :partial => "routes/item" %>
-			</ul>
-    </div>
+
     
     
   </div>
