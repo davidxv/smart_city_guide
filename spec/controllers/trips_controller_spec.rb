@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe RouteController do
+describe TripsController do
 
 end
