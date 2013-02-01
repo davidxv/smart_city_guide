@@ -1,22 +1,5 @@
 <section id="frontpage">
-  <article class="left">
-    <header>
-      <h2>
-        <% content_for :title do%>
-          <%= t('welcome', :site => t('site.name')) %>
-        <%end%>
-      </h2>
-    </header>
-    <%= render :partial => 'layouts/search' %>
-    <div class="thumbnail inline">
-      <header>
-        <h6>Busca usuarios, grupos, archivos...</h6>
-      </header>
-      <%= render :partial => 'frontpage/caracteristics' %>
-    </div>
-  </article>
-
-  <article class="right">
+  <article class="login_frontpage">
     <div class="div_login">
       <h3 data-i18n="Log In">
         Log In
