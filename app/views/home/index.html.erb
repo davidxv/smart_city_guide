@@ -1,15 +1,28 @@
-<% sidebar %>
-
-<%= location(link_to(t('home')+": "+ truncate_name(sanitize current_subject.name)))%>
-                      
+<%# sidebar %>
+<%#= location(link_to(t('home')+": "+ truncate_name(sanitize current_subject.name)))%>     
 <%# toolbar %>
-
 <%# if current_subject.respond_to?(:recent_groups) %>
-  <%#= render partial: "users/groups",
+ <%#= render partial: "users/groups",
              locals: { user: current_subject } %>
 <%# end %>
+<article class="left_home">
+	<div class="info_city">
+		<%= render :partial => "home/info_city" %>
+	</div>
+	<div class="interest_points">
+		<%= render :partial => "home/interest_points" %>
+	</div>
+</article>
 
-<%= render :partial => "pois" %>
-<%= render :partial => "true_pois" %>
-<%= render :partial => "guides" %>
-<%= render :partial => "routes" %>
+
+<article class="right_home">
+	<div class="planification">
+		<%= render :partial => "home/planification" %>
+	</div>
+	<div class="wall">
+
+			<%= render :partial => "activities/index", :locals => { :activities => current_subject.wall(:home).page(params[:page]), :owner => current_subject } %>
+	</div>
+ </article>
+
+
