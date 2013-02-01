@@ -20,7 +20,8 @@
     </script>
     <%= yield :headers %>
   </head>
-  <body>
+  <body class="fondo">
+
     <div class="wrapper container">
       <header id="header">
         <%= render :partial => "layouts/header" %>
@@ -30,9 +31,7 @@
           <div id="flash">
             <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
           </div>
-          <div class="description">
-            <%= render :partial => "layouts/definition" %>
-          </div>
+          
           <%= yield %>
         </div>
       </section>
