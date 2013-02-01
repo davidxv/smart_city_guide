@@ -2,13 +2,14 @@
 
 <%= location(link_to(t('home')+": "+ truncate_name(sanitize current_subject.name)))%>
                       
-<% toolbar %>
+<%# toolbar %>
 
-<% if current_subject.respond_to?(:recent_groups) %>
-  <%= render partial: "users/groups",
+<%# if current_subject.respond_to?(:recent_groups) %>
+  <%#= render partial: "users/groups",
              locals: { user: current_subject } %>
-<% end %>
+<%# end %>
 
-<%= render :partial => "activities/index",
-           :locals => { :activities => current_subject.wall(:home).page(params[:page]),
-                        :owner => current_subject } %>
+<%= render :partial => "pois" %>
+<%= render :partial => "true_pois" %>
+<%= render :partial => "guides" %>
+<%= render :partial => "routes" %>
