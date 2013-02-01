@@ -6,7 +6,7 @@
   .root
     .avatar
       img
-        width: 60px !important
+        @include grid-fluid-span-x(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
     .media-body
       color: $grayLight
       word-wrap: break-word
