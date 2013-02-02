@@ -1,0 +1,196 @@
+#wrapper_activities
+  margin-top: 30px
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  .wall_input
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    @include border-radius(7px) 
+    background-color: $grayLighter
+
+    margin-bottom: 20px
+    display: inline-block
+    float: left
+
+    input
+      @include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      margin-top: 8px
+      display: block
+      &[type="submit"]
+        @include size (auto, auto)
+        @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
+        padding: 3px 11px 4px 11px
+        float: right
+
+
+      &[type="checkbox"]
+        width: 30px
+        margin: 3px 0px 0px 0px
+        
+
+    .new_document
+      display: none
+      padding: 1px 6px 4px 6px
+
+    .btn-group,
+      display: none
+    open
+      display: inline-block
+      .dropdown-menu
+        li
+          margin-left: 0px
+          padding-left: 7px
+          a
+            padding: 0px !important
+            label
+              margin-left: 0px
+              padding: 0px 16px 0px 0px!important
+              &:hover
+                background: rgba(0,232,232,0.3)
+                color: $white
+#flash
+  @include makeColumn(10, 0)
+
+@import 'chosen'
+.content-full,
+.timeline,
+.comments
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  float: left
+  .media,
+  .root
+    .avatar
+      @include grid-fluid-span(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      img
+        
+    .media-body
+      color: $grayLight
+      word-wrap: break-word
+      .media-heading
+        font-size: 14px
+        a
+          text-decoration: none
+        .x
+          display: inline
+          font-size: 12px
+          color: $black
+          float: right
+          a
+            float: right
+            text-decoration: none
+            color: $grayLight
+            &:hover
+              color: $red
+      .objects
+        word-wrap: break-word
+        .thumb
+          float: left
+          width: auto
+          margin-right: 10px
+
+          img
+            width: 50px
+          .play_button
+            width: auto
+            margin-left: -107px
+        .text
+          font-size: 12px
+          h6
+            font-size: 14px 
+        .description
+          margin: 0 0 4px
+          .view-more
+            font-size: 12px
+
+      .actions
+        display: inline
+        margin-bottom: 20px
+        width: 100%
+        .post_time_ago
+          display: inline-block
+          font-size: 11px
+          color: $gray
+        .to_comment,
+        .to_like
+          display: inline-block
+          font-size: 12px
+          margin-left: 5px
+        .audience
+          display: inline-block
+          font-size: 12px
+          margin-left: 7px
+          
+        .tooltip
+          @include opacity (1)
+          @include border-radius(5px)
+          background: $gray
+          color: whitesmoke
+          margin-top: 26px 0px 0px 53px
+        
+        textarea
+          resize: none
+          width: 100%
+
+      .media,
+      .child
+        @include border-radius(5px)
+        background: #f5f5f5
+        padding: 9px 6px 11px 12px
+        margin-bottom: 19px
+        a
+          .avatar
+            width: 40px !important
+
+      .hidden_comments
+        float: right
+        margin: 2px 6px -2px 0 
+        a
+          font-size: 11px
+          text-decoration: none
+          color: $gray
+          &:hover
+            color: $linkColor
+
+    .likes
+      margin-left: 66px !important
+      font-size: 12px
+        
+
+#comment_text
+  float: right
+  width: 357px
+
+
+#new_comment
+  margin-left: 20px
+  div
+    .btb
+      @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25))
+      float: right
+      margin-right: 19px
+
+.new_comment
+  .avatar
+    float: left
+    margin-left: 16px
+    margin-right: 6px
+    margin-top: -10px
+    img
+      margin-top: 6px
+      width: 40px 
+    h6
+      margin-top: 69px
+    
+
+
+
+.timeline,
+.comments
+  .media,
+  .root,
+  .child
+    .media-body
+      color: $grayLight
+      word-wrap: break-word
+      .actions
+        display: inline-block
+        margin-bottom: 10px
+
