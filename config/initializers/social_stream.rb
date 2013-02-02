@@ -15,7 +15,7 @@ SocialStream.setup do |config|
   # Remember you must add an "activity_object_id" foreign key column to your migration!
   # Be sure to add the other modules of Social Stream you might be using (e.g. :document, :event, :link ).
   #
-  config.objects += [ :guide, :route ]
+  config.objects += [ :guide, :route, :diary, :planning ]
 
   # Form for activity objects to be loaded
   # You can write your own activity objects
