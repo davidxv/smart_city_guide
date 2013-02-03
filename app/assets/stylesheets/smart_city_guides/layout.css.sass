@@ -58,6 +58,62 @@
     
   .dropdown-toggle
     margin-right: 5px
-  
 
-  
+//users
+
+#toolbar 
+  @include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  display: inline-block
+  float: left
+  #avatar_profile
+    text-aling: center
+    img
+      @include border-radius(5px)
+      max-width: 139px
+
+    h5 
+      a
+        text-decoration: none
+        color: $black
+        text-aling: center
+    input, select
+      @include makeColumnoMargin(2, 0)
+
+  .contact
+    width: auto
+    img
+      padding: 14px 10px 0 0
+
+        
+.toolbar_menu
+  @include border-radius(5px)
+
+.users
+  width: 780px
+  margin-left: 20px
+  display: inline-block
+  float: left
+  .my_guides
+    @include makeColumn(3, 0)
+    .thumbnails
+      margin-left: 0px
+      li
+        margin-left: 0px
+        .thumbnail
+          img
+          @include makeColumn(3, 0) 
+          margin-left: 0px
+
+  .my_diaries
+    @include makeColumn(3, 0)
+    .thumbnails
+      margin-left: 0px
+      li
+        margin-left: 0px
+        .thumbnail
+          img
+          @include makeColumn(3, 0) 
+          margin-left: 0px
+  .social
+    @include makeColumn(3, 0)
+    width: 280px

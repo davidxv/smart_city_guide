@@ -23,10 +23,26 @@
 
 <br class="clearfloat" />
 
-<%= render :partial => "users/groups",
+
+  <div class="my_guides">
+    my guides
+    <ul class="thumbnails">
+        <%= render :partial => "guides/item" %>
+    </ul>
+  </div>
+    <div class="my_diaries">
+      my diaries
+      <ul class="thumbnails">
+    <%= render :partial => "diaries/item" %>
+  </ul>
+  </div>
+    <div class="social">
+      contacts
+    <%= render :partial => "users/groups",
            :locals  => { :user => @user } %>
 
-<%= render :partial => "activities/index",
+    <%= render :partial => "activities/index",
            :locals  => { :activities => @user.wall(:profile, :for => current_subject).
                                               page(params[:page]),
                          :owner => @user } %>
+</div>
