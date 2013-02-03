@@ -1,0 +1,5 @@
+<h2>All <%= @trip.title %> routes</h2>
+
+<% @trip.routes.each do |r| %>
+	<div><%= link_to r.title, trip_route_path(@trip, r) %></div>
+<% end %>

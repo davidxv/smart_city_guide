@@ -2,4 +2,86 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  guide:
+    actions:
+      delete: "Delete"
+      details: "Details"
+      edit: "Edit"
+    all: "All guides"
+    confirm_delete: "Delete guide?"
+    details:
+      info: "Info"
+    form:
+      title: "Guide"
+    info:
+      author: "Author"
+      date:
+        created_at: "Created at"
+        updated_at: "Updated at"
+      description:
+        description: "Description"
+        update: "Update description"
+      file:
+        title: "Upload"
+      size: "Size"
+      tags: "Tags"
+      title:
+        title: "Title"
+    mine: "My guides"
+    name: "guide"
+    name_title: "Guide name"
+    phone_title: "Phone number"
+    photo:
+      button: "Upload"
+      update: "Upload photo"
+    url_title: "Website"
+    address:
+      street: "Address"
+      locality: "City"
+      region: "Region"
+      postalcode: "Postalcode"
+      country: "Country"
+    not_mine: "Guides"
+    one: "a guide"
+    simple_all: "All"
+    title: "Guides"
+    like:
+      me: "I like"
+      other: "%{contact} likes"
+    search:
+      name: "Search for your fav guides"
+      no_match: "Don't find your fav guide?"
+      new: "+ Add new guide"
+    comments:
+      contacts: "See only my contacts's comments"
+      all: "See all comments"
+    view:
+      list: "List view"
+      map: "Map view"
+    tabs:
+      mine: "My guides"
+      friends: "Friends guides"
+      recommended: "Recommended"
+  activity:
+    verb:
+      like:
+        Guide:
+          title: "%{subject} likes %{activity_object}."
+          like: "I like too"
+          unlike: "I do not like anymore"
+    like_construction:
+      like_friends:
+        one: "%{friends} contact"
+        other: "%{friends} contacts"
+      like_and: " and "
+#      like_you: "you like this"
+      like_people:
+        one: "%{people} person"
+        other: "%{people} people"
+      like_others:
+        one: "%{people} other"
+        other: "%{people} others"
+      like_final:
+        one: " likes this"
+        other: " like this"
+        you: "like this"

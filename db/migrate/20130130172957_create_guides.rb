@@ -3,7 +3,6 @@ class CreateGuides < ActiveRecord::Migration
     create_table :guides do |t|
       t.references :activity_object
       t.references :trip
-      t.string :title
 
       t.timestamps
     end

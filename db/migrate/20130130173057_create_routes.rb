@@ -4,7 +4,6 @@ class CreateRoutes < ActiveRecord::Migration
       t.references :activity_object
       t.references :trip
       t.references :guide
-      t.string :title
 
       t.timestamps
     end

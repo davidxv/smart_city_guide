@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130204154) do
+ActiveRecord::Schema.define(:version => 20130202192801) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -174,6 +174,14 @@ ActiveRecord::Schema.define(:version => 20130130204154) do
     t.datetime "updated_at",                 :null => false
   end
 
+  create_table "diaries", :force => true do |t|
+    t.integer  "activity_object_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "diaries", ["activity_object_id"], :name => "index_diaries_on_activity_object_id"
+
   create_table "documents", :force => true do |t|
     t.string   "type"
     t.integer  "activity_object_id"
@@ -212,7 +220,6 @@ ActiveRecord::Schema.define(:version => 20130130204154) do
   create_table "guides", :force => true do |t|
     t.integer  "activity_object_id"
     t.integer  "trip_id"
-    t.string   "title"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
@@ -261,6 +268,14 @@ ActiveRecord::Schema.define(:version => 20130130204154) do
   end
 
   add_index "places", ["activity_object_id"], :name => "index_places_on_activity_object_id"
+
+  create_table "plannings", :force => true do |t|
+    t.integer  "activity_object_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "plannings", ["activity_object_id"], :name => "index_plannings_on_activity_object_id"
 
   create_table "posts", :force => true do |t|
     t.integer  "activity_object_id"
@@ -336,7 +351,6 @@ ActiveRecord::Schema.define(:version => 20130130204154) do
     t.integer  "activity_object_id"
     t.integer  "trip_id"
     t.integer  "guide_id"
-    t.string   "title"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end

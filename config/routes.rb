@@ -1,6 +1,8 @@
 SmartCityGuide::Application.routes.draw do
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
-  resources :trips
+  resources :trips do
+    resources :guides, :routes, :places
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

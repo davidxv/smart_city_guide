@@ -1,8 +1,8 @@
 <%= form_for @place, :html => {:onkeypress => "return event.keyCode!=13"} do |f| %>
   <%# @place.owner_id = current_subject.try(:actor_id) %>
   <%# @place.relation_ids = Relation::Public.instance.id %>
-  <% @place.latitude = 0 %>
-  <% @place.longitude = 0 %>
+  <% @place.latitude ||= 0 %>
+  <% @place.longitude ||= 0 %>
 
   <% if f.object.errors.any? %>
     <div id="error_explanation">
