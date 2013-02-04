@@ -1,5 +1,7 @@
 PlacesController.class_eval do
 
+  optional_belongs_to :trip
+
 	#http://localhost:3000/places/new?place[trip_ids][]=1&place[trip_ids][]=2
 	#http://localhost:3000/places/new?place[trip_ids]=1
 	def new

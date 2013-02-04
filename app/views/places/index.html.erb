@@ -1,7 +1,5 @@
-<% if profile_subject %>
-  <% toolbar :profile, :subject => profile_subject %>
-<% elsif user_signed_in? %>
-  <% toolbar %>
-<% end %>
+<h2>All <%= @trip.title %> places</h2>
 
-<h1>All places</h1>
+<% @trip.places.each do |p| %>
+	<div><%= link_to p.title, trip_place_path(@trip, p) %></div>
+<% end %>

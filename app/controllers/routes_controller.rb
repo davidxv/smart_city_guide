@@ -1,6 +1,6 @@
 class RoutesController < ApplicationController
 	include SocialStream::Controllers::Objects
-	#belongs_to :trip, :optional => true
+	belongs_to :trip, :optional => true
   #belongs_to :guide, :optional => true
 
   def new
