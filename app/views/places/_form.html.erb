@@ -43,6 +43,15 @@
 
   <%= f.hidden_field :latitude %>
   <%= f.hidden_field :longitude %>
+  <% f.object.route_ids.each do |i| %>
+    <%= hidden_field_tag "place[route_ids][]", i %>
+  <% end %>
+  <% f.object.guide_ids.each do |i| %>
+    <%= hidden_field_tag "place[guide_ids][]", i %>
+  <% end %>
+  <% f.object.trip_ids.each do |i| %>
+    <%= hidden_field_tag "place[trip_ids][]", i %>
+  <% end %>
 
 
   <div class="place_create">

@@ -1,6 +1,6 @@
 class GuidesController < ApplicationController
 	include SocialStream::Controllers::Objects
-	belongs_to :trip
+	optional_belongs_to :trip
 
 	def create
   	params[:guide].merge!(:owner_id => current_subject.try(:actor_id), :relation_ids => Relation::Public.instance.id,

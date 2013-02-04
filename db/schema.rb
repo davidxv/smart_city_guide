@@ -269,6 +269,20 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
 
   add_index "places", ["activity_object_id"], :name => "index_places_on_activity_object_id"
 
+  create_table "places_routes", :id => false, :force => true do |t|
+    t.integer "place_id", :null => false
+    t.integer "route_id", :null => false
+  end
+
+  add_index "places_routes", ["place_id", "route_id"], :name => "index_places_routes_on_place_id_and_route_id", :unique => true
+
+  create_table "places_trips", :id => false, :force => true do |t|
+    t.integer "place_id", :null => false
+    t.integer "trip_id",  :null => false
+  end
+
+  add_index "places_trips", ["place_id", "trip_id"], :name => "index_places_trips_on_place_id_and_trip_id", :unique => true
+
   create_table "plannings", :force => true do |t|
     t.integer  "activity_object_id"
     t.datetime "created_at",         :null => false
@@ -359,13 +373,6 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
   add_index "routes", ["guide_id"], :name => "index_routes_on_guide_id"
   add_index "routes", ["trip_id"], :name => "index_routes_on_trip_id"
 
-  create_table "routes_places", :id => false, :force => true do |t|
-    t.integer "route_id", :null => false
-    t.integer "place_id", :null => false
-  end
-
-  add_index "routes_places", ["route_id", "place_id"], :name => "index_routes_places_on_route_id_and_place_id", :unique => true
-
   create_table "sites", :force => true do |t|
     t.string   "type"
     t.integer  "actor_id"
@@ -408,13 +415,6 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "trips_places", :id => false, :force => true do |t|
-    t.integer "trip_id",  :null => false
-    t.integer "place_id", :null => false
-  end
-
-  add_index "trips_places", ["trip_id", "place_id"], :name => "index_trips_places_on_trip_id_and_place_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
