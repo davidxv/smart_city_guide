@@ -5,8 +5,8 @@
     <li class="active">
       <a data-toggle="tab" href="#info">info</a>
     </li>
-        <li class="">
-      <a data-toggle="tab" href="#map">map</a>
+    <li class="">
+      <a data-toggle="tab" href="#map" id="mapTab">map</a>
     </li>
     <li class="">
       <a data-toggle="tab" href="#photo">photo</a>
@@ -19,13 +19,12 @@
   <div class="tab-content">
 
     <div id="info" class="tab-pane active">
-      	<%= render :partial => "guides/info" %>
+      <%= render :partial => "guides/info" %>
     </div>
 
     <div id="map" class="tab-pane ">
-      <ul class="thumbnails">
-        <%= render :partial => "guides/map" %>
-      </ul>
+      <%= render  :partial => "guides/map",
+                  :locals => { :json => @json } %>
 		</div>
 
     <div id="photo" class="tab-pane ">
