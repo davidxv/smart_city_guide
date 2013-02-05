@@ -3,7 +3,7 @@
 
 <%= div_for @place do %>
 	<div class="central">
-	  <h2 class="titlecentral">Alcazar</h2>
+	  <h2 class="titlecentral"><%= @place.title %></h2>
     <%#= place_timeline_thumb(@place) %>
     <%= render :partial => 'carousel' %>
     
@@ -22,21 +22,6 @@
 
         <h3><%= t('place.info.description.description') %></h3>
         <%= @place.description %>
-        <p>
-          
-              El Álcazar, edificio simbólico, se emplaza en la zona más alta de la ciudad de Toledo, teniendo sus orígenes más remotos en la época romana. Situado en un punto estratégico de la ciudad, durante la época visigoda, Eurico conquista la ciudad y Leovigildo establece en ella la capitalidad, dejando modificaciones y adaptaciones en dicho edificio, considerado y concebido inicialmente como una gran fortaleza.
-
-    Durante los reinados de Alfonso VI y Alfonso X El Sabio, se rehace, dando origen al primer alcázar de planta cuadrada con torres en los ángulos, y fachada principal de tres cuerpos.En el siglo XVI Carlos V y Felipe II ordenaron erigir el Alcázar como tal.
-
-    Las fachadas oriental y occidental fueron las que recibieron un tratamiento más sencillo, siendo la fachada principal donde Covarrubias centró el carácter representativo y emblemático del edificio. El patio, diseñado por Covarrubias en 1550, es la pieza más clásica y monumental del conjunto que, junto con la escalera, diseñada por Villalpando y construida por Juan de Herrera, dotan al edificio de un aspecto solemnemente triunfal, en clara sintonía con la proporción y monumentalidad clásica del conjunto.
-
-    En cuanto a sus acontecimientos históricos, el edificio ha estado marcado por distintos hechos históricos (la Guerra de Sucesión, la Guerra de la Independencia, la Guerra Civil Española...), sufriendo asedios, incendios, etc. Tras su parcial destrucción durante la guerra civil se comenzó una laboriosa reconstrucción que no terminó hasta finales de los 70. Fue llevada a cabo por ingenieros militares y estuvo estructurada en diferentes fases.
-
-    La imagen actual es de un imponente edificio con cuatro fachadas, cada una con un estilo artístico distinto y que ha tenido diferentes usos, entre otros: Academia de Infantería, Museo del Ejército y actual Biblioteca Regional de Castilla-La Mancha. Como Biblioteca Regional, destacar sus más de 380.000 volúmenes, y sus colecciones de especial valor, como la Borbón Lorenzana, además de su condición de relevante emplazamiento cultural, con magníficas instalaciones, y de permanente uso social.
-
-    En la actualidad se acaba de inaugurar el nuevo Museo del Ejército de Tierra dentro del propio conjunto del Alcázar, el cual ocupa una superficie mayor a 8.000 metros cuadrados. En él se muestran las aportaciones militares al progreso institucional, social, científico y cultural de España, y en total se pueden apreciar 20 salas de exposición permanente que albergan unos 6.000 fondos, organizados alrededor de la Historia de España, con Salas Históricas, Salas Temáticas y los Restos Arqueológicos del Alcázar.
-
-        </p>
       </div>
     <% end %>
     
