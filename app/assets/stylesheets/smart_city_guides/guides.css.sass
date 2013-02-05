@@ -1,66 +1,35 @@
-#content
-	@include makeRow() 
+.guide_all
 	@include makeColumn(12, 0)
 	margin-left: 0px
-	.left_home
+
+
+
+	
+	.visualization
 		@include makeColumn(8, 0)
 		margin-left: 0px
-		
 		float: left
-		height: 90%
-		.info_city
-			@include makeColumn(8, 0)
-			margin-left: 0px
-			height: 400px
-			.item
-				img
-					width: 620px 
-					height: 400px
-			.carousel-caption
-				padding-top: 0
-				bottom: 0px
-				left: 0%
-				background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
-				h1
-					font-size: 35px
-				p
-					font-size: 16px
-
-		.interest_points
-
-			margin-top: 10px
-			@include makeColumn(8, 0)
-			margin-left: 0px
-
-			.all-item
-				.search_all
-					display: inline-block
-					@include makeColumn(3, 0)
-					margin-top: 20px
-
-				.option_search
-					display: inline-block
-					@include makeColumn(2, 0)
-					margin-top: 20px
-
-				.view_type
-					display: inline-block
-					@include makeColumn(2, 0)
-					margin-top: 20px
-					.btn
-						float: right
-				.guide_home
-					@include makeColumn(8, 0)
-					margin-left: 0px
 
 
-
-	.right_home
-		@include makeColumn(4, 0)
-		margin-left: 0px
-		
+	.right_visualization
+		@include makeColumn(4, 0)		
+		margin-top: 10px
 		float: right
-		.planification
-		.wall
+		.info
+			text-align: left
+			overflow-y: scroll
+			height: 350px
+			padding-right: 5px
+			.cover
+				width: 160px
+				height: 160px
+				display: inline-block
+				float: left
+				img
+					width: 150px
+					height: 150px
+
+		.comments
+			@include makeColumn(4, 0)	
 
 

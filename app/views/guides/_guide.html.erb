@@ -5,29 +5,7 @@
   </div>
 
   <div class="text">
-
+    <h6><%= link_to guide.title, guide %></h6>
   </div>
 
-
-
-
-
-<article class="visualization">
-	<%= render :partial => "guide/all" %>
-</article>
-
-<article class="right_visualization">
-	<div class="description">
-	  <div class="thumb">
-	    <%= link_to(raw("<i class='icon_place_70-default'></i> "), guide)%>
-	  </div>
-		<h4 class="title"><%= link_to guide.title, guide %></h6>
-		<h6></h6>
-
-	</div>
-	<div class="wall">
-		<%= render :partial => "activities/index", :locals => { :activities => current_subject.wall(:home).page(params[:page]), :owner => current_subject } %>
-	</div>
- </article>
-
- <% end %> 
+<% end %> 
