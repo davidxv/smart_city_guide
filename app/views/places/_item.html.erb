@@ -1,14 +1,19 @@
+<div class="photo">
+	<% photos = place.photos %>
+	<% if photos.empty? %>
+		<%= link_to(raw("<i class='icon_place_70-default'></i> "), place)%>
+	<% else %>
+	    <div><%= link_to thumb_for(photos.first, 'thumb48sq'), place %></div>
+	<% end %>
+<div>
+
+
 <div><%= place.title %></div>
 <div><%= place.formatted %></div>
 <div><%= place.streetAddress %></div>
 <div><%= place.description %></div>
 
-<% photos = place.photos %>
-<% if photos.empty? %>
-	<%= link_to(raw("<i class='icon_place_70-default'></i> "), place)%>
-<% else %>
-    <div><%= link_to thumb_for(photos.first, 'thumb48sq'), place %></div>
-<% end %>
+
 
 
 

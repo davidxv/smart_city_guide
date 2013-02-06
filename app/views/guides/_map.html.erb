@@ -12,11 +12,7 @@
 	<% end %>
 </div>
 <div class="places">
-	<div class="details">
-
-	</div>
 	<div class="list">
-	<div class="planification">
 		<ul class="thumbnails sortable">
 			<% guide.places.each do |p| %>
 				<%= render  :partial => "places/item",
@@ -25,6 +21,4 @@
 		</ul>
 		<!--http://jqueryui.com/draggable/#sortable-->
 	</div>
-	</div>
-
 </div>
