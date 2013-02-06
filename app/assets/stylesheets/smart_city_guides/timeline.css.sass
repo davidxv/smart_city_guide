@@ -8,20 +8,23 @@
   .wall_input
     @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
     @include border-radius(7px) 
-    background-color: $gray
+    background-color: $grayLight
 
     margin-bottom: 0px
     display: inline-block
     float: left
 
     input
-      @include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
-      margin: 8px
+      @include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      margin-top: 8px
+      margin-left: 8px
+      margin-bottom: 8px
+      margin-right: 3px
       display: inline-block
       float: left
       &[type="submit"]
-        @include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-        @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
+        @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+        @include buttonBackground($black, $gray, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
         padding: 3px 11px 4px 11px
         float: left
 
