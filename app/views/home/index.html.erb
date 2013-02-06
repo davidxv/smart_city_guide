@@ -16,43 +16,37 @@
 
 
 <article class="right_home">
+
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
 			<ul>
 				<li><h4>Planning</h4></li>
 				<li>
 					<div class="dropdown">
-   
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <b class="caret"></b>
-</a>
-  <ul class="dropdown-menu">
-
-      
-
-
-    <li>
-      <a href="/settings" id="btn_menu_settings">Go to my guide</a>
-    </li>
-    <li>
-      <a href="/relation/customs">Clear planning</a>
-    </li>
-
-  </ul>
-</div>
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      				<b class="caret"></b>
+						</a>
+  					<ul class="dropdown-menu">
+					    <li>
+      					<a href="/settings" id="btn_menu_settings">Go to my guide</a>
+    					</li>
+    					<li>
+      					<a href="/relation/customs">Clear planning</a>
+    					</li>
+  					</ul>
+					</div>
 				</li>
 			</ul>	
 		</div>	
 	</div>
 	<div class="planification">
 		<ul class="thumbnails sortable">
-			<%= render :partial => "home/planification" %>
+			<%#= render :partial => "places/item" %>
 		</ul>
 		<!--http://jqueryui.com/draggable/#sortable-->
 	</div>
 	<div class="wall">
-
-			<%= render :partial => "activities/index", :locals => { :activities => current_subject.wall(:home).page(params[:page]), :owner => current_subject } %>
+		<%= render :partial => "activities/index", :locals => { :activities => current_subject.wall(:home).page(params[:page]), :owner => current_subject } %>
 	</div>
  </article>
 
