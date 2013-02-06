@@ -23,10 +23,11 @@
       display: inline-block
       float: left
       &[type="submit"]
-        @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+        width: 88px
         @include buttonBackground($black, $gray, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
         padding: 3px 11px 4px 11px
         float: left
+        display: inline-block
 
 
       &[type="checkbox"]
