@@ -1,35 +1,30 @@
 .guide_all
 	@include makeColumn(12, 0)
 	margin-left: 0px
-
-
-
-	
-	.visualization
-		@include makeColumn(8, 0)
+	.details
+		@include makeColumn(7, 0)
 		margin-left: 0px
-		float: left
-
-
-	.right_visualization
-		@include makeColumn(4, 0)		
-		margin-top: 10px
-		float: right
+		display: inline-block
+		h4
+			text-align: left
 		.info
 			text-align: left
 			overflow-y: scroll
 			height: 350px
 			padding-right: 5px
 			.cover
-				width: 160px
-				height: 160px
+				width: 200px
+				height: 200px
 				display: inline-block
 				float: left
 				img
-					width: 150px
-					height: 150px
+					width: 190px
+					height: 190px
 
-		.comments
-			@include makeColumn(4, 0)	
+	.comments
+		@include makeColumn(5, 0)	
+		margin-left: 0px
+		float: right
+		display: inline-block
 
 
