@@ -22,7 +22,7 @@
 <% toolbar :profile, :subject => @user %>
 
 <br class="clearfloat" />
-
+<div id="content_profile">
 
   <div class="guide_home">
     my guides
@@ -36,6 +36,7 @@
     <%= render :partial => "diaries/item" %>
   </ul>
   </div>
+</div>
     <div class="social">
       contacts
     <%= render :partial => "users/groups",
