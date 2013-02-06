@@ -9,14 +9,22 @@ es:
       edit: "Editar"
     all: "Todas las guías"
     confirm_delete: "¿Borrar guía?"
+    details:
+      info: "Info"
     form:
       title: "Guía"
     info:
+      author: "Autor"
       date:
         created_at: "Creado el"
         updated_at: "Actualizado el"
+      description:
+        description: "Descripción"
+        update: "Actualizar descripción"
       file:
         title: "Cargar"
+      size: "Tamaño"
+      tags: "Etiquetas"
       title:
         title: "Título"
     mine: "Mis guías"
