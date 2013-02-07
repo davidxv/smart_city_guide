@@ -11,14 +11,13 @@
 		});
 	<% end %>
 </div>
+
 <div class="places">
-	<div class="list">
-		<ul class="thumbnails sortable">
-			<% guide.places.each do |p| %>
-				<%= render  :partial => "places/item",
+	<ul class="thumbnails">
+		<% guide.places.each do |p| %>
+			<%= render  :partial => "places/item",
 										:locals => { :place => p } %>
-			<% end %>
-		</ul>
+		<% end %>
+	</ul>
 		<!--http://jqueryui.com/draggable/#sortable-->
-	</div>
 </div>
