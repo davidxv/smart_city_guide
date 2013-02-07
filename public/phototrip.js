@@ -24,7 +24,7 @@ TRIP = (function($,undefined){
 			var pois = phototrip_demo.photos[id].pois;
 			for (var i = pois.length -1; i >= 0; i--) {
 				var poi_id = _getId("image");
-				$('#' + id).append("<img id='"+poi_id+"' destination_id='"+pois[i].destination_id+"' class='poi' src='/assets/phototrip/ball.png' style='position:absolute;left:"+pois[i].x+"px;top:"+pois[i].y+"px'/>");
+				$('#' + id).append("<img id='"+poi_id+"' destination_id='"+pois[i].destination_id+"' class='poi' src='/phototrip/ball.png' style='position:absolute;left:"+pois[i].x+"px;top:"+pois[i].y+"px'/>");
 				$("#"+poi_id).on("click", function(){
 					var destination_id = $(this).attr("destination_id");
 					_showPhoto(destination_id,true);
