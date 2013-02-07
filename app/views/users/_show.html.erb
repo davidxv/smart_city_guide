@@ -23,9 +23,63 @@
 
 <br class="clearfloat" />
 <div id="content_profile">
+  <div class="trip_content">
+      <ul class="trips">
+        <li class="plannings">
+          <div class="planning_item">
+            <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        <li class="diaries">
+          <div class="diary_item">
+            <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        </li> 
+      </ul>
+      <ul class="trips">
+        <li class="plannings">
+          <div class="planning_item">
+            <img src="/assets/toledo_rio3.jpeg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        <li class="diaries">
+          <div class="diary_item">
+            <img src="/assets/picaro.jpg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        </li> 
+      </ul>     
+      <ul class="trips">
+        <li class="plannings">
+          <div class="planning_item">
+            <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        <li class="diaries">
+          <div class="diary_item">
+            <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
+            <div class="caption">
+              <h4>Guía básica</h4>
+            </div>
+          </div>
+        </li> 
+      </ul>                
+  </div>
 
-  <div class="guide_home">
+  <!--div class="guide_home">
     my guides
+    <img src="/assets/prueba.png" width="115" height="100" style="background-image:url(/assets/toledo2.jpg);" alt="texto" />
     <ul class="thumbnails">
         <%= render :partial => "guides/item" %>
     </ul>
@@ -36,7 +90,7 @@
     <%= render :partial => "diaries/item" %>
   </ul>
   </div>
-</div>
+</div-->
     <div class="social">
       contacts
     <%= render :partial => "users/groups",
@@ -46,4 +100,5 @@
            :locals  => { :activities => @user.wall(:profile, :for => current_subject).
                                               page(params[:page]),
                          :owner => @user } %>
+    </div>
 </div>
