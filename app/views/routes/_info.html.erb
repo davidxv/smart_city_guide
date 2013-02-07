@@ -1,5 +1,5 @@
 <div class="details">
-  <h4>This is a guide from <%= @guide.trip.title %> trip</h4>
+  <h4>This is a guide from <%= @route.trip.title %> trip</h4>
   <div class="info">
     <div class="cover">
       <%= image_tag('ninja.jpeg') %>
@@ -9,7 +9,7 @@
 </div>
   <div class="comments_object">
     <h2>comments</h2>
-    <%= render :partial => 'comments/new', :locals => { :activity => @guide.post_activity } %>
-    <%= render :partial => 'activities/comments', :locals => { :activity => @guide.post_activity } %>
+    <%= render :partial => 'comments/new', :locals => { :activity => @route.post_activity } %>
+    <%= render :partial => 'activities/comments', :locals => { :activity => @route.post_activity } %>
   </div>
 

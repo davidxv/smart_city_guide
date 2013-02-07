@@ -1,0 +1,23 @@
+<div class="map">
+	<%= gmaps(:map_options => { :container_class => "map_container", :id => "route_map", 
+		:class => "gmaps4rails_map" }, :markers => {:data => json} )%>
+	<%= yield :scripts %>
+
+	<%= javascript_tag do %>
+		$('#mapTab').on('shown', function (e) {
+			//Gmaps.loadMaps();
+			google.maps.event.trigger(route_map, 'resize');
+			Gmaps.route_map.adjustMapToBounds();
+		});
+	<% end %>
+</div>
+
+<div class="places">
+	<ul class="thumbnails">
+		<% route.places.each do |p| %>
+			<%= render  :partial => "places/item",
+										:locals => { :place => p } %>
+		<% end %>
+	</ul>
+		<!--http://jqueryui.com/draggable/#sortable-->
+</div>
