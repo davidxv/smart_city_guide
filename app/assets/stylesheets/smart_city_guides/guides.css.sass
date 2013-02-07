@@ -1,6 +1,8 @@
 .guide_all
 	@include makeColumn(12, 0)
 	margin-left: 0px
+
+
 	.details
 		@include makeColumn(7, 0)
 		margin-left: 0px
@@ -9,7 +11,9 @@
 			text-align: left
 		.info
 			text-align: justify
-			padding-right: 5px
+			padding-right: 20px
+			border-right: 1px solid $grayLighter
+			color: $gray
 			.cover
 				width: 200px
 				height: 200px
@@ -19,22 +23,74 @@
 					width: 180px
 					height: 180px
 
+
 	.comments_object
 		@include makeColumn(5, 0)	
 		margin-left: 0px
 		float: right
 		display: inline-block
-		h4
-			text-align: left
+		h2
+			text-align: right
+			line-height: 20px
 	.map
 		@include makeColumn(8, 0)
 		margin-left: 0px
 		display: inline-block
 	.places
-		@include makeColumn(4, 0)
+		width: 320px
 		display: inline-block
 		margin-left: 0px
 		height: 414px
+		overflow-x: hidden
+		overflow-y: auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
