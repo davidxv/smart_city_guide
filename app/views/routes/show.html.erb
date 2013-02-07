@@ -1,3 +1,42 @@
 <h2><%= @route.title %> route</h2>
 
 This is a route from <%= @route.trip.title %> trip
+
+<div class="guide_all tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#info">info</a>
+    </li>
+    <li class="">
+      <a data-toggle="tab" href="#map" id="mapTab">map</a>
+    </li>
+    <li class="">
+      <a data-toggle="tab" href="#photo">photo</a>
+    </li>
+
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="info" class="tab-pane active">
+      <%= render :partial => "routes/info" %>
+    </div>
+
+    <div id="map" class="tab-pane ">
+      <%= render  :partial => "routes/map",
+                  :locals => { :json => @json, :route => @route } %>
+		</div>
+
+    <div id="photo" class="tab-pane ">
+      <ul class="thumbnails">
+      	<%= render :partial => "routes/photo" %>
+			</ul>
+    </div>
+
+
+    
+    
+  </div>
+</div>
+
+
