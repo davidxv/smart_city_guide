@@ -1,3 +1,9 @@
+<%= javascript_tag do %>
+  $(function() {
+    SocialStream.Objects.init();
+  });
+<% end %>
+
 <h2><%= @guide.title %> guide</h2>
 
 <div class="guide_all tabbable">
