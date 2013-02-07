@@ -1,0 +1,79 @@
+var phototrip_demo = {
+	"title":"Phototrip",
+	"photos":{
+		"1" : {
+			"pois":[
+				{					
+					"x":"935",
+					"y":"471",
+					"destination_id":"2"
+				},{					
+					"x":"509",
+					"y":"427",
+					"destination_id":"3"
+				},{					
+					"x":"458",
+					"y":"488",
+					"destination_id":"4"
+				}
+			]
+		},
+		"3": {			
+			"pois":[
+				{					
+					"x":"634",
+					"y":"507",
+					"destination_id":"4"
+				},{					
+					"x":"659",
+					"y":"524",
+					"destination_id":"5"
+				}
+			]
+		},
+		"5": {		
+			"pois":[
+				{					
+					"x":"569",
+					"y":"840",
+					"destination_id":"6"
+				},{					
+					"x":"425",
+					"y":"846",
+					"destination_id":"10"
+				}
+			]
+		},
+		"6": {			
+			"pois":[
+				{					
+					"x":"412",
+					"y":"319",
+					"destination_id":"7"
+				},{					
+					"x":"265",
+					"y":"319",
+					"destination_id":"8"
+				},{					
+					"x":"448",
+					"y":"422",
+					"destination_id":"9"
+				}
+			]
+		},		
+		"9":{
+			"pois":[
+				{					
+					"x":"381",
+					"y":"462",
+					"destination_id":"6"
+				},{					
+					"x":"866",
+					"y":"519",
+					"destination_id":"10"
+				}
+			]
+		}
+	}
+
+};
