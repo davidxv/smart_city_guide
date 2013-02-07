@@ -163,31 +163,48 @@
       font-size: 12px
         
 
-#comment_text
-  float: right
-  width: 357px
-
-
-#new_comment
-  margin-left: 20px
-  div
-    .btb
-      @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25))
-      float: right
-      margin-right: 19px
-
-.new_comment
+.new
+  width: 100%
+  display: inline-block
+  float: left
   .avatar
+    width: 10%
     float: left
-    margin-left: 16px
-    margin-right: 6px
-    margin-top: -10px
-    img
-      margin-top: 6px
-      width: 40px 
-    h6
-      margin-top: 69px
-    
+    display: none
+
+  .new_comment
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    @include border-radius(7px) 
+    background-color: $grayLight
+
+    margin-bottom: 0px
+    display: inline-block
+    float: left
+    #comment_text
+      @include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      margin-top: 8px
+      margin-left: 8px
+      margin-bottom: 8px
+      margin-right: 3px
+      display: inline-block
+      float: left
+
+    button.btn,
+    input.btn[type="submit"]
+      @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      @include buttonBackground($black, $gray, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) 
+      padding: 3px 11px 4px 11px
+      float: left
+      display: inline-block
+      margin-left: 8px
+      margin-top: 8px
+
+
+
+
+
+
+
 
 
 
