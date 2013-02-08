@@ -1,29 +1,30 @@
-.restructure
-	@include makeColumn(6, 0)
-	margin-left: 0px
-.description
-	@include makeColumn(6, 0)
-	overflow-y: scroll
-	height: 320px
-
-
-
-.comentpoint
+.place_show
 	@include makeColumn(12, 0)
 	margin-left: 0px
-	margin-top: 10px
+	.titlecentral
+		@include makeColumn(12, 0)
+		text-align: center
+		display: inline-block
+	.map
+		@include makeColumn(6, 0)
+		margin-left: 0px
+		display: inline-block
 
-.info
-	text-align: center
-	
+	.info_photo
+		@include makeColumn(12, 0)
+		margin-left: 0px
+		display: inline-block
+		float: left
+	.description
+		@include makeColumn(6, 0)
+		overflow-y: auto
+		height: 400px
+		margin-left: 20px
+		display: inline-block
+		float: left
+	.comments
+		clear: both
+		@include makeColumn(8, 2)
+		margin-top: 10px
 
-.btn-large
-	margin-top: 20px
-
-.titlecentral
-	text-align: center
-	display: inline-block
-	position: absolute
-	z-index: 2
-	width: 940px
 
