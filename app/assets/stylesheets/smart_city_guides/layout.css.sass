@@ -114,8 +114,10 @@
   @include border-radius(5px)
 
 .users
-
   display: inline-block
+  float: left
+
+
 
   .my_guides
     @include makeColumn(3, 0)
@@ -139,5 +141,6 @@
           @include makeColumn(3, 0) 
           margin-left: 0px
   .social
-    @include makeColumn(3, 0)
-    width: 280px
+    display: inline-block
+    font: right
+    width: 295px
