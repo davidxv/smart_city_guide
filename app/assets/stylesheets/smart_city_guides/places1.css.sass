@@ -1,36 +1,31 @@
 .place_show
 	@include makeColumn(12, 0)
 	margin-left: 0px
+	.titlecentral
+		@include makeColumn(12, 0)
+		text-align: center
+		display: inline-block
 	.map
 		@include makeColumn(6, 0)
+		margin-left: 0px
+		display: inline-block
 
+	.info_photo
+		@include makeColumn(12, 0)
+		margin-left: 0px
+		display: inline-block
+		float: left
+	.description
+		@include makeColumn(6, 0)
+		overflow-y: auto
+		height: 400px
+		margin-left: 20px
+		display: inline-block
+		float: left
+	.comments
+		clear: both
+		@include makeColumn(8, 2)
 
-
-
-.restructure
-	@include makeColumn(6, 0)
-	margin-left: 0px
-.description
-	@include makeColumn(6, 0)
-	overflow-y: scroll
-	height: 320px
-
-
-
-.comentpoint
-	@include makeColumn(12, 0)
-	margin-left: 0px
-	margin-top: 10px
-
-.info
-	text-align: center
-	
-
-.btn-large
-	margin-top: 20px
-
-.titlecentral
-	text-align: center
-	display: inline-block
+		margin-top: 10px
 
 
