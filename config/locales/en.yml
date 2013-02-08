@@ -2,6 +2,66 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  diary:
+    actions:
+      delete: "Delete"
+      details: "Details"
+      edit: "Edit"
+    all: "All diaries"
+    confirm_delete: "Delete diary?"
+    details:
+      info: "Info"
+    form:
+      title: "Diary"
+    info:
+      author: "Author"
+      date:
+        created_at: "Created at"
+        updated_at: "Updated at"
+      description:
+        description: "Description"
+        update: "Update description"
+      file:
+        title: "Upload"
+      size: "Size"
+      tags: "Tags"
+      title:
+        title: "Title"
+    mine: "My diaries"
+    name: "diary"
+    name_title: "Diary name"
+    phone_title: "Phone number"
+    photo:
+      button: "Upload"
+      update: "Upload photo"
+    url_title: "Website"
+    address:
+      street: "Address"
+      locality: "City"
+      region: "Region"
+      postalcode: "Postalcode"
+      country: "Country"
+    not_mine: "Diaries"
+    one: "a diary"
+    simple_all: "All"
+    title: "Diaries"
+    like:
+      me: "I like"
+      other: "%{contact} likes"
+    search:
+      name: "Search for your fav diaries"
+      no_match: "Don't find your fav diary?"
+      new: "+ Add new diary"
+    comments:
+      contacts: "See only my contacts's comments"
+      all: "See all comments"
+    view:
+      list: "List view"
+      map: "Map view"
+    tabs:
+      mine: "My diaries"
+      friends: "Friends diaries"
+      recommended: "Recommended"
   trip:
     actions:
       delete: "Delete"
