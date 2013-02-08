@@ -7,14 +7,14 @@ module SmartCityGuide
         attr_accessor :activity_object_property_object_id
 
         before_validation(:on => :create) do
-          hola
+          # hola
           set_activity_object
         end
       end
 
-      def hola
-        puts "holacarol"
-      end
+      # def hola
+      #   puts "holacarol"
+      # end
 
       protected
 
