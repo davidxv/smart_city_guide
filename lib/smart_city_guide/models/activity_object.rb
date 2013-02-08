@@ -20,7 +20,7 @@ module SmartCityGuide
 				end
 
 				def build_photo
-					Document.new(:activity_object_property_object_id => self.id,
+					::Document.new(:activity_object_property_object_id => self.id,
 								 :owner_id => self.owner_id)
 				end
 
