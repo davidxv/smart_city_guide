@@ -70,16 +70,19 @@
       &:focus
         background-color: #2BC4D2
     li
+      color: $gray
       a 
+        color: $gray
         &:hover,
         &:focus,
         &:active
-          color: white
+          color: $gray
           background-color: #2BC4D2
           background-image: none
     
   .dropdown-toggle
     margin-right: 5px
+
 
 //users
 
@@ -111,8 +114,10 @@
   @include border-radius(5px)
 
 .users
-
   display: inline-block
+  float: left
+
+
 
   .my_guides
     @include makeColumn(3, 0)
@@ -136,5 +141,6 @@
           @include makeColumn(3, 0) 
           margin-left: 0px
   .social
-    @include makeColumn(3, 0)
-    width: 280px
+    display: inline-block
+    font: right
+    width: 295px

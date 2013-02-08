@@ -1,1 +1,37 @@
-<h2><%=@diary.title %> diary</h2>
+<h2><%= @diary.title %> diary</h2>
+
+<div class="guide_all tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#book">book</a>
+    </li>
+
+
+    <li class="">
+      <a data-toggle="tab" href="#photo">photo</a>
+    </li>
+
+  </ul>
+
+  <div class="tab-content">
+    <div id="book" class="tab-pane active">
+        <%= render :partial => "diaries/book" %>
+    </div>
+
+
+    <div id="photo" class="tab-pane ">
+      <ul class="thumbnails">
+      	<%= render :partial => "diaries/photo" %>
+      </ul>
+    </div>
+
+
+    
+    
+  </div>
+  <%= javascript_tag do %>
+    $(function() {
+      SocialStream.Objects.init();
+    });
+  <% end %>
+</div>

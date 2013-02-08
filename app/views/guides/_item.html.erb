@@ -1,25 +1,26 @@
-				<li class="thumbnails_home">
-					<div class="thumbnail labels">
-						<%= image_tag('toledo_basica.jpg') %>
-						<div class="caption">
-							<h4>Basic guide</h4>
-							<p>A short guide with the principal places... </p>
-							<p>
-								<a class="btn btn-primary" href="#">Add to my guide</a>
-							</p>
-						</div>
-					</div>
-				</li>
-				<li class="thumbnails_home">
-					<div class="thumbnail labels">
-						<%= image_tag('24_guide.jpg') %>
-						<div class="caption">
-							<h4>Toledo in 24 hours</h4>
-							<p>The essence of Toledo in 24 hours</p>
-							<p>
-								<a class="btn btn-primary" href="#">Add to my guide</a>
-							</p>
-						</div>
-					</div>
-				</li>
+<li class="thumbnails_home">
+	<div class="thumbnail labels">
+		<%= link_to image_tag('toledo_basica.jpg'), Guide.first %>
+		<div class="caption">
+			<a href="/guides/1"><h4>Basic guide</h4></a>
+			<p>A short guide with the principal places... </p>
+			<p>
+				<a class="btn btn-primary" href="#">Add to my guide</a>
+			</p>
+		</div>
+	</div>
+</li>
+
+<li class="thumbnails_home">
+	<div class="thumbnail labels">
+		<%= link_to image_tag('24_guide.jpg'), Guide.first  %>
+		<div class="caption">
+			<a href="/guides/1"><h4>Toledo in 24 hours</h4></a>
+			<p>The essence of Toledo in 24 hours</p>
+			<p>
+				<a class="btn btn-primary" href="#">Add to my guide</a>
+			</p>
+		</div>
+	</div>
+</li>
 				
