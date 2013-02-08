@@ -1,0 +1,5 @@
+<h2>All <%= @trip.title %> diaries</h2>
+
+<% @trip.diaries.each do |d| %>
+	<div><%= link_to d.title, trip_diary_path(@trip, d) %></div>
+<% end %>

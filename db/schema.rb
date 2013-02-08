@@ -176,11 +176,13 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
 
   create_table "diaries", :force => true do |t|
     t.integer  "activity_object_id"
+    t.integer  "trip_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "diaries", ["activity_object_id"], :name => "index_diaries_on_activity_object_id"
+  add_index "diaries", ["trip_id"], :name => "index_diaries_on_trip_id"
 
   create_table "documents", :force => true do |t|
     t.string   "type"
@@ -285,11 +287,13 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
 
   create_table "plannings", :force => true do |t|
     t.integer  "activity_object_id"
+    t.integer  "trip_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "plannings", ["activity_object_id"], :name => "index_plannings_on_activity_object_id"
+  add_index "plannings", ["trip_id"], :name => "index_plannings_on_trip_id"
 
   create_table "posts", :force => true do |t|
     t.integer  "activity_object_id"
