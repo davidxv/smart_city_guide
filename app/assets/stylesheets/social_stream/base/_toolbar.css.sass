@@ -1,6 +1,7 @@
 #toolbar 
   @include makeColumnoMargin(2, 0)
-  display: table-cell
+  display: table-cell: 
+  text-align: left
 
   #avatar_profile
     text-aling: center
@@ -24,6 +25,12 @@
         
 .toolbar_menu
   @include border-radius(5px)
+  ul
+    li
+      a
+        margin: 0px
+        padding: 0px
+
 
     
 
