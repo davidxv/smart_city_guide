@@ -1,5 +1,7 @@
 <h2>Edit Place</h2>
 
 <%= render :partial => 'form_photo' %>
-<%= render :partial => 'form_description' %>
+<%#= render :partial => 'shared/form_photo', :locals => {:ao => @place} %>
+<%#= render :partial => 'form_description' %>
+<%= render :partial => 'shared/form_description', :locals => {:ao => @place} %>
 <%= render :partial => 'form' %>

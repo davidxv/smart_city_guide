@@ -411,10 +411,12 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
   add_index "ties", ["relation_id"], :name => "index_ties_on_relation_id"
 
   create_table "trips", :force => true do |t|
-    t.string   "title"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "activity_object_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
+
+  add_index "trips", ["activity_object_id"], :name => "index_trips_on_activity_object_id"
 
   create_table "users", :force => true do |t|
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false

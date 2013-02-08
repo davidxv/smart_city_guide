@@ -2,6 +2,66 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  trip:
+    actions:
+      delete: "Delete"
+      details: "Details"
+      edit: "Edit"
+    all: "All trips"
+    confirm_delete: "Delete trip?"
+    details:
+      info: "Info"
+    form:
+      title: "Trip"
+    info:
+      author: "Author"
+      date:
+        created_at: "Created at"
+        updated_at: "Updated at"
+      description:
+        description: "Description"
+        update: "Update description"
+      file:
+        title: "Upload"
+      size: "Size"
+      tags: "Tags"
+      title:
+        title: "Title"
+    mine: "My trips"
+    name: "trip"
+    name_title: "Trip name"
+    phone_title: "Phone number"
+    photo:
+      button: "Upload"
+      update: "Upload photo"
+    url_title: "Website"
+    address:
+      street: "Address"
+      locality: "City"
+      region: "Region"
+      postalcode: "Postalcode"
+      country: "Country"
+    not_mine: "Trips"
+    one: "a trip"
+    simple_all: "All"
+    title: "Trips"
+    like:
+      me: "I like"
+      other: "%{contact} likes"
+    search:
+      name: "Search for your fav trips"
+      no_match: "Don't find your fav trip?"
+      new: "+ Add new trip"
+    comments:
+      contacts: "See only my contacts's comments"
+      all: "See all comments"
+    view:
+      list: "List view"
+      map: "Map view"
+    tabs:
+      mine: "My trips"
+      friends: "Friends trips"
+      recommended: "Recommended"
   guide:
     actions:
       delete: "Delete"
@@ -61,6 +121,66 @@ en:
     tabs:
       mine: "My guides"
       friends: "Friends guides"
+      recommended: "Recommended"
+  route:
+    actions:
+      delete: "Delete"
+      details: "Details"
+      edit: "Edit"
+    all: "All routes"
+    confirm_delete: "Delete route?"
+    details:
+      info: "Info"
+    form:
+      title: "Route"
+    info:
+      author: "Author"
+      date:
+        created_at: "Created at"
+        updated_at: "Updated at"
+      description:
+        description: "Description"
+        update: "Update description"
+      file:
+        title: "Upload"
+      size: "Size"
+      tags: "Tags"
+      title:
+        title: "Title"
+    mine: "My routes"
+    name: "route"
+    name_title: "Route name"
+    phone_title: "Phone number"
+    photo:
+      button: "Upload"
+      update: "Upload photo"
+    url_title: "Website"
+    address:
+      street: "Address"
+      locality: "City"
+      region: "Region"
+      postalcode: "Postalcode"
+      country: "Country"
+    not_mine: "Routes"
+    one: "a route"
+    simple_all: "All"
+    title: "Routes"
+    like:
+      me: "I like"
+      other: "%{contact} likes"
+    search:
+      name: "Search for your fav routes"
+      no_match: "Don't find your fav route?"
+      new: "+ Add new route"
+    comments:
+      contacts: "See only my contacts's comments"
+      all: "See all comments"
+    view:
+      list: "List view"
+      map: "Map view"
+    tabs:
+      mine: "My routes"
+      friends: "Friends routes"
       recommended: "Recommended"
   activity:
     verb:

@@ -2,6 +2,66 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
+  trip:
+    actions:
+      delete: "Borrar"
+      details: "Detalles"
+      edit: "Editar"
+    all: "Todos los viajes"
+    confirm_delete: "¿Borrar viaje?"
+    details:
+      info: "Info"
+    form:
+      title: "Viaje"
+    info:
+      author: "Autor"
+      date:
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+      description:
+        description: "Descripción"
+        update: "Actualizar descripción"
+      file:
+        title: "Cargar"
+      size: "Tamaño"
+      tags: "Etiquetas"
+      title:
+        title: "Título"
+    mine: "Mis viajes"
+    name: "viaje"
+    name_title: "Nombre del viaje"
+    phone_title: "Teléfono"
+    photo:
+      button: "Subir"
+      update: "Subir foto"
+    url_title: "Website"
+    address:
+      street: "Dirección"
+      locality: "Ciudad"
+      region: "Región"
+      postalcode: "Código postal"
+      country: "País"
+    not_mine: "Viajes"
+    one: "un viaje"
+    simple_all: "Todos"
+    title: "Viajes"
+    like:
+      me: "que me gustan"
+      other: "que gustan a %{contact}"
+    search:
+      name: "Busca tus viajes favoritos"
+      no_match: "¿No encuentras el viaje?"
+      new: "+ Añade un viaje nuevo"
+    comments:
+      contacts: "Ver sólo los comentarios de mis contactos"
+      all: "Ver todos los comentarios"
+    view:
+      list: "Lista"
+      map: "Mapa"
+    tabs:
+      mine: "Mis viajes"
+      friends: "De amigos"
+      recommended: "Recomendados"
   guide:
     actions:
       delete: "Borrar"
@@ -60,6 +120,66 @@ es:
       map: "Mapa"
     tabs:
       mine: "Mis guías"
+      friends: "De amigos"
+      recommended: "Recomendados"
+  route:
+    actions:
+      delete: "Borrar"
+      details: "Detalles"
+      edit: "Editar"
+    all: "Todas las rutas"
+    confirm_delete: "¿Borrar ruta?"
+    details:
+      info: "Info"
+    form:
+      title: "Ruta"
+    info:
+      author: "Autor"
+      date:
+        created_at: "Creado el"
+        updated_at: "Actualizado el"
+      description:
+        description: "Descripción"
+        update: "Actualizar descripción"
+      file:
+        title: "Cargar"
+      size: "Tamaño"
+      tags: "Etiquetas"
+      title:
+        title: "Título"
+    mine: "Mis rutas"
+    name: "ruta"
+    name_title: "Nombre de la ruta"
+    phone_title: "Teléfono"
+    photo:
+      button: "Subir"
+      update: "Subir foto"
+    url_title: "Website"
+    address:
+      street: "Dirección"
+      locality: "Ciudad"
+      region: "Región"
+      postalcode: "Código postal"
+      country: "País"
+    not_mine: "Rutas"
+    one: "una ruta"
+    simple_all: "Todas"
+    title: "Rutas"
+    like:
+      me: "que me gustan"
+      other: "que gustan a %{contact}"
+    search:
+      name: "Busca tus rutas favoritas"
+      no_match: "¿No encuentras la ruta?"
+      new: "+ Añade una ruta nueva"
+    comments:
+      contacts: "Ver sólo los comentarios de mis contactos"
+      all: "Ver todos los comentarios"
+    view:
+      list: "Lista"
+      map: "Mapa"
+    tabs:
+      mine: "Mis rutas"
       friends: "De amigos"
       recommended: "Recomendados"
   activity:
