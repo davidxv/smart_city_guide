@@ -1,48 +1,28 @@
 <%= render :partial => 'objects/show',
            :locals  => { :object => @place } %>
-
 <%= div_for @place do %>
-	<div class="central">
-	  <h2 class="titlecentral"><%= @place.title %></h2>
+	<div class="place_show">
+    <h2 class="titlecentral"><%= @place.title %></h2>
+    <div class="map">
+      <%= gmaps(:map_options => { :container_class => "map_container", :id => "map", :class => "gmaps4rails_map", :auto_zoom => false, :zoom => 16 }, :markers => {:data => @json} )%>
+      <%= yield :scripts %>
+    </div>   
+	  
     <%#= place_timeline_thumb(@place) %>
-    <%= render :partial => 'carousel' %>
-    
-
-  <div class="restructure">
-
-    <%= gmaps(:map_options => { :container_class => "map_container", :id => "map", :class => "gmaps4rails_map", :auto_zoom => false, :zoom => 16 }, :markers => {:data => @json} )%>
-          
-    <%= yield :scripts %>
-
-</div>
-            
-        <% unless @place.description.blank? %>
-
+    <div class="info_photo">
+      <%= render :partial => 'carousel' %>
+    </div>
+    <% unless @place.description.blank? %>
       <div class="description">
-
         <h3><%= t('place.info.description.description') %></h3>
         <%= @place.description %>
       </div>
     <% end %>
-    
-<%= render :partial => 'place_info' %>
-
-
-
-		<div class="tabbable comentpoint">
-			
-
-		  <div class="tab-content comentpoint">
-		    <div id="comments" class="comments">
-		      <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
-		      <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
-		    </div>
-		  </div>
-		</div>
+    <%= render :partial => 'place_info' %>
+    <div id="comments" class="comments">
+      <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
+      <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
+    </div>
 	</div>
-
- 
-    
-  </div>
 <% end %>
 
