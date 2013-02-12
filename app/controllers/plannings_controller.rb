@@ -1,15 +1,15 @@
 class PlanningsController < ApplicationController
-	include SocialStream::Controllers::Objects
-	optional_belongs_to :trip
+  include SocialStream::Controllers::Objects
+  optional_belongs_to :trip
 
-	def new
+  def new
     @planning = Planning.new planning_params
- 	end
+  end
 
   def create
-  	params[:planning].merge!(:owner_id => current_subject.try(:actor_id), :relation_ids => Relation::Public.instance.id,
-  		:author_id => current_subject.try(:actor_id), :user_author_id => current_user.id)
-  	create!
+    params[:planning].merge!(:owner_id => current_subject.try(:actor_id), :relation_ids => Relation::Public.instance.id,
+      :author_id => current_subject.try(:actor_id), :user_author_id => current_user.id)
+    create!
   end
 
   private
