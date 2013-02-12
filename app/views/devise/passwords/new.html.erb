@@ -1,31 +1,20 @@
-<% content_for :headers do%>
-  <%= render :partial => 'layouts/devise_style' %>
-<%end%>
-<div id="welcome">
-  <article class="forgot">
-    <h2>
-      <%= t('devise.passwords.forgot') %>
-    </h2>
-
-    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<section id="devise">
+  <article class="objects">
+  </article>
+  <article class="form">
+    <h2><%= t('devise.passwords.forgot') %></h2>
+    <h5><%= t('devise.passwords.instructions') %></h5>
+    <div>
+      <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
       <%= devise_error_messages! %>
-    <h4>
-      <%= t('devise.passwords.instructions') %>
-    </h4>
-  </article>
-
-  <article class="right">
-    <div class="div_password">
       <%= f.label :email %>
-
       <%= f.text_field :email, :class => "form_tag" %>
-        
       <%= f.submit t('action.send'), :class =>"btn" %>
-      <hr class="soften">
-      <div class="options">
-        <%= render :partial => "devise/shared/links" %>
-      </div>
+      <% end %>
     </div>
-    <% end %>
+    <hr class="soften">
+    <div class="options">
+      <%= render :partial => "devise/shared/links" %>
+    </div>
   </article>
-</div>
+</section>
