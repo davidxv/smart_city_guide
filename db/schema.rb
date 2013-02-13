@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130202192801) do
+ActiveRecord::Schema.define(:version => 20130212092035) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20130202192801) do
     t.integer "activity_object_id"
     t.integer "property_id"
     t.string  "type"
+    t.boolean "main"
   end
 
   add_index "activity_object_properties", ["activity_object_id"], :name => "index_activity_object_properties_on_activity_object_id"
