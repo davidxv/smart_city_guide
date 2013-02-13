@@ -4,9 +4,9 @@ PlacesController.class_eval do
 
   #http://localhost:3000/places/new?place[trip_ids][]=1&place[trip_ids][]=2
   #http://localhost:3000/places/new?place[trip_ids]=1
-  def new
-    @place = Place.new place_params
-  end
+  # def new
+  #   @place = Place.new place_params
+  # end
 
 
   private
