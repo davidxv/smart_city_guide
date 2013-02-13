@@ -1,16 +1,16 @@
 class GuidesController < ApplicationController
-	include SocialStream::Controllers::Objects
-	optional_belongs_to :trip
+  include SocialStream::Controllers::Objects
+  optional_belongs_to :trip
 
   def new
     @guide = Guide.new guide_params
   end
 
-	def create
-  	params[:guide].merge!(:owner_id => current_subject.try(:actor_id), :relation_ids => Relation::Public.instance.id,
-  		:author_id => current_subject.try(:actor_id), :user_author_id => current_user.id)
-  	#@guide = Guide.new(guide_params)
-  	create!
+  def create
+    params[:guide].merge!(:owner_id => current_subject.try(:actor_id), :relation_ids => Relation::Public.instance.id,
+      :author_id => current_subject.try(:actor_id), :user_author_id => current_user.id)
+    #@guide = Guide.new(guide_params)
+    create!
   end
 
   def show
@@ -18,7 +18,7 @@ class GuidesController < ApplicationController
     show!
   end
 
-	private
+  private
   # Using a private method to encapsulate the permissible parameters is just a good pattern
   # since you'll be able to reuse the same permit list between create and update. Also, you
   # can specialize this method with per-user checking of permissible attributes.
