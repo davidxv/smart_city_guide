@@ -1,8 +1,9 @@
+# encoding: utf-8
 namespace :db do
   namespace :populate do
 
     desc "Fill SCG database with sample data"
-    task :create => [ 'create:trips', 'create:guides', 'create:routes', 'create:places', 'create:plannings', 'create:diaries']
+    task :create => [ 'create:trips', 'create:guides', 'create:routes', 'create:pois', 'create:plannings', 'create:diaries']
 
     namespace :create do
 
@@ -64,9 +65,9 @@ namespace :db do
 
 
       # PLACES
-      desc "Create places"
-      task :places => :read_environment do
-        puts 'Place population'
+      desc "Create POIs"
+      task :pois => :read_environment do
+        puts 'POI population'
         places_start = Time.now
 
         demo = Actor.find_by_slug('demo')
@@ -103,7 +104,7 @@ namespace :db do
                       :relation_ids   => Array(Relation::Public.instance.id)
 
         Place.create  :title          => "Alcazar of Toledo",
-                      :streetAddress  => "Calle del General Moscardo, 4",
+                      :streetAddress  => "Calle del General Moscardó, 4",
                       :locality       => "Toledo",
                       :region         => "Castile-La Mancha",
                       :postalCode     => "45001",
