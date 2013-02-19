@@ -35,6 +35,9 @@ else
   git 'git://github.com/ging/social_stream.git', &social_stream_gems
 end
 
+# FI-WARE Authentication
+gem 'omniauth-fiware'
+
 group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'forgery'

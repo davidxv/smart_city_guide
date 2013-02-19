@@ -1,5 +1,6 @@
-PATH
-  remote: ../social_stream
+GIT
+  remote: git://github.com/ging/social_stream.git
+  revision: 6c18b8a5f7676d510dff0c2583de0c337f0fe70b
   specs:
     social_stream-base (2.0.0)
       acts-as-taggable-on (~> 2.2.2)
@@ -109,7 +110,7 @@ GEM
     deface (0.9.1)
       nokogiri (~> 1.5.0)
       rails (~> 3.1)
-    delayed_paperclip (2.5.0.1)
+    delayed_paperclip (2.5.1.0)
       paperclip (>= 3.3.0)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
@@ -173,11 +174,13 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
-    omniauth (1.1.2)
+    omniauth (1.1.3)
       hashie (~> 1.2)
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-fiware (0.1.0)
+      omniauth-socialstream (~> 0.1.3)
     omniauth-linkedin (0.0.8)
       omniauth-oauth (~> 1.0)
     omniauth-oauth (1.0.1)
@@ -186,7 +189,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    omniauth-socialstream (0.1.2)
+    omniauth-socialstream (0.1.3)
       omniauth-oauth2 (~> 1.1.1)
     orm_adapter (0.4.0)
     paperclip (3.3.1)
@@ -270,7 +273,7 @@ GEM
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
-      tilt (>= 1.3.3, ~> 1.3)
+      tilt (~> 1.3, >= 1.3.3)
     social_cheesecake (0.5.0)
       railties (>= 3.1.3)
     sprockets (2.2.2)
@@ -321,6 +324,7 @@ DEPENDENCIES
   jquery-rails
   meta_request (~> 0.2.0)
   mysql2
+  omniauth-fiware
   rails (= 3.2.11)
   rspec-rails (= 2.6.1)
   sass-rails (~> 3.2.3)
