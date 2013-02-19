@@ -1,0 +1,83 @@
+#content
+	@include makeRow() 
+	@include makeColumn(12, 0)
+	margin-left: 0px
+	.left_home
+		@include makeColumn(8, 0)
+		margin-left: 0px
+		
+		float: left
+		height: 90%
+		.info_city
+			@include makeColumn(8, 0)
+			margin-left: 0px
+			height: 400px
+			.item
+				img
+					width: 620px 
+					height: 400px
+			.carousel-caption
+				padding-top: 0
+				bottom: 0px
+				left: 0%
+				background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
+				h1
+					font-size: 35px
+					color: #9A9A9A
+					opacity: 0.8
+				p
+					font-size: 16px
+
+		.interest_points
+
+			margin-top: 10px
+			@include makeColumn(8, 0)
+			margin-left: 0px
+
+			.all-item
+				.search_all
+					display: inline-block
+					@include makeColumn(3, 0)
+					margin-top: 20px
+
+				.option_search
+					display: inline-block
+					@include makeColumn(2, 0)
+					margin-top: 20px
+
+				.view_type
+					display: inline-block
+					@include makeColumn(2, 0)
+					margin-top: 20px
+					.btn
+						float: right
+				.guide_home
+					@include makeColumn(8, 0)
+					margin-left: 0px
+
+
+
+	.right_home
+		@include makeColumn(4, 0)
+		margin-left: 0px
+		float: right
+		.navbar
+			margin-bottom: 10px 
+			ul
+				padding: 0px
+				margin: 0px
+				float: right
+				li
+					display: inline-block
+					h4
+						color: grey
+						font-size: 17px
+					.dropdown-menu
+						margin-left: -100px
+						margin-top: 5px
+					.caret
+						border-bottom-color: #0088CC
+						border-top-color: #0088CC
+
+
+

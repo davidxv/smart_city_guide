@@ -1,0 +1,47 @@
+<%# sidebar %>
+<%#= location(link_to(t('home')+": "+ truncate_name(sanitize current_subject.name)))%>     
+<% toolbar %>
+<%# if current_subject.respond_to?(:recent_groups) %>
+ <%#= render partial: "users/groups",
+             locals: { user: current_subject } %>
+<%# end %>
+<article class="left_home">
+	<div class="info_city">
+		<%= render :partial => "home/info_city" %>
+	</div>
+	<div class="interest_points">
+		<%= render :partial => "home/interest_points" %>
+	</div>
+</article>
+
+
+<article class="right_home">
+	<h3><%= link_to t('planning.planning') %></h3>
+	<div class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+	    <li>
+				<a href="/settings" id="btn_menu_settings"><%= t('planning.go') %></a>
+			</li>
+			<li>
+				<a href="/relation/customs"><%= t('planning.clear') %></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="planification">
+		<ul class="thumbnails sortable">
+			<%= render :partial => "home/planification" %>
+		</ul>
+		<!--http://jqueryui.com/draggable/#sortable-->
+	</div>
+  <div class="comments_object">
+    <h3><%= link_to t('comments') %></h3>
+    <%= render :partial => 'comments/new', :locals => { :activity => Trip.first.post_activity } %>
+    <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
+  </div>
+ </article>
+
+
