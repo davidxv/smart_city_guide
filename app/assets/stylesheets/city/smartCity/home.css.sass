@@ -1,32 +1,27 @@
-#content
-	@include makeRow() 
-	@include makeColumn(12, 0)
-	margin-left: 0px
+.container
 	.left_home
-		@include makeColumn(8, 0)
-		margin-left: 0px
-		
-		float: left
-		height: 90%
 		.info_city
-			@include makeColumn(8, 0)
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			margin-left: 0px
-			height: 400px
-			.item
-				img
-					width: 620px 
-					height: 400px
-			.carousel-caption
-				padding-top: 0
-				bottom: 0px
-				left: 0%
-				background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
-				h1
-					font-size: 35px
-					color: #9A9A9A
-					opacity: 0.8
-				p
-					font-size: 16px
+			.Carousel-trip
+				@include grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth)
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				.item
+					img
+						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						height: 300px
+						
+				.carousel-caption
+					padding-top: 0
+					bottom: 0px
+					left: 0%
+					background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
+					h1
+						font-size: 35px
+						color: #9A9A9A
+						opacity: 0.8
+					p
+						font-size: 16px
 
 		.interest_points
 
@@ -58,9 +53,6 @@
 
 
 	.right_home
-		@include makeColumn(4, 0)
-		margin-left: 0px
-		float: right
 		.navbar
 			margin-bottom: 10px 
 			ul

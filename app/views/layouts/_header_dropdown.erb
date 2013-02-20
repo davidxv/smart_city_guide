@@ -1,0 +1,49 @@
+<div class="btn-group">
+  <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">go to<span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="" href="/plannings">Profile</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Plannings</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Diaries</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Contacts</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Messages</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Create</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Events</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">Favourites</a>
+    </li>
+    <li>
+      <a class="" href="/plannings">cities</a>
+    </li>
+
+    <li class="divider">
+
+    <%= render :partial => 'layouts/header_dropdown_menu_sessions'%>
+    <li>
+      <%= link_to t('settings.main'), settings_path, :id => "btn_menu_settings" %>
+    </li>
+    <% if SocialStream.relation_model == :custom %>
+    <li>
+      <%= link_to t('account.privacy'), relation_customs_path %>
+    </li>
+    <% end %>
+    <li class="divider">
+    </li>
+    <li>
+      <%= link_to t('sign_out'), destroy_user_session_path, :method => :delete  %>
+    </li>
+  </ul>
+</div>

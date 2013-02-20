@@ -15,7 +15,8 @@
   <body>
     <%= render :partial => "layouts/header" %>
     <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
-    <section class="container">
+    <section class="container ">
+      <div class="banner"></div>
       <%= yield %>
     </section>
     <footer class="footer">
