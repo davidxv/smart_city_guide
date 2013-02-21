@@ -3,38 +3,30 @@
 	<div class="search_all">
 		<form class="form-search ">
 	    <div class="input-append">
-	    	<input type="text" class="span2 search-query">
+	    	<input type="text" class="search-query">
 	    	<button type="submit" class="btn">Search</button>
 	    </div>
 	  </form>
-	 </div>
+	</div>
 <!--options search-->
-<div class="option_search">
-   <div class="btn-group">
-    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    	Filter by
-    	<span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-    	<li>
-				<label class="checkbox">
-					<input type="checkbox" value="">
-					Popular
-				</label>
-    	</li>
-    	<li>
-				<label class="checkbox">
-					<input type="checkbox" value="">
-					Prize
-				</label>
-    	</li>
-    </ul>
-   </div>
+  <div class="option_search">
+    <div class="btn-group">
+      <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+      	Filter by
+      	<span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <%= render :partial => "trips/select" %>
+      </ul>
+    </div>
   </div>
 <!--view tipe-->
-	<div class="view_type">
-		<button class="btn">map</button>
-		<button class="btn">list</button>
+  <div class="view_type">
+    <div class="btn-group">
+      <button class="btn">list</button>
+      <button class="btn">expanded</button>
+      <button class="btn">map</button>
+    </div>
   </div>
 
 <!--view tipe-->

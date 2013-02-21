@@ -1,14 +1,14 @@
 @import 'chosen'
-.content-full,
 .timeline,
 .comments
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
   .media,
   .root
     border-bottom: 1px solid #e1e1e1
     .avatar
       @include border-radius (5px)
       img
-        width: 60px !important
+        @include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
     .media-body
       color: $grayLight
       word-wrap: break-word
@@ -99,33 +99,24 @@
     .likes
       margin-left: 66px !important
       font-size: 12px
-        
+
+
+    
+#comments
+  .new_comment
+    .avatar
+      display: inline-block
+      float: left
+      @include grid-fluid-span(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
+
 
 #comment_text
-  float: right
-  width: 357px
+  @include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  display: inline-block
+  float: left
 
 
-#new_comment
-  margin-left: 20px
-  div
-    .btb
-      @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25))
-      float: right
-      margin-right: 19px
-
-.new_comment
-  .avatar
-    float: left
-    margin-left: 16px
-    margin-right: 6px
-    margin-top: -10px
-    img
-      margin-top: 6px
-      width: 40px 
-    h6
-      margin-top: 69px
-    
 
 
 
