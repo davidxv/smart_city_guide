@@ -38,3 +38,7 @@ webrat.log
 
 # Ignore compiled assets
 /public/assets
+
+# Capistrano files
+Capfile
+/config/deploy.rb

@@ -22,18 +22,25 @@ end
 
 gem 'jquery-rails'
 
-social_stream_gems = lambda {
+# social_stream_gems = lambda {
+#   gem 'social_stream-base'
+#   gem 'social_stream-documents'
+#   gem 'social_stream-places'
+# }
+
+# # Developing Social Stream
+# if ENV['PLACES_DEV']
+#   path '../social_stream', &social_stream_gems
+# else
+#   git 'git://github.com/ging/social_stream.git', &social_stream_gems
+# end
+
+git 'git://github.com/ging/social_stream.git', branch: "master" do
   gem 'social_stream-base'
   gem 'social_stream-documents'
   gem 'social_stream-places'
-}
-
-# Developing Social Stream
-if ENV['PLACES_DEV']
-  path '../social_stream', &social_stream_gems
-else
-  git 'git://github.com/ging/social_stream.git', &social_stream_gems
 end
+
 
 # FI-WARE Authentication
 gem 'omniauth-fiware'
