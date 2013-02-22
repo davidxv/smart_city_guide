@@ -9,15 +9,15 @@
     <div class="wrapper container">
       <%= render :partial => "layouts/header" %>
       <div id="flash">
-        <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
+        <%#= render :partial => "layouts/flash", :locals => {:flash => flash} %>
       </div>
-
+<div id="toolbar " class="hidden-phone">
       <% if content_for?(:toolbar) %>
-        <div id="toolbar " class="hidden-phone">
+        
           <%= yield :toolbar %>
-        </div>
+        
       <% end %>
-
+</div>
       <section id="content" class="<%= content_section_class %>">
         <%= yield %>
       </section>
