@@ -19,11 +19,17 @@
       <% end %>
       <%= @place.description %>
     </div>
-    
-    <div id="comments" class="comments">
-      <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
-      <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
+    <div class="coment-social">
+      <div id="comments" class="comments">
+        <h2>comments</h2>
+        <div class="new-coments-box">
+          <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
+        </div>
+        <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
+      </div>
     </div>
+    
+
 	</div>
 <% end %>
 

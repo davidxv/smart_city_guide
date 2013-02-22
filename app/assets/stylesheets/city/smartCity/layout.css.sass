@@ -1,40 +1,122 @@
-//home
-.container
+@media (min-width: 1200px) 
+	//home
+	.container
 
-	.banner
-		width: 100%
-		height: 60px
-	.left_home
-		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		float: left
-		display: inline-block
-
-	.right_home
-		@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		float: right
-		display: inline-block
-
-.container
-	@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.toolbar
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		float: left
-		display: inline-block
-
-	.content-profile
-		@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		float: left
-		display: inline-block
-		margin-left: 20px
-		
-		.trip_content
+		.banner
+			width: 100%
+			height: 60px
+			display: inline-block
+		.left_home
 			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: left
 			display: inline-block
-		.social
+
+		.right_home
 			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: right
 			display: inline-block
 
+	.container
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		.toolbar
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+		.content-profile
+			@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+			margin-left: 20px
+			
+			.trip_content
+				@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: left
+				display: inline-block
+			.social
+				@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: right
+				display: inline-block
+
+
 
   
+@media (min-width: 768px) and (max-width: 979px)
+	//home
+	.container
+		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		.banner
+
+		.left_home
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+
+		.right_home
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+
+	.container
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		.toolbar
+
+			display: none
+
+		.content-profile
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+			
+			.trip_content
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: left
+				display: inline-block
+			.social
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: right
+				display: inline-block
+
+
+
+
+
+@media (max-width: 767px)
+	//home
+	.container
+
+
+		.banner
+
+
+		.left_home
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+		.right_home
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+
+	.container
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		.toolbar
+			display: none
+		.content-profile
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+		
+			.trip_content
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: left
+				display: inline-block
+			.social
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: right
+				display: inline-block

@@ -5,9 +5,10 @@
 			margin-bottom: 10px
 			margin-left: 10px
 			
-
+			
 			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			.thumbnail
+				height: 250px
 				h4
 					overflow: hidden
 					white-space: nowrap
@@ -24,6 +25,7 @@
 					padding-bottom: 0px
 					margin-bottom: 0px
 					margin-top: 5px
+
 
 
 
@@ -105,3 +107,29 @@
 
 
 		
+
+@media (max-width: 767px)
+	.guide_home
+
+		ul.thumbnails
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			li
+				margin-left: 0px
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				.thumbnail
+					h4
+						overflow: hidden
+						white-space: nowrap
+						text-overflow: ellipsis
+						text-align: left
+						margin-bottom: 3px
+						margin-top: 3px
+						font-size: 16px
+					img
+						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						height: 120px
+					p
+						font-size: 12px
+						padding-bottom: 0px
+						margin-bottom: 0px
+						margin-top: 5px
