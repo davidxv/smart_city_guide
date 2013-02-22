@@ -1,0 +1,91 @@
+@import "jquery.cleditor"
+
+.content-large
+  @include makeColumn(10, 0)
+
+.content_left
+  @include makeColumn(3, 0)
+  display: inline
+  .avatar
+    display: inline
+  header
+    display: inline-block
+.content_right
+  @include makeColumnoMargin(7, 0)
+  color: $gray
+  display: inline-block
+  margin-bottom: 15px
+  .subject
+    font-weight: normal
+    font-size: 14px
+    a
+      font-size: 15px
+      font-weight: bold
+      &:hover
+        @include opacity (0.4)
+        text-decoration: none
+  .briefing
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    color: $gray
+  
+  .date
+    color: $gray
+    font-size: 11px
+    display: inline
+    margin: 0 13px 0 4px
+
+  .action
+    float: right
+    margin-top: -20px 10px 0 0
+
+#conversation
+  .new_message
+    margin-left: 20px
+  
+#ck_editor
+  .cleditorMain
+    @include border-radius(5px) 
+    width: 694px !important
+.new_message
+  .btn
+    @include buttonBackground($blueDark, $blue, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25))
+    margin: 15px 61px 0 0
+
+.conversation
+  @include opacity (0.5)
+
+.unread
+  @include opacity (50)
+
+.conversation_full
+  h3
+    white-space: nowrap
+    width: 50%
+    overflow: hidden
+    text-overflow: ellipsis
+    display: inline
+  .participants
+    padding: 7px 10px 9px 10px
+    @include border-radius(5px)
+    border: 1px solid #f1f1f1
+    img
+      padding: 4px 1px 2px 2px
+      width: 40px
+  .action
+    display: inline-block
+  .cont_conversation
+    .cleditorMain
+      @include border-radius(5px) 
+    .actions
+      margin-top: 10px
+
+  .message
+    .media
+      margin-left: 20px
+      .name
+        display: inline
+      .date
+        display: inline-block
+        color: $grayLighter

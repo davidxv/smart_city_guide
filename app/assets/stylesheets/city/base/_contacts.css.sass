@@ -1,0 +1,72 @@
+.loading
+  width: auto
+  
+#sent,
+#received
+  margin-left: 0px 
+  .contact
+    padding: 5px 4px
+    margin-right: 10px
+  .avatar
+    @include makeColumnoMargin(1, 0)
+    display: inline
+    img
+      @include border-radius(5px)
+      width: 45px 
+   
+  .data
+    @include makeColumn(2, 0)
+    display: inline-block
+    margin: 0px 0px 16px -7px
+    .name
+      color: $black
+      .x
+        font-size: 12px
+        color: $black
+        a
+          float: right
+          text-decoration: none
+          margin-top: -19px
+    .info
+      font-size: 12px
+      color: $grayLight
+  .add
+    @include makeColumnoMargin(3, 0)
+    font-size: 10px
+    z-index: 1
+    .edit_contact
+      margin-bottom: 0px
+    .dropdown-toggle
+      margin-left: 0 
+      widht: 100%
+
+.tab-content
+  ul
+    display: inline
+  input
+    &[type="text"]
+      @include makeColumn (2, 0)
+      float: right
+      margin-top: 6px
+      display: inline-block
+  .tab-content
+    clear: both
+#contact-form
+  ul
+    @include makeColumnoMargin(3, 0)
+    input
+      &[type="check"]
+        display: inline
+    label
+      display: inline-block
+      margin-left: 10px
+  .name_text_area
+    font-size: 16px
+  .new_contact_text_area
+    @include makeColumn(6, 0)
+    @include clearfix
+    height: 200px 
+  input
+    &[type="submit"]
+      float: right
+      margin-right: 74px
