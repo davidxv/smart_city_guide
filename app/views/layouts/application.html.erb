@@ -11,17 +11,18 @@
       <div id="flash">
         <%#= render :partial => "layouts/flash", :locals => {:flash => flash} %>
       </div>
-<div id="toolbar " class="hidden-phone">
-      <% if content_for?(:toolbar) %>
-        
+      <div id="toolbar " class="hidden-phone">
+        <% if content_for?(:toolbar) %>
           <%= yield :toolbar %>
-        
-      <% end %>
-</div>
-      <section id="content" class="<%= content_section_class %>">
+        <% end %>
+      </div>
+      <section class="container">
+        <div class="row-fluid">
+        <div class="banner"></div>
         <%= yield %>
+        </div>
       </section>
-  
+  <div class="hidden-phone">
       <% if content_for?(:sidebar) %>
         <aside id="sidebar">
           <div id="sidebarContent">
@@ -29,9 +30,10 @@
           </div>
         </aside>
       <% end %>
+      </div>
     </div>
     
-    <%= render :partial => "layouts/footer" %>
+    <%#= render :partial => "layouts/footer" %>
 
   </body>
   

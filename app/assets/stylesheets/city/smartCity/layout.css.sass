@@ -38,23 +38,63 @@
 				float: right
 				display: inline-block
 
+@media (min-width: 980px) and (max-width: 1050px)
+	//home
+	.container
+		padding: 20px
+
+		.banner
+			width: 100%
+			height: 60px
+			display: inline-block
+		.left_home
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+		.right_home
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: right
+			display: inline-block
+
+	.container
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		.toolbar
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+
+		.content-profile
+			@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			float: left
+			display: inline-block
+			margin-left: 20px
+			
+			.trip_content
+				@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: left
+				display: inline-block
+			.social
+				@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+				float: right
+				display: inline-block
 
 
   
 @media (min-width: 768px) and (max-width: 979px)
 	//home
 	.container
-		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 		.banner
 
 		.left_home
-			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: left
 			display: inline-block
 
 
 		.right_home
-			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: left
 			display: inline-block
 
