@@ -6,7 +6,7 @@
 <%= render :partial => "layouts/head" %>
   </head>
 
-  <body>
+  <bodyclass="fondo">
     <div class="wrapper container">
       <header id="header">
         <%= render :partial => "layouts/header" %>
@@ -17,7 +17,7 @@
             <%#= render :partial => "layouts/flash", :locals => {:flash => flash} %>
           </div>
 
-          <%= render :partial => "layouts/description" %>
+          <%#= render :partial => "layouts/description" %>
 
           <%= yield %>
         </div>
@@ -32,3 +32,5 @@
     </footer>
   </body>
 </html>
+
+
