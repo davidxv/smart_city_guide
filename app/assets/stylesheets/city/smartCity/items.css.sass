@@ -1,10 +1,12 @@
 .guide_home
 	ul.thumbnails
-		width: 600px
+		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 		li
-			margin-bottom: 0px
-			width: 180px
-			height: 264px
+			margin-bottom: 10px
+			margin-left: 10px
+			
+
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			.thumbnail
 				h4
 					overflow: hidden
@@ -15,7 +17,7 @@
 					margin-top: 3px
 					font-size: 16px
 				img
-					width: 175px
+					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 					height: 120px
 				p
 					font-size: 12px
@@ -31,7 +33,7 @@
 		margin: 0
 		li
 		.thumbnails_home
-			@include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			margin-left: 0
 			margin-bottom: 10px
 		.thumbnail

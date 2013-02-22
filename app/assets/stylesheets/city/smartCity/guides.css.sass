@@ -1,8 +1,8 @@
 .guide_all
-	@include makeColumn(12, 0)
+	@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 	margin-left: 0px
 	.details
-		@include makeColumn(7, 0)
+		@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
 		margin-left: 0px
 		display: inline-block
 		h4
@@ -13,17 +13,18 @@
 			border-right: 1px solid $grayLighter
 			color: $gray
 			.cover
-				width: 200px
+				@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
 				height: 200px
 				display: inline-block
 				float: left
+				margin-right: 20px
 				img
 					width: 180px
 					height: 180px
 
 
 	.comments_object
-		@include makeColumn(5, 0)	
+		@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
 		margin-left: 0px
 		float: right
 		display: inline-block
@@ -31,7 +32,7 @@
 			text-align: right
 			line-height: 20px
 	.map
-		@include makeColumn(8, 0)
+		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
 		margin-left: 0px
 		display: inline-block
 	.places
@@ -51,6 +52,9 @@
 		width: 948px
 		@include border-radius(10px)
 
+.coment-social
+	@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+	float: right
 
 
 
