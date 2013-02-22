@@ -12,13 +12,6 @@
     </div>   
 	  
     <%#= place_timeline_thumb(@place) %>
-    <div class="description">
-      <%= render :partial => 'place_info' %>
-      <% unless @place.description.blank? %>
-        <h3><%= t('place.info.description.description') %></h3>
-      <% end %>
-      <%= @place.description %>
-    </div>
     <div class="coment-social">
       <div id="comments" class="comments">
         <h2>comments</h2>
@@ -28,6 +21,14 @@
         <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
       </div>
     </div>
+    <div class="description">
+      <%= render :partial => 'place_info' %>
+      <% unless @place.description.blank? %>
+        <h3><%= t('place.info.description.description') %></h3>
+      <% end %>
+      <%= @place.description %>
+    </div>
+
     
 
 	</div>
