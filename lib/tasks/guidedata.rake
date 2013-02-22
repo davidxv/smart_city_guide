@@ -147,6 +147,13 @@ namespace :db do
                       :user_author_id => demo.id,
                       :relation_ids   => Array(Relation::Public.instance.id)
 
+        Diary.create  :title    => "My trip around FI-CONTENT",
+                      :trip_id  => Trip.first.id,
+                      :author_id      => demo.id,
+                      :owner_id       => demo.id,
+                      :user_author_id => demo.id,
+                      :relation_ids   => Array(Relation::Public.instance.id)
+
         diaries_stop = Time.now
         puts '  -> ' + (diaries_stop - diaries_start).round(4).to_s + 's'
       end
