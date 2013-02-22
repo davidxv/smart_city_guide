@@ -218,7 +218,7 @@ Devise.setup do |config|
                       
   config.omniauth :facebook, "129571360447856","eef39dce5e20e76f77495c59623bdb38"
 
-  config.omniauth :fiware, "3", "f39e8fcd3ce2772f02c30805754d2c2211aaa2ca26e47fdaa793987f7165c50c889d1d82e3bda72958c864d9df3b6ff9368dfe19a2f110dfb8028fd0ae9feed1"
+  config.omniauth :fiware, "4", "76a25e657e82cf1f34513dca9c184fe989ff623dbe14861b4fcbe2cec9fddafef4d9af46e7b5c9b1d3c7afb41939f9b8e1c93084f03d2d68aee7622ac006b886"
  #   :client_options => {:ssl => {:verify => false, :ca_file => 'etc/ssl/certs/TERENASSLCA.crt'}}
                       
   #config.omniauth :twitter, "wgTxO0fTpjTeSnjKC9ZHA","JepulVWwLcuAnGfWjwCu47yEP0TcJJfKtvISPBsilI"
