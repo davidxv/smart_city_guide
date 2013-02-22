@@ -20,14 +20,15 @@
 		margin-left: auto
 		margin-right: auto
 		margin-top: 150px
-		width: 380px
+		@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
 	h1, h2, h3, label, a,
 		color: #FFF
 
 .fondo   
 	background-image: url(himalaya.jpg)
 	background-size: 100%
-	background-repeat: none
+	background-repeat-x: none
+	background-repeat-y: none
 .pois
 	font-size: 12px
 
