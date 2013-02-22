@@ -10,9 +10,12 @@
       <p>Toledo was home to El Greco for the latter part of his life, and is the subject of some of his most famous paintings, including The Burial of the Count of Orgaz, exhibited in the Church of Santo Tomé.</p>
   </div>
 </div>
-  <div class="comments_object">
+<div class="coment-social">
+  <div id="comments" class="comments">
     <h2>comments</h2>
-    <%= render :partial => 'comments/new', :locals => { :activity => @guide.post_activity } %>
+    <div class="new-coments-box">
+      <%= render :partial => 'comments/new', :locals => { :activity => @guide.post_activity } %>
+    </div>
     <%= render :partial => 'activities/comments', :locals => { :activity => @guide.post_activity } %>
   </div>
-
+</div>
