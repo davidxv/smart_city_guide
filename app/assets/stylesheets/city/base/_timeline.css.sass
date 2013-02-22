@@ -5,6 +5,7 @@
   .media,
   .root
     border-bottom: 1px solid #e1e1e1
+    clear: both
     .avatar
       @include border-radius (5px)
       img
@@ -103,18 +104,39 @@
 
     
 #comments
-  .new_comment
-    .avatar
-      display: inline-block
-      float: left
-      @include grid-fluid-span(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  .new-coments-box
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    height: 80px
 
+    .new_comment
+      .avatar
+        display: inline-block
+        float: left
+        width: 60px
+        z-index: 2
+        position: relative
+        img
+          width: 60px
+          height: 60px
+          @include border-radius(30px)
+          border: 1px solid #CCCCCC
+          border-right: none
+      .btn
+        margin-left: -2px
+        margin-top: 8px
+        float: left
+        border-radius: 0px 4px 4px 0px
+        height: 43px
 
 
 #comment_text
   @include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
   display: inline-block
   float: left
+  margin-left: -9px
+  margin-top: 8px
+
 
 
 
@@ -124,10 +146,19 @@
 .comments
   .media,
   .root,
+
   .child
     .media-body
       color: $grayLight
       word-wrap: break-word
+
       .actions
         display: inline-block
         margin-bottom: -3px
+.comments
+  .activity
+    .avatar
+      .media-object
+        a
+          img
+            @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
