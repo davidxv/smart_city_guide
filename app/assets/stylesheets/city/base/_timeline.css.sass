@@ -9,6 +9,8 @@
     .avatar
       @include border-radius (5px)
       @include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      float: left
+      display: inline-block
       img
         
     .media-body
@@ -168,15 +170,29 @@
             @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 
 @media (max-width: 767px)
-  #comment_text
-    @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  .media-body
+    @include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    @include grid-fluid-offset(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
     display: inline-block
     float: left
-    margin-left: -9px
-    margin-top: 8px
-    padding-left: 10px
+    .media-heading
+      display: inline-block
+      @include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      float: left
+
+
+
+
+
+  #comment_text
+    @include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    float: left
+    margin-left: 0px
+    margin-top: 0px
+    padding-left: 0px
     margin-right: -10px
-    height: 32px
+    height: 33px
 
   #comments
     @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -196,7 +212,8 @@
             border-right: none
         .btn
           margin-left: -2px
-          margin-top: 8px
+          margin-top: 0px
           float: left
           border-radius: 0px 4px 4px 0px
           height: 43px
+          @include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)

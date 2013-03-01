@@ -1,206 +1,383 @@
 @media (min-width: 1200px) 
-	//home
 	.container
-
 		.banner
-			width: 100%
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			height: 60px
 			display: inline-block
-		.left_home
+		
+		.grid-1
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+		.grid-2_left
 			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
 			display: inline-block
-
-		.right_home
+			float: left
+		.grid-2_right
 			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: right
 			display: inline-block
-
-	.container
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		.toolbar
-			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: left
-			display: inline-block
-
-		.content-profile
-			@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
 			margin-left: 20px
-			
-			.trip_content
-				@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: left
-				display: inline-block
-			.social
-				@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: right
-				display: inline-block
 
-@media (min-width: 980px) and (max-width: 1050px)
-	//home
+
+		.grid-3_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_center
+			@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_right
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-4_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_center
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-5_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-left
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+//..............................................................................
+@media (min-width: 1000px) and (max-width: 1199px)
 	.container
-		padding: 20px
-
+		width: 1000px
 		.banner
-			width: 100%
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			height: 60px
 			display: inline-block
-		.left_home
+		
+		.grid-1
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+		.grid-2_left
 			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
 			display: inline-block
-
-		.right_home
+			float: left
+		.grid-2_right
 			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: right
 			display: inline-block
-
-	.container
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		.toolbar
-			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			float: left
-			display: inline-block
-
-		.content-profile
-			@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
 			margin-left: 20px
-			
-			.trip_content
-				@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: left
-				display: inline-block
-			.social
-				@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: right
-				display: inline-block
 
 
-  
+		.grid-3_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_center
+			@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_right
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-4_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_center
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-5_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-left
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+@media (min-width: 980px) and (max-width: 999px)
+	.container
+		width: 980px
+		.banner
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			height: 60px
+			display: inline-block
+		
+		.grid-1
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+		.grid-2_left
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-2_right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+			margin-left: 20px
+
+
+		.grid-3_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_center
+			@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_right
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-4_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_center
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-5_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-left
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+//..............................................................................
 @media (min-width: 768px) and (max-width: 979px)
-	//home
 	.container
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+	
 		.banner
-
-		.left_home
 			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
-
-
-		.right_home
-			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
-
-
-	.container
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		.toolbar
-
+			height: 60px
 			display: none
-
-		.content-profile
+		
+		.grid-1
 			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
 			display: inline-block
+			float: left
 
-			
-			.trip_content
-				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: left
-				display: inline-block
-			.social
-				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: right
-				display: inline-block
+		.grid-2_left
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-2_right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+			margin-left: 20px
 
 
+		.grid-3_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_center
+			@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_right
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-4_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_center
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-5_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-left
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
 
 
 
 @media (max-width: 767px)
-	//home
 	.container
-
-
 		.banner
-
-
-		.left_home
 			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
-
-		.right_home
-			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
-
-
-	.container
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		.toolbar
+			height: 60px
 			display: none
-		.content-profile
-			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-			float: left
-			display: inline-block
 		
-			.trip_content
-				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: left
-				display: inline-block
-			.social
-				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				float: right
-				display: inline-block
+		.grid-1
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+		.grid-2_left
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-2_right
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-3_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_center
+			@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-3_right
+			@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-4_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_center
+			@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		.grid-4_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+
+
+
+		.grid-5_left
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-left
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_center-right
+			@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
+		
+		.grid-5_right
+			@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
+			float: left
 
 
 
 
+@media (min-width: 1200px) 
+@media (min-width: 1000px) and (max-width: 1199px)
+@media (min-width: 980px) and (max-width: 1000px)
+@media (min-width: 768px) and (max-width: 979px)
+@media (max-width: 767px)
 
-
-.container
-	@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-1
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-
-
-	.grid-2_left
-		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-2_right
-		@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-
-
-	.grid-3_left
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-3_center
-		@include grid-fluid-span(7, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-3_right
-		@include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
-
-
-
-	.grid-4_left
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-4_center
-		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-4_right
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-
-
-
-	.grid-5_left
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-5_center-left
-		@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-5_center-right
-		@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	.grid-5_right
-		@include grid-fluid-span(2, $fluidGridColumnWidth, $fluidGridGutterWidth)

@@ -1,35 +1,35 @@
-<!--<article class="left_home">
+<div class="grid-2_left">
 	<div class="info_city">
 		<%= render :partial => "home/info_city" %>
 	</div>
 	<div class="interest_points">
 		<%= render :partial => "home/interest_points" %>
 	</div>
-</article>
-<article class="right_home">
+</div>
 
-	<div class="planification hidden-phone">
-	<h2><%= link_to t('planning.planning') %></h2>
-	<div class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			<b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-	    <li>
-				<a href="/settings" id="btn_menu_settings"><%= t('planning.go') %></a>
-			</li>
-			<li>
-				<a href="/relation/customs"><%= t('planning.clear') %></a>
-			</li>
-		</ul>
-	</div>
-		<ul class="thumbnails sortable">
+<div class="grid-2_right">
+
+	<div class="planification">
+		<h2><%= link_to t('planning.planning') %></h2>
+		<div class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+		    <li>
+					<a href="/settings" id="btn_menu_settings"><%= t('planning.go') %></a>
+				</li>
+				<li>
+					<a href="/relation/customs"><%= t('planning.clear') %></a>
+				</li>
+			</ul>
+		</div>
+		<ul class="thumbnails">
 			<%= render :partial => "home/planification" %>
 		</ul>
-
 	</div>
-	<h2><%= link_to t('comments') %></h2>
 
+	<h2><%= link_to t('comments') %></h2>
   <div id="comments" class="comments">
   	<div class="new-coments-box">
     	<%= render :partial => 'comments/new', :locals => { :activity => Trip.first.post_activity } %>
@@ -37,9 +37,4 @@
     <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
   </div>
   
-</article>
--->
-
-
-<div class="grid-2_left">SADFASDFASDF</div>
-<div class="grid-2_right">ASDFASFASDFA</div
+</div>
