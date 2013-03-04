@@ -24,8 +24,8 @@
         <div class="banner"></div>
 
         <% if content_for?(:toolbar) %>
-          <div class="toolbar">
-            <%= yield :toolbar %>
+          <div class="toolbar hidden-phone">
+            <%= yield :toolbar %> 
           </div>
         <% end %>
         <div class="content-profile">

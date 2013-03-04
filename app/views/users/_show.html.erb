@@ -1,3 +1,4 @@
+<div class="hidden-phone">    
 <% content_for :title do %>
   <%= @user.name+" | "+t('site.name') %>
 <% end %>
@@ -19,12 +20,12 @@
 
 <%= location(link_to(t('profile.one')+": "+truncate_name(sanitize @user.name)))%>
               
-<div class="hidden-phone">              
-<% toolbar :profile, :subject => @user %>
+          
+  <% toolbar :profile, :subject => @user %>
 </div>
 
 
-<div id="content_profile">
+<div id="content_profile" class="grid-3_center">
   <div class="trip_content">
     <ul class="trips">
       <div class="city"><h4>TOLEDO</h4></div>
@@ -132,7 +133,7 @@
       </li> 
     </ul>                
   </div>
-
+</div>
   <!--div class="guide_home">
     my guides
     <img src="/assets/prueba.png" width="115" height="100" style="background-image:url(/assets/toledo2.jpg);" alt="texto" />
@@ -147,19 +148,18 @@
   </ul>
   </div>
   </div-->
-  <div class="social">
-    <div class="hidden-phone">
-      <%= render :partial => "users/groups",
-         :locals  => { :user => @user } %>
-    </div>
-    <%= render :partial => "activities/index",
-         :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
-                       :owner => @user } %>
-
-    <%= javascript_tag do %>
-      $(function(){  
-        SocialStream.Timeline.init();  
-      });
-    <% end %>
+<div class="social grid-3_right">
+  <div class="hidden-phone">
+    <%= render :partial => "users/groups",
+       :locals  => { :user => @user } %>
   </div>
+  <%= render :partial => "activities/index",
+       :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
+                     :owner => @user } %>
+
+  <%= javascript_tag do %>
+    $(function(){  
+      SocialStream.Timeline.init();  
+    });
+  <% end %>
 </div>
