@@ -179,10 +179,11 @@
 	.list
 		width: 100%
 		margin-left: 0px
+
 		.thumbnail
 			display: inline-block
 			float: left
-			margin-bottom: -10px
+			margin-bottom: -10pxpx
 			margin-left: 10px
 			@include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
 			.photo
@@ -205,3 +206,17 @@
 				@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
 				address
 					margin-bottom: 0px
+
+
+
+@media (min-width: 0px) and (max-width: 979px)
+	.places
+		.list
+			width: 100%
+			margin-left: 0px
+			margin-top: 10px
+			.thumbnail
+				display: inline-block
+				float: left
+				margin-bottom: 5px
+				margin-left: 10px
