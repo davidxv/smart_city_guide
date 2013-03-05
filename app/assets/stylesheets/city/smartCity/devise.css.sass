@@ -1,10 +1,17 @@
-#devise
-	@include makeColumn(12, 0)
-	.objects
-		@include makeColumn(6, 6)
-		margin-left: 0px
-		display: block
-	.form
-		@include makeColumn(6, 6)
-		float: left
-		display: inline-block
+#forgot-pass
+	.forgot-img
+	
+		@extend .grid-2_left
+		display: none !important
+	.forgot
+	
+		@extend .grid-2_right
+		h2
+			width: 90%
+#presentation
+	@extend .grid-2_left
+	display: none !important
+.sign_in,
+.div_registration
+	@extend .grid-2_right
+	float: right
