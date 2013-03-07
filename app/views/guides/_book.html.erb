@@ -3,7 +3,30 @@
 <%= javascript_tag do %>
   $('#bookTab').on('shown', function (e) {
     if ($('.bookframe').html() == "") {
-      $('.bookframe').append('<iframe id="presentation_iframe" src="http://vishub.org/excursions/154.full" width="910" height="680" style="border:0" iframeborder="0" frameborder="0" iframeElement.frameBorder = 0;></iframe>');
+      $('.bookframe').append('<div id="presentation_wrapper"><iframe id="presentation_iframe" src="http://vishub.org/excursions/154.full" width="910" height="680" style="border:0" scrolling="no" iframeborder="0" frameborder="0" iframeElement.frameBorder = 0;></iframe></div>');
+      resize_iframe();
     };
+  });
+<% end %>
+
+<%= javascript_tag do %>
+  function width(){
+     return window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
+  }
+  function height(){
+     return window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight||0;
+  }
+
+  function resize_iframe() {
+    $('#presentation_wrapper').css('width', $('#book').width());
+    $('#presentation_iframe').css('width', $('#book').width());
+    $('#presentation_wrapper').css('height', height() - 200);
+    $('#presentation_iframe').css('height', height() - 200);
+  }
+
+  var resizeTimer;
+  $(window).resize(function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize_iframe, 100);
   });
 <% end %>
