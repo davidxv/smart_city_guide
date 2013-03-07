@@ -134,6 +134,7 @@
     </ul>                
   </div>
 </div>
+
   <!--div class="guide_home">
     my guides
     <img src="/assets/prueba.png" width="115" height="100" style="background-image:url(/assets/toledo2.jpg);" alt="texto" />
@@ -148,11 +149,21 @@
   </ul>
   </div>
   </div-->
-<div class="social grid-3_right">
+
+
+
+
+
+
+ <div class="social grid-3_right">
   <div class="hidden-phone">
     <%= render :partial => "users/groups",
        :locals  => { :user => @user } %>
   </div>
+
+
+
+  <div class="time-time">
   <%= render :partial => "activities/index",
        :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
                      :owner => @user } %>
@@ -162,4 +173,5 @@
       SocialStream.Timeline.init();  
     });
   <% end %>
+  </div>
 </div>
