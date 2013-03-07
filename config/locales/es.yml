@@ -205,6 +205,8 @@ es:
       mine: "Mis rutas"
       friends: "De amigos"
       recommended: "Recomendados"
+  site:
+    name: "Hello World"
   trip:
     actions:
       delete: "Borrar"
