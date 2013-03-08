@@ -16,9 +16,9 @@
 
   function resize_iframe() {
     $('#presentation_wrapper').css('width', $('#book').width());
-    $('#presentation_iframe').css('width', $('#book').width());
     $('#presentation_wrapper').css('height', height() - 200);
-    $('#presentation_iframe').css('height', height() - 200);
+    $('#presentation_iframe').css('width', $('#book').width() -10);
+    $('#presentation_iframe').css('height', height() - 200 - 10);
   }
 
   resize_iframe();

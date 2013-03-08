@@ -3,7 +3,7 @@
 <%= javascript_tag do %>
   $('#bookTab').on('shown', function (e) {
     if ($('.bookframe').html() == "") {
-      $('.bookframe').append('<div id="presentation_wrapper"><iframe id="presentation_iframe" src="http://vishub.org/excursions/154.full" width="910" height="680" style="border:0" scrolling="no" iframeborder="0" frameborder="0" iframeElement.frameBorder = 0;></iframe></div>');
+      $('.bookframe').append('<div id="presentation_wrapper"><iframe id="presentation_iframe" src="http://vishub.org/excursions/154.full" style="border:0" scrolling="no" iframeborder="0" frameborder="0" iframeElement.frameBorder = 0;></iframe></div>');
       resize_iframe();
     };
   });
@@ -19,9 +19,9 @@
 
   function resize_iframe() {
     $('#presentation_wrapper').css('width', $('#book').width());
-    $('#presentation_iframe').css('width', $('#book').width());
     $('#presentation_wrapper').css('height', height() - 200);
-    $('#presentation_iframe').css('height', height() - 200);
+    $('#presentation_iframe').css('width', $('#book').width() - 10);
+    $('#presentation_iframe').css('height', height() - 200 - 10);
   }
 
   var resizeTimer;
