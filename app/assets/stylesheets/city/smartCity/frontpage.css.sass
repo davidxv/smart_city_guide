@@ -34,3 +34,12 @@
 	input.input_username
 		width: 100%
 		display: block
+
+@media (max-width: 767px)
+	#frontpage
+		.login_frontpage
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 15%
+			@include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
