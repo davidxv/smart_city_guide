@@ -1,1 +1,31 @@
-<h2><%= @trip.title %> trip</h2>
+	<div id="info_city">
+		<div class="title-trip"><h1><%= @trip.title %></h1></div>
+		<%= render :partial => "trips/info" %>
+	</div>
+
+	<div id="planning_trip">
+		<h3><%= link_to t('planning.planning') %></h3>
+		<ul class="thumbnails">
+			<%= render :partial => "plannings/item" %>
+		</ul>
+	</div>
+
+
+	<div class="interest_points">
+		<%= render :partial => "home/interest_points" %>
+	</div>
+
+
+
+
+
+
+	<h2><%= link_to t('comments') %></h2>
+  <div id="comments" class="comments">
+  	<div class="new-coments-box">
+    	<%= render :partial => 'comments/new', :locals => { :activity => Trip.first.post_activity } %>
+  	</div>
+    <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
+  </div>
+  
+</div>

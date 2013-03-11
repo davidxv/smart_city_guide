@@ -4,38 +4,14 @@
   <head>
     <%= render :partial => "layouts/head" %>
   </head>
-
   <body>
     <div class="wrapper container">
       <%= render :partial => "layouts/header" %>
-      <div id="flash">
-        <%#= render :partial => "layouts/flash", :locals => {:flash => flash} %>
-      </div>
-      <div id="toolbar " class="hidden-phone">
-        <% if content_for?(:toolbar) %>
-          <%= yield :toolbar %>
-        <% end %>
-      </div>
-      <section class="container">
-        <div class="row-fluid">
-        <div class="banner"></div>
-        <%= yield %>
-        </div>
-      </section>
-
-      <div class="hidden-phone">
-      <% if content_for?(:sidebar) %>
-        <aside id="sidebar">
-          <div id="sidebarContent">
-            <%= yield :sidebar %>
-          </div>
-        </aside>
-      <% end %>
-      </div>
+      <div class="banner"></div>
+      <%= flashy %>
+      <%= yield %>
     </div>
-    
-    <%#= render :partial => "layouts/footer" %>
-
+    <%= render :partial => "layouts/footer" %>
   </body>
   
 </html>
