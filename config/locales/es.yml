@@ -206,7 +206,7 @@ es:
       friends: "De amigos"
       recommended: "Recomendados"
   site:
-    name: "Hello World"
+    name: "Binakuru"
   trip:
     actions:
       delete: "Borrar"
