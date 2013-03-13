@@ -1,0 +1,48 @@
+<div class="checkbox-menu">
+  <label for="check">guides</label>
+  <input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+  
+  <label for="check">routes</label>
+  <input type="checkbox" name="check" id="check" value="2" onchange="javascript:showContent()" />
+  
+  <label for="check">points</label>
+  <input type="checkbox" name="check" id="check" value="3" onchange="javascript:showContent()" />
+</div>
+
+
+
+
+<div class="content-checkbox">
+  <div id="content_guides" style="display: none;">
+    <ul class="thumbnails">
+      <%= render :partial => "guides/item" %>
+    </ul>
+  </div>
+
+  <div id="content_routes" style="display: none;">
+    <ul class="thumbnails">
+      <%= render :partial => "routes/item" %>
+    </ul>
+  </div>
+
+  <div id="content_points" style="display: none;">
+    <ul class="thumbnails">
+      <%= render :partial => "points/item" %>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
