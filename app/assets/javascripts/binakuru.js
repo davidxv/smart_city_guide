@@ -1,4 +1,3 @@
-
 function showContentGuides() {
   element = document.getElementById("content_guides");
   check = document.getElementById("checkGuides");
@@ -8,17 +7,11 @@ function showContentGuides() {
   else {
     element.style.display='none';
   }
-
 }
-  function displayResult()
-  {
-    var x=document.getElementById("checkGuides").defaultChecked;
-    alert(x);
-  }
 
 function showContentRoutes() {
   element = document.getElementById("content_routes");
-  check = document.getElementById("checkRoutes").defaultChecked;
+  check = document.getElementById("checkRoutes");
   if (check.checked) {
     element.style.display='block';
   }
@@ -29,13 +22,19 @@ function showContentRoutes() {
 
 function showContentPoints() {
   element = document.getElementById("content_points");
-  check = document.getElementById("checkPoints").defaultChecked;
+  check = document.getElementById("checkPoints");
   if (check.checked) {
     element.style.display='block';
   }
   else {
     element.style.display='none';
   }
+}
+
+
+function displayResult() {
+  var x=document.getElementById("checkGuides").defaultChecked;
+  alert(x);
 }
 
 
@@ -46,5 +45,3 @@ $(function() {
     return false;
   });
 });
-
-var x=document.getElementById("myCheck").defaultChecked;
