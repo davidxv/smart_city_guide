@@ -3,39 +3,16 @@
 <html lang="<%= I18n.locale.to_s %>">
   <head>
     <%= render :partial => "layouts/head" %>
-
-    <script>
-      $(function() {
-      $( ".sortable" ).sortable({
-      revert: true
-      });
-      $( "ul, li" ).disableSelection();
-      });
-    </script>
-
   </head>
   <body>
-
-    <%= render :partial => "layouts/header" %>
-
-    <section class="container">
-      <div class="row-fluid">
-
-        <div class="banner"></div>
-
-        <% if content_for?(:toolbar) %>
-          <div class="toolbar hidden-phone">
-            <%= yield :toolbar %> 
-          </div>
-        <% end %>
-        <div class="content-profile">
-          <%= yield %>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <%#= render :partial => "layouts/footer" %>
-    </footer>
-
+    <div class="wrapper container">
+      <%= render :partial => "layouts/header" %>
+      holaaa
+      <div class="banner"></div>
+      <%= flashy %>
+      <%= yield %>
+    </div>
+    <%= render :partial => "layouts/footer" %>
   </body>
+  
 </html>

@@ -1,14 +1,12 @@
-<div class="hidden-phone">    
 <% content_for :title do %>
-  <%= @user.name+" | "+t('site.name') %>
+  <%= "#{ @user.name } | #{ t 'site.name' }" %>
 <% end %>
-
 
 <% content_for :description do %>
   <% if @user.profile.description? %>
     <%= @user.profile.description%>
   <% else %>
-    <%= @user.name+" "+t('profile.is_on') + " "+ t('site.name') %>
+    <%= "#{ @user.name } #{ t('profile.is_on') } #{  t('site.name') }" %>
   <% end %>
 <% end %>
 
@@ -177,4 +175,15 @@
     });
   <% end %>
   </div>
+</div>
+
+<%#= render :partial => 'show' %>
+<div id=" profile_toolbar">
+  <ul class="toolbar">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
