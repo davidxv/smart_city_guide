@@ -22,6 +22,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'select2-rails'
 
 # social_stream_gems = lambda {
 #   gem 'social_stream-base'

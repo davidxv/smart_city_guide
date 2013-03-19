@@ -20,8 +20,8 @@
 
 <%= location(link_to(t('profile.one')+": "+truncate_name(sanitize @user.name)))%>
               
-          
-  <% toolbar :profile, :subject => @user %>
+  <%= render partial: 'toolbar/profile', locals: { subject: @user } %>
+  <%# toolbar :profile, :subject => @user %>
 </div>
 
 
@@ -164,9 +164,12 @@
 
 
   <div class="time-time">
-  <%= render :partial => "activities/index",
+  <%#= render :partial => "activities/index",
        :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
                      :owner => @user } %>
+  <%= render :partial => "activities/index",
+             :locals  => { section: @user,
+                           owner:   @user } %>
 
   <%= javascript_tag do %>
     $(function(){  

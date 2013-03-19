@@ -20,6 +20,18 @@ namespace :db do
                     :user_author_id => demo.id,
                     :relation_ids   => Array(Relation::Public.instance.id)
 
+        Trip.create :title          => "London",
+                    :author_id      => demo.id,
+                    :owner_id       => demo.id,
+                    :user_author_id => demo.id,
+                    :relation_ids   => Array(Relation::Public.instance.id)
+
+        Trip.create :title          => "San Francisco",
+                    :author_id      => demo.id,
+                    :owner_id       => demo.id,
+                    :user_author_id => demo.id,
+                    :relation_ids   => Array(Relation::Public.instance.id)
+
         trips_end = Time.now
         puts '  -> ' + (trips_end - trips_start).round(4).to_s + 's'
       end
@@ -32,7 +44,14 @@ namespace :db do
         guides_start = Time.now
 
         demo = Actor.find_by_slug('demo')
-        Guide.create  :title          => "Basic",
+        Guide.create  :title          => "Basic guide",
+                      :trip_id        => Trip.first.id,
+                      :author_id      => demo.id,
+                      :owner_id       => demo.id,
+                      :user_author_id => demo.id,
+                      :relation_ids   => Array(Relation::Public.instance.id)
+
+        Guide.create  :title          => "Toledo in 24 hours",
                       :trip_id        => Trip.first.id,
                       :author_id      => demo.id,
                       :owner_id       => demo.id,
@@ -58,6 +77,23 @@ namespace :db do
                       :owner_id       => demo.id,
                       :user_author_id => demo.id,
                       :relation_ids   => Array(Relation::Public.instance.id)
+
+        Route.create  :title          => "Toledo Templar",
+                      :trip_id        => Trip.first.id,
+                      :guide_id       => Guide.first.id,
+                      :author_id      => demo.id,
+                      :owner_id       => demo.id,
+                      :user_author_id => demo.id,
+                      :relation_ids   => Array(Relation::Public.instance.id)
+
+        Route.create  :title          => "Magical Journey",
+                      :trip_id        => Trip.first.id,
+                      :guide_id       => Guide.first.id,
+                      :author_id      => demo.id,
+                      :owner_id       => demo.id,
+                      :user_author_id => demo.id,
+                      :relation_ids   => Array(Relation::Public.instance.id)
+
 
         routes_end = Time.now
         puts '  -> ' + (routes_end - routes_start).round(4).to_s + 's'
