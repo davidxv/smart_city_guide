@@ -15,8 +15,8 @@
 <div class="content-checkbox">
   <div id="content_guides" >
 
-      <%= render :partial => "guides/item" %>
-
+      <%= render :partial => "guides/item", :locals => {:id => "guide1"}  %>
+      <%= render :partial => "guides/item", :locals => {:id => "guide2"}  %>
   </div>
 
   <div id="content_routes" >
