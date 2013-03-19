@@ -1,4 +1,22 @@
 // colors
 // -------------------------
-$color1:                  #ff4430 ;
-$color2:                  #ececec ;
+$color1: 									#0da592;
+$color2: 									#c07313;
+$background_color:				#f9f9f9;
+$color3: 									white;
+$color4:									#20170d;
+
+
+// typography
+// -------------------------
+//$title: 									"Lato light italic";
+//$section: 								"Lato light";
+//$link: 										"Lato regular";
+//$text: 										"OpenSans regular";
+//$title_prg:								"Lato regular";
+
+// Links
+// -------------------------
+$linkColor:        			$color1;
+$linkColorHover:        darken($linkColor, 15%);
+$link_prg: 							white; 
