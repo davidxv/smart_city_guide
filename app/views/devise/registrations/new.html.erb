@@ -1,7 +1,5 @@
 <section id="registration"> 
-  <section class="welcome">
-    
-  </section>
+
 
   <section class="div_registration">
     <h3>
@@ -35,10 +33,9 @@
       
       <%= f.text_field :name, :class =>"form_tag"  %>
 
-    
+      </div>
 
       <%= f.submit t('action.accept').capitalize,:class=>"btn"%>
-      </div>
 
 
 
@@ -46,7 +43,7 @@
       <%= link_to t('confirmation.not_received.long'), new_confirmation_path(resource_name) %><br />
     <% end -%>
       
-    <%= render :partial => "devise/shared/links" %>
+    <%= render :partial => "devise/shared/providers" %>
       
       <% end %>
   </section>
