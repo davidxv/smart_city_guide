@@ -1,57 +1,58 @@
-<section id="toolbar" class="toolbar-profile">
-  <div class="user">
-    <%= render partial: 'toolbar/logo',
-               locals: { subject: subject } %>
+<section id="toolbar_profile" class="">
+  <ul>
+    <li class="gutter">hola
+<!--       <div class="user">
+        <%#= render partial: 'toolbar/logo',
+                   locals: { subject: subject } %>
 
-    <div class="contact-button">
-      <%= contact_to subject %>
+        <div class="contact-button">
+          <%#= contact_to subject %>
 
-      <%= javascript_tag do %>
-        $(function() {
-          SocialStream.Contact.show();
-        });
-      <% end %>
-    </div>
-
-    <%= content_for :toolbar_menu do %>
-    
-  </div>
-  <ul class="buttons">
-    <li>
-      <%= link_to [ subject, :profile ], class: "btn-blue" do  %>
-        <i class='icon_tool16-info'></i> <%= t 'menu.information' %>
-      <% end %>
+          <%#= javascript_tag do %>
+<!--             $(function() {
+              SocialStream.Contact.show();
+            }); -->
+          <%# end %>
+<!--         </div>
+      <%#= content_for :toolbar_menu do %>
+      
+      </div> --> -->
     </li>
-    <li>
-      <%= render partial: 'toolbar/groups' %>
+    <li class="gutter">hola
+      <%#= link_to [ subject, :profile ], class: "btn-blue" do  %>
+       <!--  <i class='icon_tool16-info'></i> --> <%#= t 'menu.information' %>
+      <%# end %>
+    </li>
+    <li class="gutter">hola
+      <%#= render partial: 'toolbar/groups' %>
     </li>
 
-    <% if current_subject.present? && subject != current_subject %>
-      <li>
-        <%= link_to new_message_path(:receiver => subject.slug), class: "btn-blue" do %>
-          <i class='icon_navbar-message-blue'></i> <%= t 'send' %>
-        <% end %>
+    <%# if current_subject.present? && subject != current_subject %>
+      <li class="gutter">hola
+        <%#= link_to new_message_path(:receiver => subject.slug), class: "btn-blue" do %>
+          <!-- <i class='icon_navbar-message-blue'></i> --> <%#= t 'send' %>
+        <%# end %>
       </li>
-    <% end %>
-    <li>
-      <%= link_to [ subject, :profile ], class: "btn-blue" do  %>
-        <i class='icon_navbar-contacts'></i> <%= t 'menu.contacts' %>
-      <% end %>
+    <%# end %>
+    <li class="gutter">hola
+      <%#= link_to [ subject, :profile ], class: "btn-blue" do  %>
+        <!-- <i class='icon_navbar-contacts'></i> --> <%#= t 'menu.contacts' %>
+      <%# end %>
     </li>
 
-    <% if SocialStream.repository_models.present? %>
-      <li>
-        <%= link_to [ subject, :repository ], class: "btn-blue"  do %>
-          <%= image_tag 'icons/resources.png' %> <%= t 'repository.title' %>
-        <% end %>
+    <%# if SocialStream.repository_models.present? %>
+      <li class="no_gutter">hola
+        <div class="toolbar_contacs"></div>
+        <div class="toolbar_messages"></div>
+        <%#= link_to [ subject, :repository ], class: "btn-blue"  do %>
+          <%#= image_tag 'icons/resources.png' %> <%#= t 'repository.title' %>
+        <%# end %>
       </li>
-    <% end %>
-
-    <div class="base_items"/>
+    <%# end %>
   </ul>
-<% end %>
+<%# end %>
 
-<%= render partial: 'toolbar/menu' %>
+<%#= render partial: 'toolbar/menu' %>
 
-<%= render partial: 'toolbar/contacts', locals: { subject: subject } %>
+<%#= render partial: 'toolbar/contacts', locals: { subject: subject } %>
 </section>
