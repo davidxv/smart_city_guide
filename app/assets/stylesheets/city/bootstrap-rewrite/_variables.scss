@@ -45,8 +45,8 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 // Typography
 // -------------------------
 $sansFontFamily:        "OpenSans", Arial, sans-serif;
-$serifFontFamily:       "BreeSerif", Times New Roman, Times, serif !default;
-$handwriteFontFamily:   "ArchitectsDaughter", Courier New, monospace !default;
+$serifFontFamily:       "OpenSans", Times New Roman, Times, serif !default;
+$handwriteFontFamily:   "OpenSans", Courier New, monospace !default;
 
 $baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily;

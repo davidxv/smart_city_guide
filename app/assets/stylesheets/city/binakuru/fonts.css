@@ -1,0 +1,21 @@
+/************* typography*******/
+
+@font-face{
+  font-family: OpenSans;
+  src: url(city/fonts/opensans-regular.ttf);
+}
+
+@font-face{
+  font-family: LatoLight;
+  src: url(city/fonts/Lato-Light.ttf);
+}
+
+@font-face{
+  font-family: LatoLightItalic;
+  src: url(city/fonts/Lato-LightItalic.ttf);
+}
+
+@font-face{
+  font-family: LatoRegular;
+  src: url(city/fonts/Lato-Regular.ttf);
+}
