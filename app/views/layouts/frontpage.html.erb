@@ -1,39 +1,17 @@
 <!-- HTML5 DOCTYPE -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="<%= I18n.locale.to_s %>">
   <head>
-<%= render :partial => "layouts/head" %>
+    <%= render :partial => "layouts/head" %>
   </head>
-
   <body>
     <div class="wrapper container">
-      <header id="header">
-        <%= render :partial => "layouts/header" %>
-      </header>
-      <section>
-        <div id="wrapper_body">
-          <div id="flash">
-            <%#= render :partial => "layouts/flash", :locals => {:flash => flash} %>
-          </div>
-
-          <%#= render :partial => "layouts/description" %>
-
-          <%= yield %>
-        </div>
-      </section>
-      <br class="clearfloat" />
-      
-      <div class="push">
-      </div>
+      <%= render :partial => "layouts/header" %>
+      <div class="banner"></div>
+      <%= flashy %>
+      <%= yield %>
     </div>
-    <footer class="footer">
-      <%#= render :partial => "layouts/footer" %>
-    </footer>
-    <script>
-      $.backstretch("/assets/himalaya.jpg");
-    </script>
+    <%= render :partial => "layouts/footer" %>
   </body>
+  
 </html>
-
-

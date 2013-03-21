@@ -1,6 +1,6 @@
 .navbar
 	.navbar-inner
-		background-color: transparent
+		background-color: $bodyBackground
 		border: none
 		background-image: none
 		box-shadow: none
@@ -9,6 +9,7 @@
 				@include makeColumn(2, 0)
 				margin-left: 0px
 				padding: 13px 6px 0px 0px
+				
 			.logo
 				margin-top: 5px
 				display: inline-block
@@ -37,23 +38,38 @@
 					font-size: 16px
 					vertical-align: text-top
 					font-weight: normal
+			.logpover
+				display: inline-block
+				margin-top: 11px
+			.navregister
+				margin-left: 20px	
+			.asistfloat	
+				float: right	
+				width: 35%
+				.search-nav
+					margin-right: 40px
+					display: inline-block
+					.search-query
+						border: 0px solid #ffffff
 					
-			.search-nav
-				float: left
-				
-			.dropdown
-				float: right
-				.dropdown-toggle
-					a
-						color: $color1
-					.caret
-						border-left: 8px solid transparent
-						border-right: 8px solid transparent
-						border-top: 8px solid $color1
+				.dropdown
+					display: inline-block
+					vertical-align: top
+					margin-top: 11px
+					
+					color: #000
+					.dropdown-toggle
+						a
+							color: $color1
+						.caret
+							margin-top: 5px
+							border-left: 8px solid transparent
+							border-right: 8px solid transparent
+							border-top: 8px solid $color1
 
-					ul.dropdown-menu
-					
-						li
+						ul.dropdown-menu
+
+							li
 
 
 

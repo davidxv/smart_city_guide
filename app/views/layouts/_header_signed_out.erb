@@ -9,12 +9,20 @@
       <%= link_to(image_tag('barco_blanco.png', :alt => t('site.name')), root_path, class: 'logo') %>
       <a href="/home "class="brand">binakuru</a>
       
-
+      <a href="#" id="logIn" class="logpover" rel="popover" data-placement="bottom" data-original-title="Log in">login</a>
+      <div id="popover_content_wrapper" style="display: none">
+        <div><%= render partial: 'devise/sessions/form' %></div>
+      </div>
+      <a href="./new.html" class="navregister">register</a>
+    <div class="asistfloat">
       <div class="search-nav ">
         <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
         <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
         <% end %>
       </div>
+
+      
+
 
       <div class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">go to<span class="caret"></span></a>
@@ -22,9 +30,10 @@
           <li>
             sdioufiop
           </li>
-          
+
         </ul>
       </div>
+    </div>
 
     </div>
   </div>

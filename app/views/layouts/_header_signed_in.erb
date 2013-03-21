@@ -9,7 +9,8 @@
       <%= link_to(image_tag('barco_blanco.png', :alt => t('site.name')), root_path, class: 'logo') %>
       <a href="/home "class="brand">binakuru</a>
       
-      <div class="nav-collapse collapse pull-right">
+      
+      <div class="nav-collapse collapse">
         <ul class="nav">
           <li class="user-nav">
             <%= link_to current_subject do %>
@@ -17,16 +18,34 @@
               <span class="name"><%= truncate_name(current_subject.name, length: 15) %></span>
             <% end %>
           </li>
-          <li> 
-            <%= render partial: 'layouts/header_dropdown' %>
-          </li>
+          
         </ul>
       </div>
-      <div class="search-nav pull-right">
-        <%= form_tag search_path, method: 'get', class: "navbar-search pull-right" do %>
-          <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
+    <div class="asistfloat">
+      <div class="search-nav ">
+        <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
+        <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
         <% end %>
       </div>
+
+      
+
+
+      <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">go to<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          
+            <%= render partial: 'layouts/header_dropdown' %>
+          
+
+        </ul>
+      </div>
+    </div>
+
     </div>
   </div>
 </div>
+
+
+
+
