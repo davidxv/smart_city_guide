@@ -16,7 +16,7 @@
         <%= f.password_field :password, :class => "input_username" %>
 
         <%= f.submit t(:sign_in), :class => 'btn pull-right'%>
-        
+
         <div class="options">
           <%= link_to t('sign_up'), new_user_registration_path, :class => "register_link" %>
           |
@@ -31,7 +31,13 @@
   </article>
 </section>
 
-p'ulhgj.lgulou
+<a href="#" id="logIn" class="btn " rel="popover" data-placement="bottom" data-original-title="Log in">hover for popover</a>
+<div id="popover_content_wrapper" style="display: none">
+  <div><%= render partial: 'devise/sessions/form' %></div>
+</div>
+
+
+
 
 
 
