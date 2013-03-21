@@ -19,3 +19,8 @@
   font-family: LatoRegular;
   src: url(city/fonts/Lato-Regular.ttf);
 }
+
+@font-face{
+  font-family: LatoItalic;
+  src: url(city/fonts/Lato-Italic.ttf);
+}

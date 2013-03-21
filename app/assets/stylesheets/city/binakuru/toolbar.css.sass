@@ -1,69 +1,87 @@
 body
 	color: $bodyBackground
 #toolbar_profile
-	color: white
+	background-color: $white
 	width: 100%
-	height: 132px
+	height: 102px
 	.toolbar_content
 		ul
 			margin: 0
+			li:last-child,
+			li:first-child
+				margin: 0
+
 			li 
 				display: inline-block
 				height: 102px
 				position: relative
-.no_gutter 
-	margin-right: 0px
-	margin-left: 0px
-	margin-top: 0px
-	margin-bottom: 0px
-	width: 147px
-.gutter
-	margin-right: 1.37%
-	margin-left: 0px
-	margin-top: 0px
-	margin-bottom: 0px
-	width: 15.2%
-.info_profile
-	margin-left: -4px
-	width: 164px
-.toolbar_front
-	background-color: $color1
-	opacity: 0.7
-	z-index: 1
-	position: absolute
-	width: 100%
-	height: 100%
-	text-align: center
-	a 
-		font-family: $title_prg
-		color: white
-		font-size: 19px
-		display: block
-		position: absolute
-		height: 100%
-		top: 35%
-	ul	
-		li
-			display: block !important
-			height: 20px !important
-			text-align: left
-			margin-left: 13px 
-			a
-				font-family: $title_prg
-				color: white
-				font-size: 14px
-.toolbar_back
-	z-index: 0
-	position: absolute
-	width: 147px
-	height: 102px
-	img
-		width: 100%
-		height: 100%
-.toolbar_contacts
-	height: 43px
-	margin-bottom: 15px
-	position: relative
-.toolbar_messages
-	height: 43px
-	position: relative
+				margin-right: 1.35%
+				width: 15.2%
+				.toolbar_front
+					background-color: $color1
+					opacity: 0.7
+					z-index: 1
+					position: absolute
+					width: 100%
+					height: 100%
+					text-align: center
+					a 
+						font-family: $title_prg
+						color: $white
+						font-size: 17px
+						display: block
+						position: absolute
+						text-align: center
+						height: 100%
+						top: 35%
+						width: 100%
+					ul	
+						li
+							display: block !important
+							height: 20px !important
+							text-align: left
+							margin-left: 18px
+							a
+								font-family: $title_prg
+								color: white
+								font-size: 14px
+				.toolbar_back
+					z-index: 0
+					position: absolute
+					width: 147px
+					height: 102px
+					img
+						width: 100%
+						height: 100%
+				.toolbar_contacts
+					height: 43px
+					margin-bottom: 15px
+					position: relative
+					a
+						top: 26%
+						text-align: center
+						width: 100%
+				.toolbar_messages
+					height: 43px
+					position: relative
+					a
+						top: 26%
+						text-align: center
+						width: 100%
+			li.diaries
+				width: 10%
+				margin-right: 2.42%
+				a 
+					font-size: 14px
+					font-family: $title2
+					width: 88px
+					margin: 4px
+			li.diaries:first-child
+				margin-right: 2.42%
+			li.diaries:last-child
+				margin: 0
+
+			.info_profile
+				margin-left: -4px
+				width: 164px
+

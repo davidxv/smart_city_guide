@@ -9,6 +9,7 @@ $bodyBackground:          #f9f9f9;
 // typography
 // -------------------------
 $title: 									"LatoLightItalic";
+$title2: 									"LatoItalic";
 $section: 								"LatoLight";
 $link: 										"LatoRegular";
 $text: 										"OpenSans";
@@ -18,5 +19,6 @@ $title_prg:								"LatoRegular";
 // -------------------------
 $linkColor:        			$color1;
 $linkColorHover:        darken($linkColor, 15%);
-$link_prg: 							$red; 
+$link_prg: 							$red;
+$link_active: 					opacify($color1, 1);
 
