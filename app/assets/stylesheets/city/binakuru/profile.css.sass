@@ -1,18 +1,38 @@
 #content_profile
+	margin-top: 15px
+	float: right
+	width: 309px
+	.divider
+		margin-bottom: 32px
 	.trip_content
-		float: right
-		width: 309px
 		.trips
 			width: 197px
 			margin: auto
+			.city p
+				font-family: $title2
 			.plannings,
 			.diaries
-				width: 94px
-				height: 102px
 				display: inline-block
 				position: relative
-				top: 10px
-				.caption_img
-					z-index: 1
+				width: 94px
+				height: 102px
+				text-align: center
+				background-color: $color2
+				.diary_item
+					z-index: 0
 					position: absolute
-					top: 0
+					width: 100%
+				.caption_img
+					margin-left: 48px
+					position: absolute
+					top: -17px
+					z-index: 1
+				.planning_item
+					z-index: 0
+					position: absolute
+					width: 100%
+#wall
+	float: left
+	width: 643px
+	background-color: $white			
+	margin-top: 15px
