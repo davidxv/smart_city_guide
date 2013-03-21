@@ -1,4 +1,7 @@
 class Planning < ActiveRecord::Base
   include SocialStream::Models::Object
-  belongs_to :trip
+
+  validates :title, :presence => true, :length => { :maximum => 50 }
+  validates :duration, :presence => true, :numericality => true, :inclusion => { :in => 1..90 }
+
 end

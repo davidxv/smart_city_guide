@@ -1,6 +1,5 @@
 class PlanningsController < ApplicationController
   include SocialStream::Controllers::Objects
-  optional_belongs_to :trip
 
   def new
     @planning = Planning.new planning_params
@@ -17,10 +16,6 @@ class PlanningsController < ApplicationController
   # since you'll be able to reuse the same permit list between create and update. Also, you
   # can specialize this method with per-user checking of permissible attributes.
   def planning_params
-    params.require(:planning).permit(:title, :owner_id, :relation_ids, :author_id, :user_author_id, :trip_id)
-  end
-
-  def allowed_params
-    [ :trip_id ]
+    params.require(:planning).permit(:title, :owner_id, :relation_ids, :author_id, :user_author_id)
   end
 end

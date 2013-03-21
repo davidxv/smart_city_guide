@@ -165,6 +165,30 @@ namespace :db do
       task :plannings => :read_environment do
         puts 'Planning population'
         plannings_start = Time.now
+
+        demo = Actor.find_by_slug('demo')
+        Planning.create   :title          => "West Coast road trip",
+                          :author_id      => demo.id,
+                          :owner_id       => demo.id,
+                          :user_author_id => demo.id,
+                          :relation_ids   => Array(Relation::Public.instance.id),
+                          :start_date     => Date.yesterday,
+                          :end_date       => Date.tomorrow,
+                          :duration       => 3,
+                          :items          => "[{'type':'guide','id':'2'},{'type':'place','id':'1'},{'type':'place','id':'3'},{'type':'route','id':'3'},{'type':'guide','id':'1'}]",
+                          :days           => "['1':[{'type':'place','id':'3'},{'type':'route','id':'3'}],'2':[{'type':'guide','id':'1'},{'type':'place','id':'1'}],'3':[{'type':'guide','id':'2'}]]"
+
+        Planning.create   :title          => "First time to Madrid",
+                          :author_id      => demo.id,
+                          :owner_id       => demo.id,
+                          :user_author_id => demo.id,
+                          :relation_ids   => Array(Relation::Public.instance.id),
+                          :start_date     => "",
+                          :end_date       => "",
+                          :duration       => 1,
+                          :items          => "[{'type':'place','id':'2'},{'type':'route','id':'1'}]",
+                          :days           => "['1':[{'type':'route','id':'1'},{'type':'place','id':'2'}]]"
+
         plannings_stop = Time.now
         puts '  -> ' + (plannings_stop - plannings_start).round(4).to_s + 's'
       end
@@ -177,14 +201,12 @@ namespace :db do
 
         demo = Actor.find_by_slug('demo')
         Diary.create  :title    => "My trip around Toledo",
-                      :trip_id  => Trip.first.id,
                       :author_id      => demo.id,
                       :owner_id       => demo.id,
                       :user_author_id => demo.id,
                       :relation_ids   => Array(Relation::Public.instance.id)
 
         Diary.create  :title    => "My trip around FI-CONTENT",
-                      :trip_id  => Trip.first.id,
                       :author_id      => demo.id,
                       :owner_id       => demo.id,
                       :user_author_id => demo.id,
