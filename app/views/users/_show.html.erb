@@ -1,38 +1,35 @@
-<% content_for :title do %>
-  <%= "#{ @user.name } | #{ t 'site.name' }" %>
-<% end %>
+<%# content_for :title do %>
+  <%#= "#{ @user.name } | #{ t 'site.name' }" %>
+<%# end %>
 
-<% content_for :description do %>
-  <% if @user.profile.description? %>
-    <%= @user.profile.description%>
-  <% else %>
-    <%= "#{ @user.name } #{ t('profile.is_on') } #{  t('site.name') }" %>
-  <% end %>
-<% end %>
+<%# content_for :description do %>
+  <%# if @user.profile.description? %>
+    <%#= @user.profile.description%>
+  <%# else %>
+    <%#= "#{ @user.name } #{ t('profile.is_on') } #{  t('site.name') }" %>
+  <%# end %>
+<%# end %>
 
-<% content_for :keywords do %>
-  <%= @user.profile.subject.tag_list%>
-<% end %>
+<%# content_for :keywords do %>
+  <%#= @user.profile.subject.tag_list%>
+<%# end %>
 
 <%# sidebar %>
 
-<%= location(link_to(t('profile.one')+": "+truncate_name(sanitize @user.name)))%>
+<%#= location(link_to(t('profile.one')+": "+truncate_name(sanitize @user.name)))%>
               
   <%= render partial: 'toolbar/profile', locals: { subject: @user } %>
   <%# toolbar :profile, :subject => @user %>
-</div>
+
 
 
 <div id="content_profile" class="grid-3_center">
   <div class="trip_content">
+    <p class="section">diaries / guides</p>
     <ul class="trips">
-      <div class="city"><h4>TOLEDO</h4></div>
       <li class="plannings">
         <div class="planning_item">
           <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Planning</h4>
-          </div>
           <div class="caption_img">
             <img src="/assets/guia2.png" alt="">
           </div>
@@ -43,93 +40,61 @@
         <a href="/diaries/1">
           <div class="diary_item">
             <img src="/assets/san_juan.jpg" alt="Toledo_basica">
-            <div class="caption">
-              <h4>Diary</h4>
-            </div>
             <div class="caption_img">
               <img src="/assets/diario24.png" alt="">
             </div>
           </div>
         </a>
       </li> 
+      <div class="city"><p>Toledo 2013</p></div>
+      <div class="divider">
     </ul>
     <ul class="trips">
-      <div class="city"><h4>LONDON</h4></div>
       <li class="plannings">
         <div class="planning_item">
-          <img src="/assets/london.jpg" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Planning</h4>
-          </div>
+          <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
           <div class="caption_img">
             <img src="/assets/guia2.png" alt="">
           </div>
         </div>
       </li>
-      <li class="diaries">
-        <div class="diary_item">
-          <img src="/assets/lodon2.jpg" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Diary</h4>
-          </div>
-          <div class="caption_img">
-            <img src="/assets/diario24.png" alt="">
-          </div>
-        </div>
-      </li> 
-    </ul>     
-    <ul class="trips">
-      <div class="city"><h4>VENICE</h4></div>
-      <li class="plannings">
-        <div class="planning_item">
-          <img src="/assets/venice.jpg" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Planning</h4>
-          </div>
-          <div class="caption_img">
-            <img src="/assets/guia2.png" alt="">
-          </div>
-        </div>
-      </li>
-      <li class="diaries">
-        <div class="diary_item">
-          <img src="/assets/venice2.jpg" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Diary</h4>
-          </div>
-          <div class="caption_img">
-            <img src="/assets/diario24.png" alt="">
-          </div>
-        </div>
-      </li> 
-    </ul>
-    <ul class="trips">
-      <div class="city"><h4>FI-CONTENT</h4></div>
-      <li class="plannings">
-        <div class="planning_item">
-          <img src="/assets/planning.png" alt="Toledo_basica">
-          <div class="caption">
-            <h4>Planning</h4>
-          </div>
-          <div class="caption_img">
-            <img src="/assets/guia2.png" alt="">
-          </div>
-        </div>
-      </li>
-      <li class="diaries">
-        <a href="/diaries/2">
+
+      <li class="diaries" >
+        <a href="/diaries/1">
           <div class="diary_item">
-            <img src="/assets/diary.png" alt="Toledo_basica">
-            <div class="caption">
-              <h4>Diary</h4>
-            </div>
+            <img src="/assets/san_juan.jpg" alt="Toledo_basica">
             <div class="caption_img">
               <img src="/assets/diario24.png" alt="">
             </div>
           </div>
         </a>
       </li> 
-    </ul>                
+      <div class="city"><p>Toledo 2013</p></div>
+      <div class="divider"></div>
+    </ul>
+    <ul class="trips">
+      <li class="plannings">
+        <div class="planning_item">
+          <img src="/assets/toledo_basica.jpg" alt="Toledo_basica">
+          <div class="caption_img">
+            <img src="/assets/guia2.png" alt="">
+          </div>
+        </div>
+      </li>
+
+      <li class="diaries" >
+        <a href="/diaries/1">
+          <div class="diary_item">
+            <img src="/assets/san_juan.jpg" alt="Toledo_basica">
+            <div class="caption_img">
+              <img src="/assets/diario24.png" alt="">
+            </div>
+          </div>
+        </a>
+      </li> 
+      <div class="city"><p>Toledo 2013</p></div>
+      <div class="divider">
+    </ul>
   </div>
 </div>
 
@@ -152,10 +117,10 @@
 
 
 
-
+<!-- 
  <div class="social grid-3_right">
   <div class="hidden-phone">
-    <%= render :partial => "users/groups",
+    <%#= render :partial => "users/groups",
        :locals  => { :user => @user } %>
   </div>
 
@@ -165,17 +130,17 @@
   <%#= render :partial => "activities/index",
        :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
                      :owner => @user } %>
-  <%= render :partial => "activities/index",
+  <%#= render :partial => "activities/index",
              :locals  => { section: @user,
                            owner:   @user } %>
 
-  <%= javascript_tag do %>
+  <%#= javascript_tag do %>
     $(function(){  
       SocialStream.Timeline.init();  
     });
-  <% end %>
+  <%# end %>
   </div>
-</div>
+</div> -->
 
 <%#= render :partial => 'show' %>
 <div id=" profile_toolbar">
@@ -186,4 +151,38 @@
     <li></li>
     <li></li>
   </ul>
+</div>
+<div id="wall">
+  <p class="section">wall</p>
+  <div class="add_wall">
+    <div class="add_icon"><p>+</p></div>
+  </div>
+  <div class="wall_content">
+    <ul>
+      <li class="publication_space">
+        <p>Show something...</p>
+      </li>
+      <li>
+        <div class="wall_gallery">
+          <ul>
+            <li class="wall_image"></li>
+            <li class="wall_image"></li>
+          </ul>
+        </div>
+        <div class="options_publication">
+          <ul>
+            <li><a href="">comment</a></li>
+            <li><a href="">like</a></li>
+            <li><a href="">share</a></li>
+          </ul>
+        </div>
+        <div class="wall_date">
+          <div class="dates">
+            <div class="publication_date"> <p>23Feb</p></div>
+          </div>
+          <div class="divider"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

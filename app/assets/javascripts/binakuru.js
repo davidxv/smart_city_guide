@@ -45,3 +45,13 @@ $(function() {
     return false;
   });
 });
+
+//popover
+$(document).ready(function(){
+  $('#logIn').popover({ 
+    html : true,
+    content: function() {
+      return $('#popover_content_wrapper').html();
+    }
+  });
+});

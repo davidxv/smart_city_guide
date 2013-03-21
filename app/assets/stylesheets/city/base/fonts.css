@@ -6,11 +6,16 @@
 }
 
 @font-face{
-  font-family:BreeSerif;
-  src: url(social_stream/fonts/BreeSerif-Regular.ttf);
+  font-family:LatoLight;
+  src: url(social_stream/fonts/Lato-Light.ttf);
 }
 
 @font-face{
-  font-family:ArchitectsDaughter;
-  src: url(social_stream/fonts/ArchitectsDaughter.ttf);
+  font-family:LatoLightItalic;
+  src: url(social_stream/fonts/Lato-LightItalic.ttf);
+}
+
+@font-face{
+  font-family:LatoRegular;
+  src: url(social_stream/fonts/Lato-Regular.ttf);
 }

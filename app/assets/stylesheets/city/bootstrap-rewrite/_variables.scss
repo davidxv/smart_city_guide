@@ -32,8 +32,8 @@ $purple:                #7a43b6 !default;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+$bodyBackground:        #f9f9f9;
+$textColor:             $gray;
 
 
 // Links
@@ -45,8 +45,8 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 // Typography
 // -------------------------
 $sansFontFamily:        "OpenSans", Arial, sans-serif;
-$serifFontFamily:       "BreeSerif", Times New Roman, Times, serif !default;
-$handwriteFontFamily:   "ArchitectsDaughter", Courier New, monospace !default;
+$serifFontFamily:       "OpenSans", Times New Roman, Times, serif !default;
+$handwriteFontFamily:   "OpenSans", Courier New, monospace !default;
 
 $baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily;
