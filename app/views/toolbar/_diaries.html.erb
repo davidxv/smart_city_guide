@@ -1,12 +1,11 @@
 <section id="toolbar_profile" class="">
   <div class="toolbar_content">
     <ul>
-      <li class="">
+      <li class="diaries">
         <div class="toolbar_front">
-          <a href=""></a>
+          <a href="">Vacation 2012 Madrid</a>
         </div>
         <div class="toolbar_back">
-          <img src="/assets/profile.png" alt="">
         </div>
   <!--       <div class="user">
           <%#= render partial: 'toolbar/logo',
@@ -25,14 +24,9 @@
         
         </div> --> 
       </li>
-      <li class="info_profile">    
+      <li class="diaries">    
         <div class="toolbar_front">
-          <ul>
-            <li><a href="">name</a></li>
-            <li><a href="">age</a></li>
-            <li><a href="">city</a></li>
-            <li><a href="">following/followers</a></li>
-          </ul>
+          <a href="">name</a>
         </div>
         <div class="toolbar_back">
         </div>
@@ -40,9 +34,9 @@
          <!--  <i class='icon_tool16-info'></i> --> <%#= t 'menu.information' %>
         <%# end %>
       </li>
-      <li class="">
+      <li class="diaries">
         <div class="toolbar_front">
-          <a href="">favourites</a>
+          <a href="">profile</a>
         </div>
         <div class="toolbar_back">
         </div>
@@ -50,9 +44,9 @@
       </li>
 
       <%# if current_subject.present? && subject != current_subject %>
-        <li class="">
+        <li class="diaries">
           <div class="toolbar_front">
-            <a href="">repository</a>
+            <a href="">profile</a>
           </div>
           <div class="toolbar_back">
           </div>
@@ -61,9 +55,9 @@
           <%# end %>
         </li>
       <%# end %>
-      <li class="">
+      <li class="diaries">
         <div class="toolbar_front">
-          <a href="">events</a>
+          <a href="">profile</a>
         </div>
         <div class="toolbar_back">
         </div>
@@ -73,24 +67,29 @@
       </li>
 
       <%# if SocialStream.repository_models.present? %>
-        <li class="">
-          <div class="toolbar_contacts">
-            <div class="toolbar_front">
-              <a href="">contacts</a>
-            </div>
-            <div class="toolbar_back"></div>
-          </div>
-          <div class="toolbar_messages">
+        <li class="diaries">
             <div class="toolbar_front">
               <a href="">messages</a>
             </div>
             <div class="toolbar_back"></div>
-          </div>
           <%#= link_to [ subject, :repository ], class: "btn-blue"  do %>
             <%#= image_tag 'icons/resources.png' %> <%#= t 'repository.title' %>
           <%# end %>
         </li>
       <%# end %>
+
+        <li class="diaries">
+            <div class="toolbar_front">
+              <a href="">messages</a>
+            </div>
+            <div class="toolbar_back"></div>
+        </li>
+        <li class="diaries">
+            <div class="toolbar_front">
+              <a href="">messages</a>
+            </div>
+            <div class="toolbar_back"></div>
+        </li>       
     </ul>
   <%# end %>
 
