@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212092035) do
+ActiveRecord::Schema.define(:version => 20130305101231) do
 
   create_table "activities", :force => true do |t|
     t.integer  "activity_verb_id"
@@ -100,6 +100,10 @@ ActiveRecord::Schema.define(:version => 20130212092035) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "activity_object_id"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "actors", ["activity_object_id"], :name => "index_actors_on_activity_object_id"
@@ -137,17 +141,6 @@ ActiveRecord::Schema.define(:version => 20130212092035) do
 
   add_index "authentications", ["user_id"], :name => "index_authentications_on_user_id"
 
-  create_table "avatars", :force => true do |t|
-    t.integer  "actor_id"
-    t.string   "logo_file_name"
-    t.string   "logo_content_type"
-    t.integer  "logo_file_size"
-    t.datetime "logo_updated_at"
-    t.boolean  "active",            :default => true
-  end
-
-  add_index "avatars", ["actor_id"], :name => "index_avatars_on_actor_id"
-
   create_table "comments", :force => true do |t|
     t.integer  "activity_object_id"
     t.datetime "created_at"
@@ -177,13 +170,11 @@ ActiveRecord::Schema.define(:version => 20130212092035) do
 
   create_table "diaries", :force => true do |t|
     t.integer  "activity_object_id"
-    t.integer  "trip_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "diaries", ["activity_object_id"], :name => "index_diaries_on_activity_object_id"
-  add_index "diaries", ["trip_id"], :name => "index_diaries_on_trip_id"
 
   create_table "documents", :force => true do |t|
     t.string   "type"
@@ -288,13 +279,16 @@ ActiveRecord::Schema.define(:version => 20130212092035) do
 
   create_table "plannings", :force => true do |t|
     t.integer  "activity_object_id"
-    t.integer  "trip_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "duration"
+    t.text     "items"
+    t.text     "days"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "plannings", ["activity_object_id"], :name => "index_plannings_on_activity_object_id"
-  add_index "plannings", ["trip_id"], :name => "index_plannings_on_trip_id"
 
   create_table "posts", :force => true do |t|
     t.integer  "activity_object_id"
@@ -467,8 +461,6 @@ ActiveRecord::Schema.define(:version => 20130212092035) do
   add_foreign_key "audiences", "relations", :name => "audiences_on_relation_id"
 
   add_foreign_key "authentications", "users", :name => "authentications_on_user_id"
-
-  add_foreign_key "avatars", "actors", :name => "avatars_on_actor_id"
 
   add_foreign_key "comments", "activity_objects", :name => "comments_on_activity_object_id"
 
