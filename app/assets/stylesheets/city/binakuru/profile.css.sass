@@ -1,38 +1,113 @@
 #content_profile
-	margin-top: 15px
-	float: right
-	width: 309px
-	.divider
-		margin-bottom: 32px
-	.trip_content
-		.trips
-			width: 197px
-			margin: auto
-			.city p
-				font-family: $title2
-			.plannings,
-			.diaries
-				display: inline-block
-				position: relative
-				width: 94px
-				height: 102px
-				text-align: center
-				background-color: $color2
-				.diary_item
-					z-index: 0
-					position: absolute
-					width: 100%
-				.caption_img
-					margin-left: 48px
-					position: absolute
-					top: -17px
-					z-index: 1
-				.planning_item
-					z-index: 0
-					position: absolute
-					width: 100%
+  margin-top: 15px
+  float: right
+  width: 309px
+  .divider
+    margin-bottom: 32px
+  .trip_content
+    .trips
+      width: 197px
+      margin: auto
+      .city p
+        font-family: $title2
+        text-align: center
+
+      .plannings,
+      .diaries
+        display: inline-block
+        position: relative
+        width: 94px
+        height: 102px
+        text-align: center
+        background-color: $color2
+        .diary_item
+          z-index: 0
+          position: absolute
+          width: 100%
+        .caption_img
+          margin-left: 48px
+          position: absolute
+          top: -17px
+          z-index: 1
+        .planning_item
+          z-index: 0
+          position: absolute
+          width: 100%
 #wall
-	float: left
-	width: 643px
-	background-color: $white			
-	margin-top: 15px
+  float: left
+  width: 643px    
+  margin-top: 15px
+  position: relative
+  .add_wall
+    border-radius: 50%
+    width: 30px
+    height: 30px
+    background-color: $color1
+    position: absolute
+    z-index: 1
+    left: 97.7%
+    bottom: 0.7%
+    .add_icon
+      p 
+        color: white
+        font-size: 28px
+        margin-top: 5px
+        text-align: center
+  .wall_content
+    background-color: $white
+    height: 700px
+    width: 100%  
+    margin-top: -10px
+    position: absolute
+    z-index: 0
+    ul
+      margin: 0
+    .publication_space
+      border: 1px solid lightgrey
+      height: 30px
+      p 
+        font-family: $title
+        margin-left: 9px
+        margin-top: 3px
+    .wall_gallery
+      width: 478px
+      margin-right: auto
+      margin-left: auto
+      margin-top: 20px
+      .wall_image
+        display: inline-block
+        width: 227px
+        height: 169px
+        background-color: $color2
+      .wall_image:first-child
+        margin-right: 20px
+    .options_publication 
+      text-align: center
+      margin-top: 10px
+      li 
+        display: inline-block
+        margin-right: 20px
+        a 
+          color: grey
+          font-size: 12px
+    .wall_date
+      position: relative
+      height: 10px
+      .dates
+        border-radius: 50%
+        width: 70px
+        height: 70px
+        background-color: $color1
+        position: absolute
+        z-index: 1
+        left: 71.7%
+        bottom: -194.3%
+        .publication_date
+          p 
+            color: white
+            font-size: 18px
+            font-family: $title2
+            margin-top: 24px
+            text-align: center
+
+
