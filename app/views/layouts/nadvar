@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>my web</title>
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/miweb.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+<body>
+    <header class="row">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="./index.html" class="brand">crispin el puto amo</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">Get started</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="active">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">Customize</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item"><img src="img/pepino.jpg">
+
+          <div class="container">
+            <div class="carousel-caption span8">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item"><img src="img/pepino2.jpg">
+          <div class="container">
+            <div class="carousel-caption span8">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item"><img src="img/pepino3.jpg">
+          <div class="container">
+            <div class="carousel-caption span8">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+  </header>
+
+
+
+
+<div class="container">
+
+  
+
+  
+     <div class="arow"> 
+
+        <div class="span3 bs-docs-sidebar"> 
+          <ul class="nav nav-list bs-docs-sidenav affix">
+            <li class="active">
+              <a href="#dropdowns">
+                <i class="icon-chevron-right"></i>
+                  Dropdowns
+              </a>
+            </li>
+            <li>
+                <a href="#buttonGroups">
+                  <i class="icon-chevron-right"></i>
+                  Button groups
+                </a>
+            </li>
+            <li>
+                <a href="#buttonDropdowns">
+                  <i class="icon-chevron-right"></i>
+                    Button dropdowns
+                </a>
+            </li>
+            <li>
+                <a href="#navs">
+                  <i class="icon-chevron-right"></i>
+                    Navs
+                </a>
+            </li>
+           </ul> 
+         </div>
+        </div>  
+      </div> 
+
+      <section class="span8">
+
+        kuyfsydfyus sdlfh asdfhsjh fajsdhf ash fasdufh asjdfh asjddhf asjjdhf jsahddf asdjdfh sajdhf jsdhf lasjdhf asjdjdfh asdlfh añashdf ñjasdfh 
+        a sdifj ilusadhyf saudyfouysdf uiasdydfjasnhdf 
+        asdf asdhfluasutd gflkasgd f
+        asdd fasdjf jsa dfjkhas dfhaskudf asdhfi ashdflka shhasdf iaslkjdfg asdf
+        asdf iasj fhashdf kjsa dfhasdfui hs
+      </section>  
+
+      <footer class="span12">
+        
+        isdflksadfj                  sdfsaf                  asdfasf                     asdfasdf                asdfsadf
+
+
+      </footer>
+</body>
+</html>
