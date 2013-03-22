@@ -3,7 +3,7 @@ namespace :db do
   namespace :populate do
 
     desc "Fill SCG database with sample data"
-    task :create => [ 'create:trips', 'create:guides', 'create:routes', 'create:pois', 'create:plannings', 'create:diaries']
+    task :create => [ 'create:trips', 'create:guides', 'create:routes', 'create:pois', 'create:photos', 'create:plannings', 'create:diaries']
 
     namespace :create do
 
@@ -159,6 +159,25 @@ namespace :db do
         puts '  -> ' + (places_end - places_start).round(4).to_s + 's'
       end
 
+      desc "Add photos to places"
+      task :photos => :read_environment do
+        puts 'Photo population'
+        photos_start = Time.now
+
+        demo = Actor.find_by_slug('demo')
+        place = ActivityObject.find_by_title('Plaza Zocodover').object
+        #SS_DOCS_PATH=Gem::Specification.find_by_name('social_stream-documents').full_gem_path
+        #doc_files = Forgery::Extensions::Array.new(Dir.glob(File.join(SS_DOCS_PATH, 'lib', 'samples', "*")))
+        # Picture.create  :add_holder_place_id  => place.id,
+        #                 :author_id            => demo.id,
+        #                 :owner_id             => demo.id,
+        #                 :user_author_id       => demo.id,
+        #                 :relation_ids         => Array(Relation::Public.instance.id),
+        #                 :file                 => File.open("assets/places/zocodover/zocodover1.jpg", "r")
+
+        photos_end = Time.now
+        puts '  -> ' + (photos_end - photos_start).round(4).to_s + 's'
+      end
 
       # PLANNINGS
       desc "Create plannings"

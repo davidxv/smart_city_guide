@@ -1,17 +1,17 @@
-<div id="item-objetc" class="minimized ui-corner-all">
+<%= div_for(route, :class =>"item-object minimized ui-corner-all") do %>
   <div class="picture">
-    <%= link_to image_tag('toledo_basica.jpg'), Guide.first %>
+    <%= link_to image_tag('toledo_basica.jpg'), route %>
     <div class="actions">
       <a href="#" class="button-resizable" class="ui-state-default ui-corner-all"></a>
       <button class="btn btn-small" type="button">add</button> 
     </div>
   </div>
   <a class="title">
-    <li>title</li>
+    <li><%= route.title %></li>
   </a>
   <div class="info-show">
     <p class="info-item">
       Because you listened to Tupac, 2Pac, Snoop Dogg, The Notorious B.I.G., and Young JeezyBecause you listened to Tupac, 2Pac, Snoop Dogg, The Notorious B.I.G., and Young JeezyDogg, The Notorious B.I.G., and Young Jee
     </p>
   </div>
-</div>
+<% end %>
