@@ -1,5 +1,5 @@
 function showContentGuides() {
-  element = document.getElementById("content_guides");
+  element = document.getElementById("item-guides");
   check = document.getElementById("checkGuides");
   if (check.checked) {
     element.style.display='block';
@@ -10,7 +10,7 @@ function showContentGuides() {
 }
 
 function showContentRoutes() {
-  element = document.getElementById("content_routes");
+  element = document.getElementById("item-routes");
   check = document.getElementById("checkRoutes");
   if (check.checked) {
     element.style.display='block';
@@ -21,7 +21,7 @@ function showContentRoutes() {
 }
 
 function showContentPoints() {
-  element = document.getElementById("content_points");
+  element = document.getElementById("item-points");
   check = document.getElementById("checkPoints");
   if (check.checked) {
     element.style.display='block';
