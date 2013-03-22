@@ -13,23 +13,12 @@
 
 
 <div class="content-checkbox">
-  <div id="content_guides" >
 
-      <%= render :partial => "guides/item", :locals => {:id => "guide1"}  %>
-      <%= render :partial => "guides/item", :locals => {:id => "guide2"}  %>
-  </div>
+  <div id="item-guides" ><%= render :partial => "guides/item" %></div>
+  <div id="item-routes" ><%= render :partial => "routes/item" %></div>
+  <div id="item-points" ><%= render :partial => "points/item" %></div>
 
-  <div id="content_routes" >
 
-      <%= render :partial => "routes/item" %>
-
-  </div>
-
-  <div id="content_points" >
-
-      <%= render :partial => "points/item" %>
-
-  </div>
 </div>
 
 
