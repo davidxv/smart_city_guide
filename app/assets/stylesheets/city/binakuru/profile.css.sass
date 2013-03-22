@@ -9,6 +9,7 @@
       width: 197px
       margin: auto
       .city p
+        @include diaryGuideName
         text-align: center
 
       .plannings,
@@ -24,10 +25,17 @@
           position: absolute
           width: 100%
         .caption_img
+          @include border-top-left-radius(40px)
+          @include border-top-right-radius(40px)
+          @include border-bottom-right-radius(40px)
+          @include border-bottom-left-radius(40px)
           margin-left: 48px
           position: absolute
           top: -17px
           z-index: 1
+          background-color: $color1
+          width: 40px
+          height: 40px
         .planning_item
           z-index: 0
           position: absolute
@@ -65,6 +73,7 @@
       border: 1px solid lightgrey
       height: 30px
       p 
+        @include writeSpace
         margin-left: 9px
         margin-top: 3px
     .wall_gallery
@@ -75,9 +84,8 @@
       .wall_image
         display: inline-block
         background-color: $color2
-        border-radius: 50%
-        width: 150px
-        height: 150px
+        height: 169px
+        width: 226px
       .wall_image:first-child
         margin-right: 20px
     .options_publication 
@@ -87,15 +95,14 @@
         display: inline-block
         margin-right: 20px
         a 
-          color: grey
-          font-size: 12px
+          @include wallOptions
     .wall_date
       position: relative
       height: 10px
       .dates
         border-radius: 50%
-        width: 70px
-        height: 70px
+        width: 60px
+        height: 60px
         background-color: $color1
         position: absolute
         z-index: 1
@@ -103,10 +110,8 @@
         bottom: -194.3%
         .publication_date
           p 
-            color: white
-            font-size: 18px
-
-            margin-top: 24px
+            @include dates_filter
+            margin-top: 20px
             text-align: center
 
 
