@@ -6,7 +6,10 @@
       img
         @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
         max-height: 360px
-        float: left       
+        float: left
+      iframe 
+        width: 720px
+        height: 360px      
     .carousel-caption
       @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
       float: left
@@ -28,6 +31,7 @@
     width: 188px
     background-color: $color1
     @include border-radius(94px)
+  
     position: absolute
     z-index: 2
     margin-top: 20px
@@ -36,7 +40,6 @@
     h1
       margin-top: 70px
       color: $white
-      font-family: $title
 #interest_points
   @include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
   margin-left: 0px
