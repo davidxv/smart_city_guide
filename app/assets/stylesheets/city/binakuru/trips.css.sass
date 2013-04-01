@@ -47,10 +47,13 @@
   .checkbox-menu
     label
       display: inline-block
-      color: $red
+
   .content-checkbox
     display: inline-block
     float: left
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
+
     
     .content_guides
       display: inline-block
@@ -73,20 +76,20 @@
 .item-object
 
   position: relative
-  margin-right: 15px
-  margin-top: 15px
+  margin-right: 19px
+  margin-top: 19px
 
 .minimized
   display: inline-block
   float: left
-  width: 144px
-  height: 144px
+  width: 146px
+  height: 146px
   position: relative
   .picture
-    width: 144px
-    height: 144px
+    width: 146px
+    height: 146px
     img
-      height: 144px
+      height: 146px
       position: absolute
       @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
       .actions
@@ -108,7 +111,7 @@
           height: 20px
 
   a.title
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
     height: 26px
     width: 100%
     text-align: center
@@ -127,18 +130,18 @@
 .expanded
   display: inline-block
   float: left
-  width: 306px
-  height: 306px
+  width: 310px
+  height: 310px
   position: relative
   .picture
-    width: 306px
-    height: 144px
+    width: 310px
+    height: 146px
     img
-      height: 306
+      height: 310px
       position: absolute
       @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
   a.title
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.75)
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
     height: 26px
     width: 100%
     text-align: center
@@ -164,7 +167,7 @@
   .info-show
     display: block
     bottom: 0px
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.90)
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
     position: absolute
     height: 120px
     color: $white

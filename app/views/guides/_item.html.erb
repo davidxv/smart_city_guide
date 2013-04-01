@@ -3,7 +3,16 @@
     <%= link_to thumb_for(guide.main_picture, '540x220'), guide %>
     <div class="actions">
       <a href="#" class="button-resizable" class="ui-state-default ui-corner-all"></a>
-      <button class="btn btn-small" type="button">add</button> 
+      
+      <a href="#" id="add" class="btn" rel="popover" data-placement="bottom" >add</a>
+      <div id="popover_add" style="display: none">
+        <li>my planning</li>
+        <li>my favourites</li>
+        <li>my repository</li>
+      </div>
+
+
+
     </div>
   </div>
   <a class="title">
