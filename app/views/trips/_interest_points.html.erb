@@ -44,7 +44,7 @@
 
   <div id="item-points">
     <% @trip.places.each do |place| %>
-      <%= render :partial => "points/item", :locals => { :place => place } %>
+      <%= render :partial => "places/item", :locals => { :place => place } %>
     <% end %>
   </div>
 </div>

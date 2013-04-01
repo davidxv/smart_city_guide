@@ -40,8 +40,12 @@ function displayResult() {
 
 $(function() {
   $( ".button-resizable" ).click(function(){
-    $( ".minimized" ).switchClass( "minimized", "expanded", 1000 );
-    $( ".expanded" ).switchClass( "expanded", "minimized", 1000 );
+    var newDiv = $(this).closest(".item-object");
+    if (newDiv.hasClass("minimized")) {
+      newDiv.switchClass( "minimized", "expanded", 1000 );
+    } else {
+      newDiv.switchClass( "expanded", "minimized", 1000 );
+    }
     return false;
   });
 });
