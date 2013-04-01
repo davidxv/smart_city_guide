@@ -55,3 +55,12 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).ready(function(){
+  $('#add').popover({ 
+    html : true,
+    content: function() {
+      return $('#popover_add').html();
+    }
+  });
+});
