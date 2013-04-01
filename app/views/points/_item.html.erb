@@ -1,6 +1,6 @@
 <%= div_for(place, :class =>"item-object minimized ui-corner-all") do %>
   <div class="picture">
-    <%= link_to image_tag('toledo_basica.jpg'), place %>
+    <%= link_to thumb_for(place.main_picture, '540x220'), place %>
     <div class="actions">
       <a href="#" class="button-resizable" class="ui-state-default ui-corner-all"></a>
       <button class="btn btn-small" type="button">add</button> 
