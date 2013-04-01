@@ -71,7 +71,7 @@
 
 
 
-
+.popover.right .arrow:after
 
 
 .item-object
@@ -90,7 +90,13 @@
 .actions
   .popover
     @include border-radius(0px)
+    width: 146px
+    background-color: $color1
+    color: $white
 
+    .popover-inner
+      h3
+        display: none
 
 .minimized
   display: inline-block
