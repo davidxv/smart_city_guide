@@ -1,22 +1,17 @@
-<%#= place.title %>
-<%#= place.formatted %>
-<%#= place.streetAddress %>
-<%#= place.description %>
-<li class="list">
-	<div class="thumbnail">
-		<div class="photo">
-			<% photos = place.photos %>
-			<% if photos.empty? %>
-				<%= link_to(raw("<i class='icon_place_70-default'></i> "), place)%>
-			<% else %>
-			    <div><%= link_to thumb_for(photos.first, 'thumb48sq'), place %></div>
-			<% end %>
-		</div>
-		<div class="caption">
-			<a><%=link_to place.title, place %></a>
-			<address>
-				<%= place.streetAddress %>
-			</address>
-		</div>
-	</div>
-</li>
+<%= div_for(place, :class =>"item-object minimized ui-corner-all") do %>
+  <div class="picture">
+    <%= link_to thumb_for(place.main_picture, '540x220'), place %>
+    <div class="actions">
+      <a href="#" class="button-resizable" class="ui-state-default ui-corner-all"></a>
+      <button class="btn btn-small" type="button">add</button> 
+    </div>
+  </div>
+  <a class="title">
+    <li><%= place.title %></li>
+  </a>
+  <div class="info-show">
+    <p class="info-item">
+      Because you listened to Tupac, 2Pac, Snoop Dogg, The Notorious B.I.G., and Young JeezyBecause you listened to Tupac, 2Pac, Snoop Dogg, The Notorious B.I.G., and Young JeezyDogg, The Notorious B.I.G., and Young Jee
+    </p>
+  </div>
+<% end %>
