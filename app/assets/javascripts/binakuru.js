@@ -61,10 +61,33 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('#add').popover({ 
+  $('.btn-add').popover({ 
     html : true,
     content: function() {
       return $('#popover_add').html();
     }
   });
 });
+
+
+// $(document).ready(function(){
+//   $('.btn-add').each(function () {
+//     $(this).popover({ 
+//       html : true,
+//       content: function() {
+//         return $('#popover_add').html();
+//       }
+//     });
+//   });
+// });
+
+
+// $('body').on('click', function (e) {
+//   $('.btn-add').each(function () {
+//     //the 'is' for buttons that triggers popups
+//     //the 'has' for icons within a button that triggers a popup
+//     if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+//       $(this).popover('hide');
+//     }
+//   });
+// });
