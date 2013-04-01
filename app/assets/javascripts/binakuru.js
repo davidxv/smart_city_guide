@@ -20,9 +20,9 @@ function showContentRoutes() {
   }
 }
 
-function showContentPoints() {
-  element = document.getElementById("item-points");
-  check = document.getElementById("checkPoints");
+function showContentPlaces() {
+  element = document.getElementById("item-places");
+  check = document.getElementById("checkPlaces");
   if (check.checked) {
     element.style.display='block';
   }

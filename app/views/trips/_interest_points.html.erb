@@ -5,8 +5,8 @@
   <label for="check">routes</label>
   <input type="checkbox" name="check" id="checkRoutes" checked onchange="javascript:showContentRoutes()" />
   
-  <label for="check">points</label>
-  <input type="checkbox" name="check" id="checkPoints" checked onchange="javascript:showContentPoints()" />
+  <label for="check">places</label>
+  <input type="checkbox" name="check" id="checkPlaces" checked onchange="javascript:showContentPlaces()" />
 </div>
 
 
@@ -25,26 +25,10 @@
     <% end %>
   </div>
 
-  <div id="item-points">
+  <div id="item-places">
     <% @trip.places.each do |place| %>
       <%= render :partial => "points/item", :locals => { :place => place } %>
     <% end %>
   </div>
-    <div id="item-guides">
-    <% @trip.guides.each do |guide| %>
-      <%= render :partial => 'guides/item', :locals => { :guide => guide } %>
-    <% end %>
-  </div>
 
-  <div id="item-routes">
-    <% @trip.routes.each do |route| %>
-      <%= render :partial => "routes/item", :locals => { :route => route } %>
-    <% end %>
-  </div>
-
-  <div id="item-points">
-    <% @trip.places.each do |place| %>
-      <%= render :partial => "points/item", :locals => { :place => place } %>
-    <% end %>
-  </div>
 </div>
