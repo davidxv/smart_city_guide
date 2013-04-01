@@ -165,15 +165,111 @@ namespace :db do
         photos_start = Time.now
 
         demo = Actor.find_by_slug('demo')
+        guide = ActivityObject.find_by_title('Basic guide').object
+        Picture.create  :add_holder_guide_id  => guide.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "guides", "basic.jpg"), "r")
+
+        guide = ActivityObject.find_by_title('Toledo in 24 hours').object
+        Picture.create  :add_holder_guide_id  => guide.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "guides", "24hours.jpg"), "r")
+
+        route = ActivityObject.find_by_title('The leyends of Toledo').object
+        Picture.create  :add_holder_route_id  => route.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "routes", "leyends.jpg"), "r")
+
+        route = ActivityObject.find_by_title('Toledo Templar').object
+        Picture.create  :add_holder_route_id  => route.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "routes", "templars.jpg"), "r")
+
+        route = ActivityObject.find_by_title('Magical Journey').object
+        Picture.create  :add_holder_route_id  => route.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "routes", "magic.jpg"), "r")
+
         place = ActivityObject.find_by_title('Plaza Zocodover').object
-        #SS_DOCS_PATH=Gem::Specification.find_by_name('social_stream-documents').full_gem_path
-        #doc_files = Forgery::Extensions::Array.new(Dir.glob(File.join(SS_DOCS_PATH, 'lib', 'samples', "*")))
-        # Picture.create  :add_holder_place_id  => place.id,
-        #                 :author_id            => demo.id,
-        #                 :owner_id             => demo.id,
-        #                 :user_author_id       => demo.id,
-        #                 :relation_ids         => Array(Relation::Public.instance.id),
-        #                 :file                 => File.open("assets/places/zocodover/zocodover1.jpg", "r")
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "zocodover", "zocodover1.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "zocodover", "zocodover2.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "zocodover", "zocodover3.jpg"), "r")
+
+        place = ActivityObject.find_by_title('Cathedral of Toledo').object
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "catedral", "catedral1.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "catedral", "catedral2.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "catedral", "catedral3.jpg"), "r")
+
+        place = ActivityObject.find_by_title('Alcazar of Toledo').object
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "alcazar", "alcazar1.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "alcazar", "alcazar2.jpg"), "r")
+
+        Picture.create  :add_holder_place_id  => place.id,
+                        :author_id            => demo.id,
+                        :owner_id             => demo.id,
+                        :user_author_id       => demo.id,
+                        :relation_ids         => Array(Relation::Public.instance.id),
+                        :file                 => File.open(File.join(Rails.root, "lib", "samples", "places", "alcazar", "alcazar3.jpg"), "r")
 
         photos_end = Time.now
         puts '  -> ' + (photos_end - photos_start).round(4).to_s + 's'
