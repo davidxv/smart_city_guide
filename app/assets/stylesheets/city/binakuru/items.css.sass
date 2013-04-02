@@ -1,0 +1,133 @@
+//item-trips
+.item-object
+  position: relative
+  margin-right: 19px
+  margin-top: 19px
+
+// BTN ADD POPOVER
+
+.btn-add
+  @include border-radius(15px)
+  background-color: $color1
+  background-image: url("ico/add+.png")
+  width: 30px
+  height: 30px
+  background-repeat: no-repeat
+  background-position: 50%
+
+.actions
+  .popover.right 
+    .arrow:after
+      border-right-color: $color1 !important
+  .popover
+    @include border-radius(0px)
+    width: 146px
+    background-color: $color1
+    color: $white
+
+    .popover-inner
+      h3
+        display: none
+
+
+// MINIMIZED
+
+.minimized
+  display: inline-block
+  float: left
+  width: 146px
+  height: 146px
+  position: relative
+  .picture
+
+    img
+      height: 100%
+      position: absolute
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      .actions
+        display: none
+    &:hover
+      .actions
+        display: block
+        width: 100%
+        position: absolute 
+        .btn-add
+          position: absolute 
+          left: 10px
+          top: 10px        
+        .button-resizable
+          position: absolute
+          top: 0px
+          right: 0
+          background-color: $color1
+          width: 20px
+          height: 20px
+
+  a.title
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
+    height: 26px
+    width: 100%
+    text-align: center
+    position: absolute
+    bottom: 0
+    color: $white 
+    font-size: 14px
+    text-decoration: none
+    right: 0
+    font-family: $LatoItalic
+    .li
+      margin-top: 5px
+  .info-show
+    display: none
+
+// EXPANDED
+
+.expanded
+  display: inline-block
+  float: left
+  width: 310px
+  height: 310px
+  position: relative
+  .picture
+    img
+      height: 100%
+      position: absolute
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  a.title
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
+    height: 26px
+    width: 100%
+    text-align: center
+    position: absolute
+    bottom: 46%
+    color: $white 
+    font-size: 16px
+    text-decoration: none
+    right: 0
+    font-family: $LatoItalic
+
+    .li
+      margin-top: 5px
+
+  .btn-add
+    position: absolute 
+    left: 10px
+    top: 10px 
+  .button-resizable
+    position: absolute
+    top: 0px
+    right: 0
+    background-color: $red
+    width: 20px
+    height: 20px
+
+  .info-show
+    display: block
+    bottom: 0px
+    background: none repeat scroll 0 0 rgba(192, 115, 19, 0.85)
+    position: absolute
+    height: 120px
+    color: $white
+    padding: 10px
+    font-size: 14px
+    font-family: $LatoItalic
