@@ -1,4 +1,10 @@
+
+
+
 <div class="checkbox-menu">
+  <label for="check_01">
+  <input id="check_01" type="checkbox" name="check_01" />
+
   <label for="check">guides</label>
   <input type="checkbox" name="check" id="checkGuides" checked onchange="javascript:showContentGuides()" />
   
@@ -9,7 +15,9 @@
   <input type="checkbox" name="check" id="checkPlaces" checked onchange="javascript:showContentPlaces()" />
 </div>
 
-
+<div class="filter">
+  <%= render :partial => 'layouts/filter' %>
+</div>
 
 
 <div class="content-checkbox">

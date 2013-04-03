@@ -45,8 +45,21 @@
   display: inline-block
   float: left
   .checkbox-menu
+    float: right
+    margin-bottom: -5px
     label
       display: inline-block
+    input[type=checkbox]
+      display: none
+    input[type=checkbox] + label
+      background: #fff
+      display: inline-block
+      width: 85px
+      height: 24px
+      background: url(ico/checkedoff.png) 0px 0px no-repeat
+      text-indent: 25px
+    input[type=checkbox]:checked + label
+      background: url(ico/checked.png) 0px 0px no-repeat
   .content-checkbox
     display: inline-block
     float: left
@@ -63,7 +76,6 @@
       display: inline-block
       ul
         margin: 0px
-
 #comments-element
   width: 31.88%
   display: inline-block
