@@ -1,0 +1,55 @@
+#frontpage
+  display: inline-block
+  float: left
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  
+  .menu-map
+    background-color: $color2
+    height: 25px
+
+    padding-top: 5px
+    .button
+
+      padding: 0
+      width: 100%
+      li
+        display: inline
+        margin-left: 25px
+
+        a
+          @include info_use
+          text-decoration: none
+          padding: 3px
+          background-color: $color2
+          color: #fff
+        a:hover 
+          background-color: $color1
+          margin-top: -2px
+          padding-bottom: 10px 
+          @include border-top-left-radius(0px)
+          @include border-top-right-radius(0px)
+          @include border-bottom-right-radius(15px)
+          @include border-bottom-left-radius(15px) 
+
+
+  .front-map
+    position: relative
+    width: 100%
+    height: 550px
+    background: url("mapa-mundo.jpg")
+    .search-inspire
+      position: absolute
+      height: 100px
+      width: 600px 
+      left: 19%
+      bottom: 0 
+      display: block
+      
+      .front-text
+        font-family: $LatoLight
+        font-size: 30px
+        color: white
+        text-align: center 
+      input
+        @include center-block
+

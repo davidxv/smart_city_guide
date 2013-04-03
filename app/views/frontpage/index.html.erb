@@ -1,34 +1,27 @@
 <section id="frontpage">
-  <article class="login_frontpage">
-    <div class="div_login">
-      <h3 data-i18n="Log In">
-        Log In
-      </h3>
-      <% unless params[:controller].eql? 'devise/sessions' and params[:action].eql? 'new' %>
-      <%= form_for User.new, :as => :user, :url => user_session_path do |f| %>
-      <div id="login_data">
-        <%= f.label :email %>
+  <div class="menu-map">
+    <ul class="button">
+      <li><a href="#">plan your travel experience</a></li>
+      <li><a href="#">a new way to know a city</a></li>
+      <li><a href="#">never get lost</a></li>
+      <li><a href="#">Get your journal automatically</a></li>
+      
+    
+    </ul>
 
-        <%= f.email_field :email, :class => "input_username" %>
+  </div> 
+  <div class="front-map">
+    <div class="search-inspire">
 
-        <%= f.label :password %>
+      <p class="front-text">where do you whatn to go?</p>
+      
+      <input id="q" class="search-query" type="text" placeholder="Buscar" name="q" autocomplete="off">
+    
 
-        <%= f.password_field :password, :class => "input_username" %>
-
-        <%= f.submit t(:sign_in), :class => 'btn pull-right'%>
-
-        <div class="options">
-          <%= link_to t('sign_up'), new_user_registration_path, :class => "register_link" %>
-          |
-          <%= link_to t('forgot_password'), new_user_password_path, :class => "register_link" %>
-          <%= render :partial => "frontpage/social_networks" %>
-        </div>
-        <% end %>
-      </div>
-      <% end %>
-      <br class="clearfloat" />
     </div>
-  </article>
+
+  </div>
+ 
 </section>
 
 
