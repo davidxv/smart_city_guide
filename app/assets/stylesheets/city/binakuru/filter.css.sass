@@ -1,10 +1,39 @@
+.filter
+  position: absolute
+  z-index: 2
+  display: inline
+  right: 0
+  top: -80px
 
 
-#button
+
+.buttonFilter
   width: 60px
   height: 60px
   background-color: $color1
+  color: $white
   @include border-radius(30px)
+  right: 0px
+  z-index: 3
+  position: absolute
+  margin-top: 85px
+  border: none
+  &:active
+    background-color: $grayLighter
+.test
+  width: 60px
+  height: 60px
+  background-color: $grayLighter
+  color: $gray
+  font-size: 35px
+  @include border-radius(30px)
+  right: 0px
+  z-index: 3
+  position: absolute
+  margin-top: 85px
+  border: none
+  &:active
+    background-color: $grayLighter
 
 #effect
   position: relative
@@ -15,6 +44,17 @@
   height: 60px
   background-color: $color1
   @include border-radius(30px)
+  label
+    display: none
+  input[type=checkbox]
+    display: none
+  input[type=checkbox] + label
+    display: none
+  input[type=checkbox]:checked + label
+    display: none
+  input[type=text]
+    display: none
+
 
 
 .anotherNewClass
@@ -22,3 +62,35 @@
   height: 230px
   background-color: $color1
   @include border-radius(115px)
+  .filter-element
+    height: 200px
+    padding-top: 14px
+    padding-left: 5px
+    label
+      display: inline-block
+      @mixin prgTitle
+    input[type=checkbox]
+      display: none
+    input[type=checkbox] + label
+      float: left
+      color: #fff
+      display: inline-block
+      width: 140px
+      height: 24px
+      background: url(ico/checkwhite-off.png) 0px 0px no-repeat
+      text-indent: 25px
+      
+    input[type=checkbox]:checked + label
+      background: url(ico/checkwhite-active.png) 0px 0px no-repeat
+    input[type=text]
+      width: 130px
+      margin-bottom: 5px
+#checkHostels,#checkCuriosity
+  margin-left: 55px
+#checkShopping,#checkHistorical
+  margin-left: 27px
+#checkArt,#checkRestaurants
+  margin-left: 10px
+
+
+

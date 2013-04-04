@@ -95,9 +95,30 @@ $(document).ready(function(){
 // filter
 
 $(function() {
+
+
+
   $( "#button" ).click(function(){
-    $( ".newClass" ).switchClass( "newClass", "anotherNewClass", 1000 );
-    $( ".anotherNewClass" ).switchClass( "anotherNewClass", "newClass", 1000 );
+ $(".newClass" ).switchClass( "newClass", "anotherNewClass", 1000 );
+      $(".anotherNewClass" ).switchClass( "anotherNewClass", "newClass", 1000 );
+
+    if($("#button").attr("class")==="buttonFilter") {
+     
+      //$("#button").switchClass("test");
+      $("#button").removeClass("buttonFilter");
+      $("#button").addClass("test");
+      $("#button").html("x");
+    }
+    else if ($("#button").attr("class")==="test") {
+
+      //$("#button").switchClass("buttonFilter");
+      $("#button").removeClass("test");
+      $("#button").addClass("buttonFilter");
+      $("#button").html("filter");
+
+    }
+
+    
     return false;
   });
 });
