@@ -4,40 +4,35 @@
   display: inline
   right: 0
   top: -80px
-
-
-
-.buttonFilter
-  width: 60px
-  height: 60px
-  background-color: $color1
-  color: $white
-  @include border-radius(30px)
-  right: 0px
-  z-index: 3
-  position: absolute
-  margin-top: 85px
-  border: none
-  &:active
+  .buttonFilter
+    width: 60px
+    height: 60px
+    background-color: $color1
+    color: $white
+    @include border-radius(30px)
+    right: 0px
+    z-index: 3
+    position: absolute
+    margin-top: 85px
+    border: none
+    &:active
+      background-color: $grayLighter
+  .buttonFilterActive
+    width: 60px
+    height: 60px
     background-color: $grayLighter
-.test
-  width: 60px
-  height: 60px
-  background-color: $grayLighter
-  color: $gray
-  font-size: 35px
-  @include border-radius(30px)
-  right: 0px
-  z-index: 3
-  position: absolute
-  margin-top: 85px
-  border: none
-  &:active
-    background-color: $grayLighter
-
+    color: $gray
+    font-size: 35px
+    @include border-radius(30px)
+    right: 0px
+    z-index: 3
+    position: absolute
+    margin-top: 85px
+    border: none
+    &:active
+      background-color: $grayLighter
 #effect
   position: relative
-
 .newClass
   margin-top: 85px
   width: 60px
@@ -54,12 +49,10 @@
     display: none
   input[type=text]
     display: none
-
-
-
 .anotherNewClass
   width: 230px
   height: 230px
+  margin-right: 25px
   background-color: $color1
   @include border-radius(115px)
   .filter-element
@@ -83,7 +76,7 @@
     input[type=checkbox]:checked + label
       background: url(ico/checkwhite-active.png) 0px 0px no-repeat
     input[type=text]
-      width: 130px
+      width: 155px
       margin-bottom: 5px
 #checkHostels,#checkCuriosity
   margin-left: 55px
@@ -91,6 +84,3 @@
   margin-left: 27px
 #checkArt,#checkRestaurants
   margin-left: 10px
-
-
-
