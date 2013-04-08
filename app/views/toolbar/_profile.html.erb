@@ -45,12 +45,14 @@
         <div class="toolbar_front roundedBox">
           <a href=""></a>
         </div>
+
         <div class="toolbar_back roundedBox">
           <%= render partial: 'toolbar/logo',
           locals: { subject: subject } %>
           <% if current_subject.present? && subject != current_subject %>
           
           <% end %>
+
         </div>
 
       </li>
