@@ -2,7 +2,7 @@ function showContentGuides() {
   element = document.getElementById("item-guides");
   check = document.getElementById("checkGuides");
   if (check.checked) {
-    element.style.display='inline-block';
+    element.style.display='block';
   }
   else {
     element.style.display='none';
@@ -13,7 +13,7 @@ function showContentRoutes() {
   element = document.getElementById("item-routes");
   check = document.getElementById("checkRoutes");
   if (check.checked) {
-    element.style.display='inline-block';
+    element.style.display='block';
   }
   else {
     element.style.display='none';
@@ -24,12 +24,17 @@ function showContentPlaces() {
   element = document.getElementById("item-places");
   check = document.getElementById("checkPlaces");
   if (check.checked) {
-    element.style.display='inline-block';
+    element.style.display='block';
   }
   else {
     element.style.display='none';
   }
 }
+
+// Remove new comment avatar
+$(function() {
+  $(".new_comment").find('div.avatar').remove();
+});
 
 
 function displayResult() {
