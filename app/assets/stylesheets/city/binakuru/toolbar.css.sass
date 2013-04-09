@@ -1,7 +1,9 @@
-#toolbar_profile
+#toolbar
   background-color: $white
-  width: 100%
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
   height: 102px
+  .toolbar_profile
+
   .toolbar_content
     ul
       margin: 0
@@ -20,6 +22,10 @@
           @include border-top-right-radius(50px)
           @include border-bottom-right-radius(0px)
           @include border-bottom-left-radius(50px)
+        .imageProfile
+          background-image: url(profile.png) 
+          background-position: center
+          background-size: cover
         .toolbar_front
           background-color: $color1
           opacity: 0.7
@@ -49,7 +55,7 @@
         .toolbar_back
           z-index: 0
           position: absolute
-          width: 147px
+          width: 100%
           height: 102px
           img
             @include border-top-left-radius(50px)
@@ -58,6 +64,7 @@
             @include border-bottom-left-radius(50px)
             width: 102px
             height: 100%
+
         .toolbar_contacts
           height: 43px
           margin-bottom: 15px

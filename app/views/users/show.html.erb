@@ -1,0 +1,69 @@
+<% content_for :title do %>
+  <%= "#{ @user.name } | #{ t 'site.name' }" %>
+<% end %>
+
+<% content_for :description do %>
+  <% if @user.profile.description? %>
+    <%= @user.profile.description%>
+  <% else %>
+    <%= "#{ @user.name } #{ t('profile.is_on') } #{ t('site.name') }" %>
+  <% end %>
+<% end %>
+
+<% content_for :keywords do %>
+  <%= @user.profile.subject.tag_list%>
+<% end %>
+
+<%= render :partial => 'show' %>
+
+
+
+
+
+
+  <!--div class="guide_home">
+    my guides
+    <img src="/assets/prueba.png" width="115" height="100" style="background-image:url(/assets/toledo2.jpg);" alt="texto" />
+    <ul class="thumbnails">
+        <%#= render :partial => "guides/item" %>
+    </ul>
+  </div>
+    <div class="my_diaries">
+      my diaries
+      <ul class="thumbnails">
+    <%#= render :partial => "diaries/item" %>
+  </ul>
+  </div>
+  </div-->
+
+
+
+
+
+<!-- 
+ <div class="social grid-3_right">
+  <div class="hidden-phone">
+    <%#= render :partial => "users/groups",
+       :locals  => { :user => @user } %>
+  </div>
+
+
+
+  <div class="time-time">
+  <%#= render :partial => "activities/index",
+       :locals  => { :activities => @user.wall(:profile, :for => current_subject).page(params[:page]),
+                     :owner => @user } %>
+  <%#= render :partial => "activities/index",
+             :locals  => { section: @user,
+                           owner:   @user } %>
+
+  <%#= javascript_tag do %>
+    $(function(){  
+      SocialStream.Timeline.init();  
+    });
+  <%# end %>
+  </div>
+</div> -->
+
+<%#= render :partial => 'show' %>
+
