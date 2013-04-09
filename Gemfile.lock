@@ -1,6 +1,10 @@
 GIT
   remote: git://github.com/ging/social_stream.git
+<<<<<<< HEAD
   revision: 33793452654b383a4dbec5d8eea4139fee5d2b35
+=======
+  revision: 43cedb5a39a2c15fa251bbcc365b8dae3d01b29e
+>>>>>>> 3f7e213ba7d161dc501531fad3ff546e584ea9c4
   branch: master
   specs:
     social_stream-base (2.0.0)
@@ -134,7 +138,7 @@ GEM
     gmaps4rails (1.5.6)
     has_scope (0.5.1)
     hashie (2.0.3)
-    hike (1.2.1)
+    hike (1.2.2)
     httpauth (0.2.0)
     i18n (0.6.4)
     i18n-js (2.1.2)
