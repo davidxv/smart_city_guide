@@ -64,6 +64,7 @@
 		margin-top: 45px
 		.media
 			border-bottom: 1px dashed $gray
+			position: relative
 			.avatar
 
 				.media-object
@@ -89,10 +90,48 @@
 						img
 							display: block
 							float: left
-							@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
-
-
-
+							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
 						.thumb
-
 						.text
+							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							display: inline-block
+							h6
+								@include objectsTitle
+							.description
+								p
+									width: 100%
+									word-wrap: break-word
+									@include objectsDescription
+				.actions
+					clear: both
+					display: block
+					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+					.to_comment,
+					.to_like,
+					.to_share
+						@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						display: inline-block
+						float: left
+						text-align: center
+
+
+					.to_like
+						i
+							display: none
+				.post_time_ago
+					text-align: right
+					margin-top: -5px
+					font-size: 11px
+					font-family: $LatoLightItalic
+					color: $black
+					position: absolute
+					bottom: 0
+					right: 50px
+
+
+
+
+
+
+
