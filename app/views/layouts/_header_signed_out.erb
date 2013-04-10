@@ -14,27 +14,13 @@
         <div><%= render partial: 'devise/sessions/form' %></div>
       </div>
       <a href="./new.html" class="navregister">register</a>
-    <div class="asistfloat">
-      <div class="search-nav ">
-        <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
-        <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
-        <% end %>
+      <div class="asistfloat">
+        <div class="search-nav ">
+          <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
+          <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
+          <% end %>
+        </div>
       </div>
-
-      
-
-
-      <div class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">go to<span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li>
-            sdioufiop
-          </li>
-
-        </ul>
-      </div>
-    </div>
-
     </div>
   </div>
 </div>
