@@ -122,3 +122,4 @@ $(function() {
 $(document).ready(function() {
     $("li[rel='tooltip']").tooltip({'placement': 'top'});
 });
+
