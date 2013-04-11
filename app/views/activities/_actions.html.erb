@@ -1,20 +1,22 @@
 <article class="actions">
-   <%= render :partial => 'activities/time_ago',
-             :locals => { :activity => activity } %>  
-
-  <% if activity.direct_object.present? %>
-
-    <%= render :partial => 'activities/comment',
-               :locals => { :activity => activity } %>   
-
-    <%= render :partial => 'activities/like',
-               :locals => { :activity => activity } %>   
-
-    <%= render :partial => 'activities/share',
-               :locals => { :activity => activity } %>   
-
-  <% end %>
-
+	<% if activity.direct_object.present? %>
+	<ul class="">
+		<li>
+			<%= render :partial => 'activities/comment',
+			:locals => { :activity => activity } %>   
+		</li>
+		<li>
+			<%= render :partial => 'activities/like',
+			:locals => { :activity => activity } %>   
+		</li>
+		<li>
+			<%= render :partial => 'activities/share',
+			:locals => { :activity => activity } %>   
+		</li>
+	<ul>
+	<% end %>
+	<%= render :partial => 'activities/time_ago',
+			:locals => { :activity => activity } %> 
 </article>
 
 

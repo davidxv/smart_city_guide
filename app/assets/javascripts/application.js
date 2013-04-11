@@ -16,4 +16,5 @@
 //= require social_stream-documents
 //= require social_stream-places
 //= require jquery.backstretch.min
+//= require jquery.mootools.valign
 //= require_tree .

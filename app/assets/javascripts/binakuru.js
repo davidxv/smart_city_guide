@@ -122,3 +122,9 @@ $(function() {
 $(document).ready(function() {
     $("li[rel='tooltip']").tooltip({'placement': 'top'});
 });
+
+
+//centrar verticalmente textos
+$(document).ready(function(e){
+  $('.vAling').vAlign();
+});

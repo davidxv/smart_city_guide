@@ -69,32 +69,57 @@
 
 				.media-object
 					img
-						height: 50px
-						width: 50px
-						@include border-top-left-radius(25px)
-						@include border-top-right-radius(25px)
+						height: 30px
+						width: 30px
+						@include border-top-left-radius(15px)
+						@include border-top-right-radius(15px)
 						@include border-bottom-right-radius(0px)
-						@include border-bottom-left-radius(25px)
+						@include border-bottom-left-radius(15px)
 			header.media-heading
+				margin-top: 5px
 				a
 					font-family: $LatoLight
 					font-size: 25px
+
 				.x
 					display: block
 					margin-right: 5px
+					-webkit-transition: all 1s ease-in-out
+					-moz-transition: all 1s ease-in-out
+					-o-transition: all 1s ease-in-out
+					-ms-transition: all 1s ease-in-out
+					transition: all 1s ease-in-out
+					a
+						font-stretch: extra-expanded
+						font-size: 15px
+						font-family: $Lato
+						&:hover
+							color: $red
+					&:hover
+						-webkit-transform: rotate(90deg) 
+						-moz-transform: rotate(90deg) 
+						-o-transform: rotate(90deg) 
+						-ms-transform: rotate(90deg) 
+						transform: rotate(90deg) 
+
 			.media-body
 				.objects
+					display: block
+					height: auto
+
 					.picture
 						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 						margin-top: 20px
 						img
+							@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
 							display: block
 							float: left
 							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
 						.thumb
 						.text
 							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
-							@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							margin-left: 50px
 							display: inline-block
 							h6
 								@include objectsTitle
@@ -104,6 +129,7 @@
 									word-wrap: break-word
 									@include objectsDescription
 				.actions
+					margin-top: 20px
 					clear: both
 					display: block
 					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -115,19 +141,36 @@
 						float: left
 						text-align: center
 
-
 					.to_like
 						i
 							display: none
+					ul
+						padding-top: 15px
+
+						display: block
+						margin-left: auto
+						margin-right: auto
+						@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						li
+							a
+								color: $grayLight
+								&:hover
+									color: $color1
+
 				.post_time_ago
-					text-align: right
-					margin-top: -5px
-					font-size: 11px
-					font-family: $LatoLightItalic
-					color: $black
 					position: absolute
-					bottom: 0
-					right: 50px
+					bottom: 5px
+					right: 5px
+					height: 70px
+					width: 70px
+					@include border-radius(35px)
+					background-color: $color1
+					background-image: none
+					p
+						font-size: 12px
+						text-align: center
+						color: $white
+						font-family: $LatoItalic
 
 
 
@@ -135,3 +178,6 @@
 
 
 
+
+
+ 
