@@ -124,7 +124,9 @@ $(document).ready(function() {
 });
 
 
+
 //centrar verticalmente textos
 $(document).ready(function(e){
   $('.vAling').vAlign();
 });
+
