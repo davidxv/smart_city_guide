@@ -71,7 +71,7 @@
 	.popover
 		text-align: center
 		width: 300px
-		height: 400px
+		height: 380px
 		margin-left: 240px
 		.popover-inner
 		border-radius: 0px
@@ -82,4 +82,22 @@
 			display: none
 		.popover-content
 			.remember
-				text-align: left
+				label
+					display: inline-block
+				input[type=checkbox]
+					display: none
+				input[type=checkbox] + label
+					background: #fff
+					display: inline-block
+					width: 85px
+					height: 24px
+					background: url(ico/checkedoff.png) 0px 0px no-repeat
+					text-indent: 25px
+				input[type=checkbox]:checked + label
+					background: url(ico/checked.png) 0px 0px no-repeat
+
+				
+			.options
+				width: 276px
+				
+
