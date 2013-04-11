@@ -1,3 +1,95 @@
+.toggler
+  margin-top: 200px
+.place_show
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  display: inline-block
+  float: left
+  width: 75%
+  position: relative
+  h2
+  .info_photo
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    z-index: 1
+    height: 335px
+    position: absolute
+    img
+      height: auto
+  .map 
+    z-index: 0
+    position: absolute
+
+  .place_description
+    @include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    float: right
+    margin-top: 20px
+    float: right
+    width: 25%
+    .title_place
+      background-color: #0DA592
+      border-radius: 94px 94px 94px 94px
+      color: white
+      font-family: "LatoLightItalic"
+      font-size: 50px
+      height: 188px
+      margin-left: 625px
+      margin-top: 20px
+      position: absolute
+      text-align: center
+      width: 188px
+  .coment-social
+    @include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    float: left
+
+@media (max-width: 767px)
+  .place_show
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    float: left
+    h2
+    .info_photo
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      display: inline-block
+      z-index: 1
+      height: 335px
+      overflow: auto
+      width: 75%
+      img
+        height: auto
+    .map 
+      z-index: 0
+
+    .place_description
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      display: inline-block
+      float: right
+      margin-top: 20px
+      float: right
+      width: 25%
+      .title_place
+        background-color: #0DA592
+        border-radius: 94px 94px 94px 94px
+        color: white
+        font-family: "LatoLightItalic"
+        font-size: 50px
+        height: 188px
+        margin-left: 625px
+        margin-top: 20px
+        position: absolute
+        text-align: center
+        width: 188px
+
+    .coment-social
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      display: inline-block
+      float: left
+
+
+
+.info_left
+  width: 60%
 #info_place
   @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
   height: 360px
@@ -25,20 +117,6 @@
         color: $gray
         font-size: 16px
         display: inline-block
-  .title-place
-    height: 188px
-    width: 188px
-    background-color: $color1
-    @include border-radius(94px)
-    @include cityName
-    position: absolute
-    z-index: 2
-    margin-top: 20px
-    margin-left: 625px
-    text-align: center
-    h1
-      margin-top: 70px
-      color: $white
 #comments-element
   width: 31.88%
   display: inline-block
