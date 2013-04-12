@@ -1,20 +1,82 @@
-#planning_trip
-  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth) 
-  h4
+#title_section
+  @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth) 
+  margin-top: 12px
+  p 
+    @include section
     text-align: center
-  ul
-    margin-left: auto
-    margin-right: auto
+#planning
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth) 
+  .menu_views
+    @include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    height: 25px
+    background-color: white
+    margin-left: 200px
+    margin-bottom: 12px
+    ul 
+      margin: 8px
+      li:last-child
+        margin-right: 0
+      li 
+        display: inline-block
+        margin-right: 24px
+        a
+          @include view
+  .planning_content
+    @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth) 
+    .planning_day
+      position: relative
+      margin-bottom: 90px
+      .planning_city
+        float: left
+        height: auto
+        background-color: white
+        width: 100%
+        position: absolute
+        z-index: 0
+        padding-bottom: 20px
+        .interest_points
+          display: inline-block
+          float: left
+          margin-left: 40px
+          position: relative
+          width: 94.12%
+      .planning_date
+        @include dates_filter
+        background-color: $color1
+        border-radius: 30px 30px 30px 30px
+        height: 60px
+        left: 73px
+        position: absolute
+        resize: none
+        left: -32px
+        top: -31px
+        width: 60px
+        z-index: 1
+        p 
+          text-align: center
+          margin-top: 18px
+  .planning_info
+    @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth) 
+    float: right
     display: block
-
-    li
-      margin-left: 13px
-      width: 85px
-      img 
-        width: 100%
-        height: 85px
-    li:first-child
-      margin-left: 0px
-      img 
-        width: 100%
-        height: 85px
+    height: 300px
+    width: 22.8571%
+    margin-top: 37px
+    background-color: white
+    .other_info
+      @include info_use
+      ul 
+        li 
+          margin-top: 5px
+          a
+            color: grey
+    .img_planning
+      background-image: url(toledo5.jpg) 
+      background-position: center
+      background-size: cover
+      width: 100%
+      height: 150px
+    .title_planning
+      margin-top: 5px
+      @include diaryGuideName 
+      text-align: center

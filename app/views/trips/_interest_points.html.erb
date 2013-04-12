@@ -20,19 +20,19 @@
 
   <div class="content-checkbox">
     <div id="item-guides">
-      <% @trip.guides.each do |guide| %>
+      <% trip.guides.each do |guide| %>
         <%= render :partial => 'guides/item', :locals => { :guide => guide } %>
       <% end %>
     </div>
 
     <div id="item-routes">
-      <% @trip.routes.each do |route| %>
+      <% trip.routes.each do |route| %>
         <%= render :partial => "routes/item", :locals => { :route => route } %>
       <% end %>
     </div>
 
     <div id="item-places">
-      <% @trip.places.each do |place| %>
+      <% trip.places.each do |place| %>
         <%= render :partial => "places/item", :locals => { :place => place } %>
       <% end %>
     </div>

@@ -11,7 +11,7 @@
 	</div>
 
 	<div id="interest_points">
-		<%= render :partial => "trips/interest_points" %>
+		<%= render :partial => "trips/interest_points", :locals => { :trip => @trip }  %>
 	</div>
   
   <div id="comments-element" class="comments">
