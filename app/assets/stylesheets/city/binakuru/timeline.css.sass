@@ -69,28 +69,55 @@
 
 				.media-object
 					img
-						height: 50px
-						width: 50px
-						@include border-top-left-radius(25px)
-						@include border-top-right-radius(25px)
+						@include border-top-left-radius(20px)
+						@include border-top-right-radius(20px)
 						@include border-bottom-right-radius(0px)
-						@include border-bottom-left-radius(25px)
+						@include border-bottom-left-radius(20px)
+						width: 40px
+						height: 40px
 			header.media-heading
+				margin-top: 20px
 				a
 					font-family: $LatoLight
 					font-size: 25px
+
 				.x
 					display: block
 					margin-right: 5px
+					-webkit-transition: all 1s ease-in-out
+					-moz-transition: all 1s ease-in-out
+					-o-transition: all 1s ease-in-out
+					-ms-transition: all 1s ease-in-out
+					transition: all 1s ease-in-out
+					a
+						font-stretch: extra-expanded
+						font-size: 15px
+						font-family: $Lato
+						&:hover
+							color: $red
+					&:hover
+						-webkit-transform: rotate(90deg) 
+						-moz-transform: rotate(90deg) 
+						-o-transform: rotate(90deg) 
+						-ms-transform: rotate(90deg) 
+						transform: rotate(90deg) 
+
 			.media-body
+				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 				.objects
+					display: block
+					height: auto
+					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
 					.picture
-						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						@include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
 						margin-top: 20px
 						img
+
 							display: block
 							float: left
 							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
 						.thumb
 						.text
 							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -104,6 +131,7 @@
 									word-wrap: break-word
 									@include objectsDescription
 				.actions
+					margin-top: 20px
 					clear: both
 					display: block
 					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -115,23 +143,128 @@
 						float: left
 						text-align: center
 
-
 					.to_like
 						i
 							display: none
+					ul
+						padding-top: 15px
+
+						display: block
+						margin-left: auto
+						margin-right: auto
+						@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						li
+							a
+								color: $grayLight
+								&:hover
+									color: $color1
+
 				.post_time_ago
-					text-align: right
-					margin-top: -5px
-					font-size: 11px
-					font-family: $LatoLightItalic
-					color: $black
 					position: absolute
-					bottom: 0
-					right: 50px
+					bottom: 5px
+					right: 5px
+					height: 70px
+					width: 70px
+					@include border-radius(35px)
+					background-color: $color1
+					background-image: none
+					p
+						font-size: 12px
+						text-align: center
+						color: $white
+						font-family: $LatoItalic
+
+				div.new_comment
+					@include center-block
+					@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+					.avatar
+						display: none
+						width: 30px
+						float: left
+						img
+							@include border-top-left-radius(20px)
+							@include border-top-right-radius(20px)
+							@include border-bottom-right-radius(0px)
+							@include border-bottom-left-radius(20px)
+							width: 40px
+							height: 40px
+					form.new_comment
+						textarea
+							@include center-block
+							@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							resize: none
+						textarea:active
+							height: auto
+						input.btn
+							height: 70px
+							width: 70px
+							@include border-radius(35px)
+							background-color: $color1
+							color: $white
+							background-image: none
+							margin-left: 8px
+							font-size: 12px
 
 
 
 
+				.comments
+					padding-top: 20px
+					.activity
+						@include center-block
+						@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+					.media
+						border-bottom: none
+						background-color: #fcfcfc
+						padding: 10px
+						.avatar
+							.media-object
+								a
+									img
+										@include border-top-left-radius(15px)
+										@include border-top-right-radius(15px)
+										@include border-bottom-right-radius(0px)
+										@include border-bottom-left-radius(15px)
+										width: 30px
+										height: 30px
 
-
-
+						header.media-heading
+							display: inline-block
+							float: left
+							width: 80%
+							margin: 0
+							padding-top: 16px
+							h6
+								font-family: $Lato
+								font-size: 12px
+								margin-top: 0px
+								line-height: 15px
+								a
+									font-size: 14px
+						.media-body
+							@include center-block
+							@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							.objects
+								display: inline-block
+								font-family: $OpenSans
+								font-size: 12px
+								line-height: 15px
+							
+							.actions
+								margin-top: 0px
+								ul
+									display: none
+								.post_time_ago
+									position: absolute
+									bottom: 5px
+									right: 5px
+									height: 20px
+									@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+									@include border-radius(0px)
+									background-color: transparent
+									background-image: none
+									p
+										font-size: 12px
+										text-align: right
+										color: $grayLight
+										font-family: $LatoItalic

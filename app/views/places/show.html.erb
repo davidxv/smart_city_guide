@@ -1,23 +1,32 @@
-<%= render :partial => 'objects/show',
+<%#= render :partial => 'objects/show',
            :locals  => { :object => @place } %>
 <%= div_for @place do %>
 	<div class="place_show">
-    <h2 class="titlecentral"><%= @place.title %></h2>
     <div class="info_photo">
       <%= render :partial => 'carousel' %>
     </div>
     <div class="map">
-      <%= gmaps(:map_options => { :container_class => "map_container", :id => "map", :class => "gmaps4rails_map", :auto_zoom => false, :zoom => 16 }, :markers => {:data => @json} )%>
-      <%= yield :scripts %>
+      <div class="">
+        <div class="map_container">
+          <%= gmaps(:map_options => { :container_class => "map_container", :id => "map", :class => "gmaps4rails_map", :auto_zoom => false, :zoom => 16 }, :markers => {:data => @json} )%>
+          <%= yield :scripts %>
+        </div>
+      </div>
     </div>   
-	  
+  </div>
+
     <%#= place_timeline_thumb(@place) %>
         <div class="description">
-      <%= render :partial => 'place_info' %>
-      <% unless @place.description.blank? %>
-        <h3><%= t('place.info.description.description') %></h3>
-      <% end %>
-      <%= @place.description %>
+          <div class="title_place">
+            <h2 class="titlecentral"><%= @place.title %></h2>
+          </div>
+        <div>  
+          <%= render :partial => 'place_info' %>
+          <% unless @place.description.blank? %>
+            <h3><%= t('place.info.description.description') %></h3>
+          <% end %>
+          <%= @place.description %>
+        </div>      
     </div>
     <div class="coment-social">
       <div id="comments" class="comments">
@@ -25,13 +34,9 @@
         <div class="new-comments-box">
           <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
         </div>
+
         <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
       </div>
     </div>
-
-
-    
-
-	</div>
 <% end %>
 
