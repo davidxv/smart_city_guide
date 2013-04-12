@@ -149,6 +149,7 @@ en:
     planning: "planning"
     clear: "Clear planning"
     go: "Go to my planning"
+    confirm_delete: "Delete planning?"
   route:
     actions:
       delete: "Delete"

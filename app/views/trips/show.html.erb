@@ -16,7 +16,7 @@
   
   <div id="comments-element" class="comments">
     <h4><%= link_to t('comments') %></h4>
-    <div class="new-coments-box">
+    <div class="new-comments-box">
       <%= render :partial => 'comments/new', :locals => { :activity => Trip.first.post_activity } %>
     </div>
     <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>

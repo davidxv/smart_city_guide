@@ -145,6 +145,11 @@ es:
       mine: "Mis guías"
       friends: "De amigos"
       recommended: "Recomendados"
+  planning: 
+    planning: "planning"
+    clear: "Limpiar planning"
+    go: "Ir a mi planning"
+    confirm_delete: "¿Borrar planning?"
   route:
     actions:
       delete: "Borrar"

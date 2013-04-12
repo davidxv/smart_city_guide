@@ -11,7 +11,7 @@
 <div class="coment-social">
   <div id="comments" class="comments">
     <h2>comments</h2>
-    <div class="new-coments-box">
+    <div class="new-comments-box">
       <%= render :partial => 'comments/new', :locals => { :activity => @route.post_activity } %>
     </div>
     <%= render :partial => 'activities/comments', :locals => { :activity => @route.post_activity } %>
