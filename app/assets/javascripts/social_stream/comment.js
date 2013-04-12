@@ -29,6 +29,8 @@ SocialStream.Comment = (function(SS, $, undefined){
       var e = $(root).find(selector);
       e.hide();
     });
+
+    $("div.media-body").find("input[type=submit]").hide();
   };
 
   var showNewCommentElements = function(root) {
@@ -38,6 +40,7 @@ SocialStream.Comment = (function(SS, $, undefined){
     $.each(elAll, function(i, selector) {
       $(root).find(selector).show();
     });
+    $(root).closest("div.media-body").find("input[type=submit]").show();
   };
 
 
@@ -90,6 +93,7 @@ SocialStream.Comment = (function(SS, $, undefined){
       var newDiv = $(this).closest(".root").find("div.new_comment");
 
       newDiv.find('textarea').show().click().focus();
+      //newDiv.find('input.btn').show.click();
 
       return false;
     });
