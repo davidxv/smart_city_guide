@@ -19,8 +19,8 @@
     <%#= place_timeline_thumb(@place) %>
         <div class="PRG_information">
           <div class="btn-add"></div>
-          <div class="title_prg title_route">
-            <p class="titlecentral"><%= @route.title %></p>
+          <div class="title_prg title_route vAling">
+            <div><p class="titlecentral"><%= @route.title %></p></div>
           </div>
             <div class="prg_stars">
               <ul>
@@ -62,12 +62,12 @@
       <p>related photos</p>
       <div class="related_photos related_all">
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><div class="photos"><%= image_tag('toledo_rio3.jpeg') %></div></li>
+          <li><div class="photos"><%= image_tag('toledo5.jpg') %></div></li>
         </ul>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><div class="photos"><%= image_tag('san_juan_reyes.jpg') %></div></li>
+          <li><div class="photos"><%= image_tag('panoramica_toledo.jpg') %></div></li>
         </ul>
       </div>
       <p>related videos</p>
