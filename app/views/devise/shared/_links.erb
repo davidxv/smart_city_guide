@@ -1,3 +1,8 @@
+<% devise_mapping = ::Devise.mappings[:user] %>
+<% resource_class = User %>
+<% resource_name = :user %>
+
+
 <article class="options">
   <%- if controller_name != 'sessions' && ! respond_to?(:sign_in_controller?) %>
     <%= link_to t('devise.links.sign_in'), new_user_session_path %>

@@ -18,7 +18,7 @@
     <%#= place_timeline_thumb(@place) %>
         <div class="PRG_information">
           <div class="btn-add"></div>
-          <div class="title_prg title_place">
+          <div class="title_prg title_place valign">
             <p class="titlecentral"><%= @place.title %></p>
           </div>
             <div class="prg_stars">
@@ -42,7 +42,9 @@
     <div class="change_mode"><a href="">map mode</a></div>
     <div class="related">
       <p>related events</p>
-      <div class="related_events related_all"></div>
+      <div class="related_events related_all">
+        <%= render :partial => 'routes/calendar' %>
+      </div>
       <p>related photos</p>
       <div class="related_photos related_all">
         <ul>

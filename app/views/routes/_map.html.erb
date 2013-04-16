@@ -11,13 +11,3 @@
 		});
 	<% end %>
 </div>
-
-<div class="places">
-	<ul class="thumbnails">
-		<% route.places.each do |p| %>
-			<%= render  :partial => "places/item",
-										:locals => { :place => p } %>
-		<% end %>
-	</ul>
-		<!--http://jqueryui.com/draggable/#sortable-->
-</div>

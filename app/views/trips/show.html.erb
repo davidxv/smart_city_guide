@@ -10,15 +10,23 @@
 		</ul>
 	</div>
 
+
 	<div id="interest_points">
 		<%= render :partial => "trips/interest_points", :locals => { :trip => @trip }  %>
 	</div>
-  
-  <div id="comments-element" class="comments">
+
+  <div class="related">
+      <p>related events</p>
+      <div class="related_events related_all">
+        <%= render :partial => 'routes/calendar' %>
+      </div>
+
+      <div id="comments-element" class="comments">
     <h4><%= link_to t('comments') %></h4>
     <div class="new-comments-box">
       <%= render :partial => 'comments/new', :locals => { :activity => Trip.first.post_activity } %>
     </div>
     <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
+  </div>
   </div>
 

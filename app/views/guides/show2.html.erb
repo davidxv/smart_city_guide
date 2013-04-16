@@ -1,0 +1,52 @@
+<%= javascript_tag do %>
+  $(function() {
+    SocialStream.Objects.init();
+  });
+<% end %>
+
+<h2><%= @guide.title %> guide</h2>
+
+<div class="guide_all tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#info">info</a>
+    </li>
+    <li class="">
+      <a data-toggle="tab" href="#map" id="mapTab">map</a>
+    </li>
+    <li class="">
+      <a data-toggle="tab" href="#photo">photo</a>
+    </li>
+    <li class="">
+      <a data-toggle="tab" href="#book" id="bookTab">book</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="info" class="tab-pane active">
+      <%= render :partial => "guides/info" %>
+    </div>
+
+    <div id="map" class="tab-pane ">
+      <%= render  :partial => "guides/map",
+                  :locals => { :json => @json, :guide => @guide } %>
+		</div>
+
+    <div id="photo" class="tab-pane ">
+      <ul class="thumbnails">
+      	<%= render :partial => "guides/photo" %>
+			</ul>
+    </div>
+
+    <div id="book" class="tab-pane ">
+      <ul class="thumbnails">
+        <%= render :partial => "guides/book" %>
+      </ul>
+    </div>
+    
+    
+  </div>
+</div>
+
+

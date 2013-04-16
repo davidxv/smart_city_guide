@@ -10,11 +10,13 @@
     width: 71% 
     height: 335px
     position: relative
+
     .info_photo
       display: block
       z-index: 1
       position: absolute
       width: 100%
+      background-color: white
     .map 
       z-index: 0
       position: absolute
@@ -81,23 +83,27 @@
       padding-left: 32px
       padding-bottom: 10px
     .title_route
-      p
-        font-size: 44px
-        padding-top: 17px
+   
+        
+ 
     .title_place
-      p 
-        padding-top: 50px
+ 
+
     .title_prg
       background-color: #0DA592
-      border-radius: 100px 100px 100px 100px
+      border-radius: 100px 
       height: 200px
       margin-left: auto
       margin-right: auto
       margin-top: 20px
       text-align: center
-      line-height: 50px
+
       width: 200px
-      @include cityName
+      p.titlecentral
+        @include cityName
+
+
+
 
         
 .PRG_description
@@ -105,7 +111,7 @@
   background-color: white
   margin-bottom: 24px
   padding-bottom: 10px
-  margin-top: 25px
+
   h2
     @include title
     margin-top: 20px
@@ -129,7 +135,7 @@
 .related
   width: 29%
   float: right
-  margin-top: -9px
+  margin-top: -17px
   p 
     @include section
     text-align: center
@@ -142,14 +148,28 @@
     padding-bottom: 13px
     ul 
       margin-left: 10%
-      li 
+      li
         display: inline-block
-        margin-right: 8%
-        margin-top: 6%
-        img
-          max-width: 100px
-          height: auto
-          opacity: 0.8
+        .photos
+          margin-right: 8%
+          margin-top: 6%
+          img
+            max-width: 100px
+            height: auto
+            opacity: 0.8
+  .related_events
+    padding-bottom: 2%
+    padding-top: 2%
+    table 
+      background-color: transparent
+      border-collapse: collapse
+      border-spacing: 0
+      height: 200px
+      margin-left: 9%
+      width: 87%
+    .highlight_events
+
+       
 
 .change_mode
   width: 71%

@@ -1,13 +1,14 @@
 SocialStream::Documents.setup do |config| 
   # Configure picture thumbnails
   #
-  # config.picture_styles = {
-  #    :thumb48sq  => ["48x48"],
-  #    :thumbwall => ["130x97#"],
-  #    # midwall preserves A4 proportion: 210x297
-  #    :midwall => ["80x113#"],
-  #    :preview => ["500>"]
-  #  }
+  config.picture_styles = {
+    :"170x127#" => ["170x127#"],
+    # this one preserves A4 proportion: 210x297
+    :"80x113#" => ["80x113#"],
+    :"500" => ["500>"],
+    :"540x220" => ["540x220>"],
+    :thumb100sq  => ["100x100#"]
+   }
 
   # Configure audio thumbnails
   #
