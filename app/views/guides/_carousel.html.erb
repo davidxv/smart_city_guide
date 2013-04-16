@@ -1,0 +1,25 @@
+<% photos = @guide.places.first.photos %>
+<% unless photos.empty? %>
+  <% if photos.length == 1 %>
+   <!-- Just one photo -->
+    <div class="no-carousel"><%= thumb_for(photos.first, 'original') %></div>
+  <% else %>
+    <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item"><%= thumb_for(photos.first, 'original') %>
+        </div>
+        <% photos[1..(photos.length() -1)].each do |p| %>
+          <div class="item"><%= thumb_for(p, 'original') %>
+   
+          </div>
+        <% end %>
+      </div>
+    <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+  <% end %>
+<% end %>
+
+
