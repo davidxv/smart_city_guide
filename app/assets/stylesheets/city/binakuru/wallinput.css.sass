@@ -1,0 +1,59 @@
+.activities
+  @include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  background-color: $white
+  margin-top: 50px
+  header
+    h2
+      display: none
+      font-size: 14px
+      text-align: center
+      color: $color1
+  .wall_input
+    clear: both
+    form.new_post
+      position: relative
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      textarea
+        position: absolute
+        @include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
+        @include border-top-left-radius(0px)
+        @include border-top-right-radius(17px)
+        @include border-bottom-right-radius(17px)
+        @include border-bottom-left-radius(0px)
+        height: 30px
+        left: 0
+        padding: 4px 46px 4px 6px
+        resize: none
+      .document_description
+        position: relative
+        margin-top: 42px
+        @include border-radius (0)
+      .wall_input-actions
+        position: absolute
+        @include grid-fluid-span(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+        right: 0
+        input.btn
+          position: absolute
+          right: 0px
+          height: 40px
+          width: 40px
+          @include border-radius(20px)
+          background-color: $color1
+          color: $white
+          background-image: none
+          font-size: 12px
+        .new_document
+          @include border-radius(15px)
+          background-color: $grayLight
+          background-image: url("ico/add+.png")
+          width: 30px
+          height: 30px
+          background-repeat: no-repeat
+          background-position: 50%
+          position: absolute
+          right: -10px
+          top: -15px
+          img
+            display: none
+        button.multiselect
+          display: none
