@@ -32,7 +32,7 @@
               </ul> 
             </div>
         <div>  
-          <!--  <%= render :partial => "routes/info" %> -->
+     <!--      <%= render :partial => "routes/info" %> -->
         <% unless @route.description.blank? %>
             <h3><%= t('route.info.description.description') %></h3>
           <% end %>
@@ -46,9 +46,13 @@
 
 
 <div id="prg_small">
-    <ul class="thumbnails">
-      <%= render :partial => "routes/item2" %>
-    </ul>
+  <ul class="thumbnails">
+    <% @route.places.each do |p| %>
+      <%= render  :partial => "places/item",
+                    :locals => { :place => p } %>
+    <% end %>
+  </ul>
+    <!--http://jqueryui.com/draggable/#sortable-->
 </div>
 
 
@@ -62,10 +66,8 @@
         <ul>
           <li><%= image_tag('panoramica_toledo.jpg') %></li>
           <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
         </ul>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
           <li><%= image_tag('panoramica_toledo.jpg') %></li>
           <li><%= image_tag('panoramica_toledo.jpg') %></li>
         </ul>
