@@ -46,9 +46,13 @@
 
 
 <div id="prg_small">
-    <ul class="thumbnails">
-      <%= render :partial => "routes/item2", :locals => {:route => @route} %>
-    </ul>
+  <ul class="thumbnails">
+    <% @route.places.each do |p| %>
+      <%= render  :partial => "places/item",
+                    :locals => { :place => p } %>
+    <% end %>
+  </ul>
+    <!--http://jqueryui.com/draggable/#sortable-->
 </div>
 
 
