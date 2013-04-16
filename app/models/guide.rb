@@ -5,9 +5,11 @@ class Guide < ActiveRecord::Base
   has_and_belongs_to_many :places
 
   def photos
-    p = Set.new
+    p = Array.new
     places.each do |a|
-      p << a.photos
+      a.photos.each do |b|
+        p << b
+      end
     end
     p
   end
