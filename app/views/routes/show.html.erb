@@ -1,42 +1,94 @@
-<h2><%= @route.title %> route</h2>
 
-This is a route from <%= @route.trip.title %> trip
-
-<div class="guide_all tabbable">
-  <ul class="nav nav-tabs">
-    <li class="active">
-      <a data-toggle="tab" href="#info">info</a>
-    </li>
-    <li class="">
-      <a data-toggle="tab" href="#map" id="mapTab">map</a>
-    </li>
-    <li class="">
-      <a data-toggle="tab" href="#photo">photo</a>
-    </li>
-
-  </ul>
-
-  <div class="tab-content">
-
-    <div id="info" class="tab-pane active">
-      <%= render :partial => "routes/info" %>
-    </div>
-
-    <div id="map" class="tab-pane ">
+<%#= render :partial => 'objects/show',
+           :locals  => { :object => @place } %> 
+<%= div_for @route do %>
+  <div class="place_show">
+    <div class="place_left">
+      <div class="info_photo">
+        <%#= render :partial => 'carousel' %>
+      </div>
+      <div class="map">
+          <div id="map" class="tab-pane ">
       <%= render  :partial => "routes/map",
                   :locals => { :json => @json, :route => @route } %>
-		</div>
-
-    <div id="photo" class="tab-pane ">
-      <ul class="thumbnails">
-      	<%= render :partial => "routes/photo" %>
-			</ul>
     </div>
+      </div>
+    </div>   
 
 
-    
-    
-  </div>
+    <%#= place_timeline_thumb(@place) %>
+        <div class="PRG_information">
+          <div class="btn-add"></div>
+          <div class="title_prg title_route">
+            <p class="titlecentral"><%= @route.title %></p>
+          </div>
+            <div class="prg_stars">
+              <ul>
+                <li><div class="star"></div></li>
+                <li><div class="star"></div></li>
+                <li><div class="star"></div></li>
+                <li><div class="star"></div></li>
+                <li><div class="star"></div></li>
+              </ul> 
+            </div>
+        <div>  
+          <!--  <%= render :partial => "routes/info" %> -->
+        <% unless @route.description.blank? %>
+            <h3><%= t('route.info.description.description') %></h3>
+          <% end %>
+          <%= @route.description %>
+        </div> 
+        </div>     
+    </div>
+    <div class="change_mode"><a href="">map mode</a></div>
+
+
+
+
+<div id="prg_small">
+    <ul class="thumbnails">
+      <%= render :partial => "routes/item2" %>
+    </ul>
 </div>
+
+
+
+
+    <div class="related">
+      <p>related events</p>
+      <div class="related_events related_all"></div>
+      <p>related photos</p>
+      <div class="related_photos related_all">
+        <ul>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+        </ul>
+        <ul>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+        </ul>
+      </div>
+      <p>related videos</p>
+      <div class="related_videos related_all"></div>
+    </div>
+    <div class="PRG_description">
+      <h2>Un edificio para la historia</h2>
+      <p>En el siglo III fue un palacio romano. Fue restaurado durante el mandato de Alfonso VI y Alfonso X y modificado en 1535, bajo el mandato de Carlos I de España, que encargó la dirección de las obras al arquitecto Alonso de Covarrubias. Este diseñó un edificio compacto y cerrado, organizado en torno a un patio rectangular con doble nivel de arcos sostenidos por columnas de aire muy clásico (corintias y compuestas). La sobria fachada dividida en tres pisos de vanos repetidos en torno a los cuales se concentra la decoración y un gigantesco escudo imperial sobre la puerta, reflejan el poder del constructor. Impresiona su escalera, posteriormente engrandecida por Francisco de Villalpando. Fue residencia temporal de las reinas viudas Mariana de Austria (viuda de Felipe IV) y Mariana de Neoburgo (viuda de Carlos II).</p>
+      <p>A mediados del siglo XIX el Ministerio de la Gobernación, durante el reinado de Isabel II, instaló en la torre N.O. (según el testimonio de Manuel de Assas en 1848) un mecanismo telegráfico para recibir y enviar mensajes codificados desde Madrid hasta Cádiz; era la torre telegráfica nº 10 de la Línea de Andalucía, creada por el Brigadier Mathé. Los puestos de esta línea de torres de telegrafía óptica estuvieron en algunas poblaciones como Aranjuez, Toledo, Consuegra, Ciudad Real, Puertollano y Fuencaliente; en la parte andaluza atravesaba entre otros lugares como Cardeña, Montoro, Córdoba capital, Carmona, Sevilla capital, Las Cabezas de San Juan, Jerez de la Frontera, Cádiz capital y San Fernando. Su funcionamiento como telégrafo óptico fue breve, desde 1848 hasta 1857. En el edificio funcionó la Academia de Infantería de Toledo.</p>
+    </div>
+    <div class="coment-social">
+      <div id="comments" class="comments">
+        <h2>comments</h2>
+        <div class="new-comments-box">
+          <%= render :partial => 'comments/new', :locals => { :activity => @route.post_activity } %>
+        </div>
+      </div>
+        <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
+        <%= render :partial => 'activities/comments', :locals => { :activity => @route.post_activity } %>
+    </div>
+<% end %>
+
 
 
