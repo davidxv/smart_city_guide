@@ -5,7 +5,7 @@
   <div class="place_show">
     <div class="place_left">
       <div class="info_photo">
-        <%#= render :partial => 'carousel' %>
+        <%= render :partial => 'carousel' %>
       </div>
       <div class="map">
           <div id="map" class="tab-pane ">
@@ -32,7 +32,7 @@
               </ul> 
             </div>
         <div>  
-     <!--      <%= render :partial => "routes/info" %> -->
+         <%= render :partial => "routes/info" %>
         <% unless @route.description.blank? %>
             <h3><%= t('route.info.description.description') %></h3>
           <% end %>
@@ -40,27 +40,25 @@
         </div> 
         </div>     
     </div>
-    <div class="change_mode"><a href="">map mode</a></div>
+  
 
 
 
 
 <div id="prg_small">
-  <ul class="thumbnails">
-    <% @route.places.each do |p| %>
-      <%= render  :partial => "places/item",
-                    :locals => { :place => p } %>
-    <% end %>
-  </ul>
-    <!--http://jqueryui.com/draggable/#sortable-->
+    <ul class="thumbnails">
+      <%= render :partial => "routes/small_item" %>
+    </ul>
 </div>
-
+  <div class="change_mode"><a href="">map mode</a></div>
 
 
 
     <div class="related">
       <p>related events</p>
-      <div class="related_events related_all"></div>
+      <div class="related_events related_all">
+         <%= render :partial => 'routes/calendar' %>
+      </div>
       <p>related photos</p>
       <div class="related_photos related_all">
         <ul>
@@ -82,7 +80,7 @@
     </div>
     <div class="coment-social">
       <div id="comments" class="comments">
-        <h2>comments</h2>
+        <h2>Comments</h2>
         <div class="new-comments-box">
           <%= render :partial => 'comments/new', :locals => { :activity => @route.post_activity } %>
         </div>
