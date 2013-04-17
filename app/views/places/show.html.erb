@@ -18,7 +18,7 @@
     <%#= place_timeline_thumb(@place) %>
         <div class="PRG_information">
           <div class="btn-add"></div>
-          <div class="title_prg title_place valign">
+          <div class="title_prg title_place ">
             <p class="titlecentral"><%= @place.title %></p>
           </div>
             <div class="prg_stars">
@@ -47,15 +47,17 @@
       </div>
       <p>related photos</p>
       <div class="related_photos related_all">
+        <% related = @place.photos.sample(3) %>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
+          <li><%= thumb_for(related[1], 'thumb100sq') %></li>
         </ul>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= thumb_for(related[2], 'thumb100sq') %></li>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
         </ul>
       </div>
+      
       <p>related videos</p>
       <div class="related_videos related_all"></div>
     </div>
@@ -66,13 +68,13 @@
     </div>
     <div class="coment-social">
       <div id="comments" class="comments">
-        <h2>comments</h2>
+        <h2>Comments</h2>
         <div class="new-comments-box">
           <%= render :partial => 'comments/new', :locals => { :activity => @place.post_activity } %>
         </div>
       </div>
-        <!--%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
-        <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>-->
+        <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
+        <%= render :partial => 'activities/comments', :locals => { :activity => @place.post_activity } %>
     </div>
 <% end %>
 
