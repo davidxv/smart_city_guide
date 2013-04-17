@@ -19,8 +19,8 @@
     <%#= place_timeline_thumb(@place) %>
         <div class="PRG_information">
           <div class="btn-add"></div>
-          <div class="title_prg title_route vAling">
-            <div><p class="titlecentral"><%= @route.title %></p></div>
+          <div class="title_prg title_place">
+            <p class="titlecentral"><%= @route.title %></p>
           </div>
             <div class="prg_stars">
               <ul>
@@ -72,7 +72,13 @@
         </ul>
       </div>
       <p>related videos</p>
-      <div class="related_videos related_all"></div>
+      <div class="related_videos related_all">
+        <% related = @route.photos.sample(3) %>
+        <ul>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
+        </ul>
+        <div class="play_icon"></div>
+      </div>
     </div>
     <div class="PRG_description">
       <h2>Un edificio para la historia</h2>
