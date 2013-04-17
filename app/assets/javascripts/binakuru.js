@@ -130,3 +130,14 @@ $(document).ready(function(e){
   $('.vAling').vAlign();
 });
 
+//map mode
+$(function() {
+  $(".change_mode").click(function(){
+    if ($(".info_photo").css("display") == "block") {
+      $(".info_photo").css("display", "none");
+    } else {
+      $(".info_photo").css("display", "block");
+    }
+    return false;
+  });
+});
