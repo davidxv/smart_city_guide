@@ -76,4 +76,46 @@
         text-align: center 
       input
         @include center-block
+
+  #interest_points
+    .checkbox-menu
+      margin-top: 10px
+      p
+        color: black
+        @include view
+
+  #users
+    background-color: $color1
+    width: 31.8%
+    height: auto
+    float: left
+    .users_front_list  
+      ul
+        padding: 0
+
+        li.avatar
+          margin-bottom: 20px
+          margin-right: 20px
+          display: inline-block
+          width: 70px
+          float: left
+          img
+            @include border-top-left-radius(35px)
+            @include border-top-right-radius(35px)
+            @include border-bottom-right-radius(0px)
+            @include border-bottom-left-radius(35px)
+            width: 70px
+            height: 70px
+
+
+.btn_map
+  margin-top: 10px 
+  background-color: $color1
+  border-radius: 5px
+  border-color: transparent
+  @include mapMode
+
+  
+
+
         
