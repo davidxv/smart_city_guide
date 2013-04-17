@@ -59,7 +59,13 @@
       </div>
       
       <p>related videos</p>
-      <div class="related_videos related_all"></div>
+      <div class="related_videos related_all">
+        <% related = @place.photos.sample(3) %>
+        <ul>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
+        </ul>
+        <div class="play_icon"></div>
+      </div>
     </div>
     <div class="PRG_description">
       <h2>Un edificio para la historia</h2>

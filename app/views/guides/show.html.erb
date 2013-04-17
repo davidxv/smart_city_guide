@@ -61,17 +61,25 @@
       </div>
       <p>related photos</p>
       <div class="related_photos related_all">
+        <% related = @guide.photos.sample(3) %>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
+          <li><%= thumb_for(related[1], 'thumb100sq') %></li>
         </ul>
         <ul>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
-          <li><%= image_tag('panoramica_toledo.jpg') %></li>
+          <li><%= thumb_for(related[2], 'thumb100sq') %></li>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
         </ul>
       </div>
+
       <p>related videos</p>
-      <div class="related_videos related_all"></div>
+      <div class="related_videos related_all">
+        <% related = @guide.photos.sample(3) %>
+        <ul>
+          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
+        </ul>
+        <div class="play_icon"></div>
+      </div>
     </div>
     <div class="PRG_description">
       <h2>Un edificio para la historia</h2>
