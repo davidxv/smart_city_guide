@@ -1,3 +1,3 @@
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-  <%= image_tag('panoramica_toledo.jpg') %>
+<li class="" rel="tooltip" title=<%= place.title %> data-original-title="Hi">
+  <%= link_to thumb_for(place.main_picture, 'thumb100sq'), place%>
 </li>
