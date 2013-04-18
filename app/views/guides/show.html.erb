@@ -41,13 +41,11 @@
         </div>     
     </div>
   
-
-
-
-
 <div id="prg_small">
     <ul class="thumbnails">
-      <%= render :partial => "guides/small_item" %>
+      <% @guide.places.each do |p| %>
+        <%= render :partial => "guides/small_item", :locals => {:place => p} %>
+      <% end %>
     </ul>
 </div>
   <div class="btn_map map_prg"><a href="">map mode</a></div>
