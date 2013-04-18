@@ -20,18 +20,18 @@
         <div class="toolbar_front profile">
           <ul>
             <li>
-              <a href="">name</a>      
-              <%= contact_to subject %>
-              <%= javascript_tag do %>
-              $(function() {
-              SocialStream.Contact.show();
-            });
-            <% end %>
-
+              <a href="">
+                <%= contact_to subject %>
+                <%= javascript_tag do %>
+                $(function() {
+                SocialStream.Contact.show();
+              });
+              <% end %>
+            </a>
           </li>
-          <li><a href="">age</a>25</li>   <!--VER EDAD-->
-          <li><a href="">city</a>Madrid</li>   <!--VER CIUDAD-->
-          <li><a href="">following/followers</a> 23/48</li>
+          <li><a href="">Age: 25</a></li>   <!--VER EDAD-->
+          <li><a href="">Madrid</a></li>   <!--VER CIUDAD-->
+          <li><a href="">23 following/48 followers</a></li>
         </ul>
       </div>
       <div class="toolbar_back">
