@@ -1,3 +1,4 @@
+<div id="trips">
 	<div id="info_city">
 		<div class="title-trip"><h1><%= @trip.title %></h1></div>
 		<%= render :partial => "trips/info" %>
@@ -29,4 +30,4 @@
     <%= render :partial => 'activities/comments', :locals => { :activity => Trip.first.post_activity } %>
   </div>
   </div>
-
+</div>
