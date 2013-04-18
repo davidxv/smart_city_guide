@@ -41,11 +41,11 @@
     </div>
     <div class="change_mode"><a href="">map mode</a></div>
     <div class="related">
-      <p>related events</p>
+      <p class="sections">related events</p>
       <div class="related_events related_all">
         <%= render :partial => 'routes/calendar' %>
       </div>
-      <p>related photos</p>
+      <p class="sections">related photos</p>
       <div class="related_photos related_all">
         <% related = @place.photos.sample(3) %>
         <ul>
@@ -58,7 +58,7 @@
         </ul>
       </div>
       
-      <p>related videos</p>
+      <p class="sections">related videos</p>
       <div class="related_videos related_all">
         <% related = @place.photos.sample(3) %>
         <ul>

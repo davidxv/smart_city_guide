@@ -76,42 +76,45 @@
         text-align: center 
       input
         @include center-block
-#interest_points
-  width: 68.12%
-  margin-left: 0px
-  display: inline-block
-  float: left
-  position: relative
-  .checkbox-menu
-    margin-bottom: -20px
-    float: right
-    margin-right: 60px
-    label
-      display: inline-block
-    input[type=checkbox]
-      display: none
-    input[type=checkbox] + label
-      background: #fff
-      display: inline-block
-      width: 85px
-      height: 24px
-      background: url(ico/checkedoff.png) 0px 0px no-repeat
-      text-indent: 25px
-    input[type=checkbox]:checked + label
-      background: url(ico/checked.png) 0px 0px no-repeat
-  .content-checkbox
-    display: inline-block
+
+
+  #interest_points
+    .checkbox-menu
+      margin-top: 10px
+      p
+        color: black
+        @include view
+
+  #users
+    background-color: $color1
+    width: 31.8%
+    height: auto
     float: left
-    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    .content_guides
-      display: inline-block
+    .users_front_list  
       ul
-        margin: 0px
-    .content_routes
-      display: inline-block
-      ul
-        margin: 0px
-    .content_places
-      display: inline-block
-      ul
-        margin: 0px
+        padding: 0
+
+        li.avatar
+          margin-bottom: 20px
+          margin-right: 20px
+          display: inline-block
+          width: 70px
+          float: left
+          img
+            @include border-top-left-radius(35px)
+            @include border-top-right-radius(35px)
+            @include border-bottom-right-radius(0px)
+            @include border-bottom-left-radius(35px)
+            width: 70px
+            height: 70px
+
+
+.btn_map
+  margin-top: 10px 
+  background-color: $color1
+  border-radius: 5px
+  border-color: transparent
+  @include mapMode
+
+  
+

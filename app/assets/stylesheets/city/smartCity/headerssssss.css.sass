@@ -1,0 +1,61 @@
+.navbar
+	@include opacity(95)
+	.navbar-inner
+		.nav-header
+			.brand
+				@include makeColumn(2, 0)
+				margin-left: 0px
+				padding: 13px 6px 0px 0px
+			.logo
+				margin-top: 5px
+				display: inline-block
+				float: left
+				img
+					width: 75px
+					margin-right: 20px
+			.user-nav
+				border: 1px solid $grayDark
+				-webkit-box-shadow: inset 2px 2px 2px 2px rgba(50, 50, 50, 0.6)
+				box-shadow: inset 2px 2px 2px 2px rgba(50, 50, 50, 0.6)
+				@include border-radius(15px)
+				height: 30px
+				margin-top: 6px
+				margin-bottom: 3px
+				.avatar-nav
+					img
+						width: 30px
+						height: 30px
+						@include border-radius(15px)
+				a
+					padding: 0px
+				.name
+					padding-left: 20px
+					padding-right: 20px
+					font-size: 16px
+					vertical-align: text-top
+					font-weight: normal
+  		.search-nav
+				margin-right: 20px
+				background-color: #000
+				margin-top: 1px
+			.btn-group
+				margin-top: 6px
+				@include makeColumn(2, 0)
+				.dropdown-menu
+					margin: 8px -88px 0
+					background-color: $color1
+				.btn-inverse 
+					background-color: transparent
+					background-image: none
+					border-color: none
+				.caret
+					border-top: none
+					border-left: none
+					border-right: none
+					background-image: url('ico/ico.png')
+					width: 10px
+					height: 8px
+					margin-top: 6px
+					margin-left: 8px
+			.btn
+				box-shadow: none
