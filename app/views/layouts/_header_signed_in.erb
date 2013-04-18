@@ -24,22 +24,35 @@
         </ul>
       </div>
     <div class="asistfloat">
-      <div class="search-nav ">
-        <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
-        <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name') %>
+      <div class="search-nav">
+        <%= form_tag search_path, method: 'get', class: "navbar-search" do %>
+        <%= text_field_tag :q, nil, autocomplete: :off, class: 'search-query', placeholder: t('search.name'), "data-min_query" => SocialStream::Search::MIN_QUERY %>
         <% end %>
+        <%= javascript_tag do %>
+          $(function() {
+          SocialStream.SearchHeader.show();
+          });
+        <% end %>
+        <div class="mat">
+          <%= render partial: 'layouts/loading' %>
+
+          <div class="query_too_short">
+            <%= t 'search.at_least', count: SocialStream::Search::MIN_QUERY %>
+          </div>
+
+          <div class="no_results">
+            <%= t 'search.nothing' %>
+          </div>
+
+          <div class="results">
+          </div>
+        </div>
       </div>
-
-      
-
 
       <div class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">go to<span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          
-            <%= render partial: 'layouts/header_dropdown' %>
-          
-
+          <%= render partial: 'layouts/header_dropdown' %>
         </ul>
       </div>
     </div>
