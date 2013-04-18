@@ -1,43 +1,3 @@
-<section id="toolbar" class="toolbar-profile">
-  <div class="user">
-
-    <div class="contact-button">
-
-    </div>
-
-  <%= content_for :toolbar_menu do %>
-    
-        </div>
-        <ul class="buttons">
-          <li>
-            <%= link_to [ subject, :profile ] do %>
-            <i class='icon_tool16-info'></i> <%= t 'menu.information' %>
-            <% end %>
-          </li>
-
-
-          <li>
-
-          </li>
-
-          <div class="base_items"/>
-        </ul>
-  <% end %>
-
-  <%= render partial: 'toolbar/menu' %>
-
-  <%= render partial: 'toolbar/contacts', locals: { subject: subject } %>
-
-  <%= render partial: 'toolbar/groups', locals: { subject: subject } %>
-</section>
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
 <section id="toolbar" class="toolbar_profile">
   <div class="toolbar_content">
     <ul>
@@ -69,9 +29,9 @@
             <% end %>
 
           </li>
-          <li><a href="">age</a></li>   <!--VER EDAD-->
-          <li><a href="">city</a></li>   <!--VER CIUDAD-->
-          <li><a href="">following/followers</a></li>
+          <li><a href="">age</a>25</li>   <!--VER EDAD-->
+          <li><a href="">city</a>Madrid</li>   <!--VER CIUDAD-->
+          <li><a href="">following/followers</a> 23/48</li>
         </ul>
       </div>
       <div class="toolbar_back">
@@ -80,7 +40,7 @@
     </li>
     <li class="">
       <div class="toolbar_front">
-        <a href="">favourites</a>     <!--IR A FAVORITOS-->
+        <a href="">Favourites</a>     <!--IR A FAVORITOS-->
       </div>
       <div class="toolbar_back">
       </div>
@@ -105,7 +65,7 @@
 
     <li class="">
       <div class="toolbar_front">
-        <a href="">events</a> <!--LINK A EVENTOS-->
+        <a href="">Events</a> <!--LINK A EVENTOS-->
       </div>
       <div class="toolbar_back">
       </div>
@@ -116,14 +76,14 @@
     <li class="">
       <div class="toolbar_contacts">
         <div class="toolbar_front">
-          <a href="">contacts</a> <!--LINK A CONTACTOS-->
+          <%= link_to t('contact.other'), [ profile_subject, Contact.new ] %>
         </div>
         <div class="toolbar_back"></div>
       </div>
       <div class="toolbar_messages">
         <div class="toolbar_front">
           <%= link_to new_message_path(:receiver => subject.slug) do %>
-          <%= t 'send message' %>
+          <%= t 'mailboxer.send' %>
           <% end %>
         </div>
         <div class="toolbar_back"></div>

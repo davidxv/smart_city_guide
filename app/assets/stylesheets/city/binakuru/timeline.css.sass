@@ -80,14 +80,6 @@
 					clear: both
 					display: block
 					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-					.to_comment,
-					.to_like,
-					.to_share
-						@include grid-fluid-span(4, $fluidGridColumnWidth, $fluidGridGutterWidth)
-						display: inline-block
-						float: left
-						text-align: center
-
 					.to_like
 						i
 							display: none
@@ -99,7 +91,16 @@
 						margin-right: auto
 						@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
 						li
-							a
+							float: left
+							display: inline
+							width: 33.3%
+							text-align: center
+							&:first-child
+								text-align: left
+							&:last-child
+								text-align: right
+
+							a					
 								color: $grayLight
 								&:hover
 									color: $color1
