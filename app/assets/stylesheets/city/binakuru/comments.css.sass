@@ -14,75 +14,82 @@
           height: 30px
       form.new_comment
         textarea
-
-          width: 212px
+          @include border-radius (0)
+          width: 225px
           margin-bottom: 0px
+          height: 26px
+          resize: none
         textarea:active
           height: auto
         input.btn
-          height: 70px
-          width: 70px              
+          height: 36px
+          width: 70px      
+          margin-left: -5px        
 
-          @include border-top-left-radius(20px)
-          @include border-top-right-radius(20px)
-          @include border-bottom-right-radius(0px)
-          @include border-bottom-left-radius(20px)
+          @include border-top-left-radius(0px)
+          @include border-top-right-radius(18px)
+          @include border-bottom-right-radius(18px)
+          @include border-bottom-left-radius(0px)
           background-color: $color1
           color: $white
           background-image: none
-          margin-left: 8px
+          border: none
+
           font-size: 12px
-  .comments
-    .media
-      border-bottom: 1px dashed $gray
-      .avatar
-        .media-object
-          a
-            img
-              @include border-top-left-radius(20px)
-              @include border-top-right-radius(20px)
-              @include border-bottom-right-radius(0px)
-              @include border-bottom-left-radius(20px)
-              width: 40px
-              height: 40px
+.comments
+  clear: both
+  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  .media
+    border-bottom: 1px dashed $gray
+    .avatar
+      .media-object
+        a
+          img
+            @include border-top-left-radius(20px)
+            @include border-top-right-radius(20px)
+            @include border-bottom-right-radius(0px)
+            @include border-bottom-left-radius(20px)
+            width: 40px
+            height: 40px
 
-      .media-heading
+    .media-heading
+      display: inline-block
+      float: left
+      width: 80%
+      margin: 0
+      h6
+        font-family: $Lato
+        font-size: 14px
+        margin-top: 0px
+        line-height: 15px
+    .media-body
+      display: inline-block
+      float: left
+      width: 80%
+      .objects
+
         display: inline-block
-        float: left
-        width: 80%
-        margin: 0
-        h6
-          font-family: $Lato
-          font-size: 14px
-          margin-top: 0px
-          line-height: 15px
-      .media-body
-        display: inline-block
-        float: left
-        width: 80%
-        .objects
+        font-family: $OpenSans
+        font-size: 12px
+        line-height: 15px
 
-          display: inline-block
-          font-family: $OpenSans
-          font-size: 12px
-          line-height: 15px
-
-          
-        .actions
-          .post_time_ago
-            text-align: right
-            margin-top: -5px
-            font-size: 11px
-            font-family: $LatoLightItalic
-            color: $black
-          .to_like
-            display: none
-          .audience
-            display: none
-          .audience-tooltip
-            display: none
-          .to_share
-            display: none
+        
+      .actions
+        margin-bottom: -10px
+        .post_time_ago
+          text-align: right
+          margin-top: -10px
+          font-size: 11px
+          font-family: $LatoLightItalic
+          color: $black
+        .to_like
+          display: none
+        .audience
+          display: none
+        .audience-tooltip
+          display: none
+        .to_share
+          display: none
 
 
 

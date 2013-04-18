@@ -1,0 +1,44 @@
+<div>
+  <%= render :partial => "toolbar/plannings" %>
+</div>
+<div id="title_section"><p>plannings</p></div>
+<div id="planning">
+  <div class="planning_info">
+    <div class="img_planning"></div>
+    <div class="title_planning"><a>Toledo Oct2013</a></div>
+    <div class="other_info">
+      <ul>
+        <li><a href="">Date: From 13Apr to 20Apr</a></li>
+        <li><a href="">Cities: Toledo</a></li>
+        <li><a href="">Members: Carol, Juan Carlos, Adriana, Víctor</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="menu_views">
+    <ul>
+      <li><a href="">custom</a></li>
+      <li><a href="">map</a></li>
+      <li><a href="">extended</a></li>
+      <li><a href="">calendar</a></li>
+    </ul>
+  </div>
+  <div class="planning_content">
+    <div class="planning_day row">
+      <div class="planning_date"><p>Day 1</p></div>
+      <div class="planning_city">
+        <div class="interest_points">
+          <%= render :partial => "plannings/interest_points", :locals => { :trip => Trip.first }  %>
+        </div>
+      </div>
+    </div>
+    <div class="planning_day row">
+      <div class="planning_date"><p>Day 2</p></div>
+      <div class="planning_city">
+        <div class="interest_points">
+          <%= render :partial => "plannings/interest_points", :locals => { :trip => Trip.first }  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

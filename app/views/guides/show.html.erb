@@ -41,13 +41,12 @@
         </div>     
     </div>
   
-
-
-
-
 <div id="prg_small">
+    <p class="section_contents">guide contents</p>
     <ul class="thumbnails">
-      <%= render :partial => "guides/small_item" %>
+      <% @guide.places.each do |p| %>
+        <%= render :partial => "guides/small_item", :locals => {:place => p} %>
+      <% end %>
     </ul>
 </div>
   <div class="btn_map map_prg"><a href="">map mode</a></div>
@@ -55,11 +54,11 @@
 
 
     <div class="related">
-      <p>related events</p>
+      <p class="sections">related events</p>
       <div class="related_events related_all">
          <%= render :partial => 'guides/calendar' %>
       </div>
-      <p>related photos</p>
+      <p class="sections">related photos</p>
       <div class="related_photos related_all">
         <% related = @guide.photos.sample(3) %>
         <ul>
@@ -72,19 +71,23 @@
         </ul>
       </div>
 
-      <p>related videos</p>
+      <p class="sections">related videos</p>
       <div class="related_videos related_all">
-        <% related = @guide.photos.sample(3) %>
-        <ul>
-          <li><%= thumb_for(related[0], 'thumb100sq') %></li>
-        </ul>
-        <div class="play_icon"></div>
+        <div class="related_videos related_all">
+        <div class="video"><iframe width="250" height="188" src="http://www.youtube.com/embed/fSi_08eRGiI" frameborder="0" allowfullscreen></iframe></div>
+      </div>
       </div>
     </div>
     <div class="PRG_description">
-      <h2>Un edificio para la historia</h2>
-      <p>En el siglo III fue un palacio romano. Fue restaurado durante el mandato de Alfonso VI y Alfonso X y modificado en 1535, bajo el mandato de Carlos I de España, que encargó la dirección de las obras al arquitecto Alonso de Covarrubias. Este diseñó un edificio compacto y cerrado, organizado en torno a un patio rectangular con doble nivel de arcos sostenidos por columnas de aire muy clásico (corintias y compuestas). La sobria fachada dividida en tres pisos de vanos repetidos en torno a los cuales se concentra la decoración y un gigantesco escudo imperial sobre la puerta, reflejan el poder del constructor. Impresiona su escalera, posteriormente engrandecida por Francisco de Villalpando. Fue residencia temporal de las reinas viudas Mariana de Austria (viuda de Felipe IV) y Mariana de Neoburgo (viuda de Carlos II).</p>
-      <p>A mediados del siglo XIX el Ministerio de la Gobernación, durante el reinado de Isabel II, instaló en la torre N.O. (según el testimonio de Manuel de Assas en 1848) un mecanismo telegráfico para recibir y enviar mensajes codificados desde Madrid hasta Cádiz; era la torre telegráfica nº 10 de la Línea de Andalucía, creada por el Brigadier Mathé. Los puestos de esta línea de torres de telegrafía óptica estuvieron en algunas poblaciones como Aranjuez, Toledo, Consuegra, Ciudad Real, Puertollano y Fuencaliente; en la parte andaluza atravesaba entre otros lugares como Cardeña, Montoro, Córdoba capital, Carmona, Sevilla capital, Las Cabezas de San Juan, Jerez de la Frontera, Cádiz capital y San Fernando. Su funcionamiento como telégrafo óptico fue breve, desde 1848 hasta 1857. En el edificio funcionó la Academia de Infantería de Toledo.</p>
+      <h2>The imperial city in 24 hours</h2>
+      <p>The old city is located on a mountaintop with a 150 degree view, surrounded on three sides by a bend in the Tagus River, and contains many historical sites, including the Alcázar, the cathedral (the primate church of Spain), and the Zocodover, a central market place.
+
+      <p>The Cathedral of Toledo (Catedral de Toledo) was built between 1226–1493 and modeled after the Bourges Cathedral, though it also combines some characteristics of the Mudéjar style. It is remarkable for its incorporation of light and features the Baroque altar called El Transparente, several stories high, with fantastic figures of stucco, paintings, bronze castings, and multiple colors of marble, a masterpiece of medieval mixed media by Narciso Tomé topped by the daily effect for just a few minutes of a shaft of light from which this feature of the cathedral derives its name. Two notable bridges secured access to Toledo across the Tajo, the Alcántara bridge and the later built San Martín bridge.</p>
+
+      <p>The Monasterio de San Juan de los Reyes is a Franciscan monastery, built 1477-1504, in a remarkable combination of Gothic-Spanish-Flemish style with Mudéjar ornamentation.</p>
+
+      <p>Toledo was home to El Greco for the latter part of his life, and is the subject of some of his most famous paintings, including The Burial of the Count of Orgaz, exhibited in the Church of Santo Tomé.</p>
+     
     </div>
     <div class="coment-social">
       <div id="comments" class="comments">

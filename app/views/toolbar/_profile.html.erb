@@ -2,11 +2,11 @@
   <div class="toolbar_content">
     <ul>
       <li class="">
-        <div class="toolbar_front roundedBox">
+        <div class="toolbar_front roundedBox profile">
           <a href=""></a>
         </div>
 
-        <div class="toolbar_back roundedBox">
+        <div class="toolbar_back roundedBox ">
           <%= render partial: 'toolbar/logo',
           locals: { subject: subject } %>
           <% if current_subject.present? && subject != current_subject %>
@@ -17,7 +17,7 @@
 
       </li>
       <li class="info_profile">    
-        <div class="toolbar_front profile">
+        <div class="toolbar_front ">
           <ul>
             <li>
               <a href="">
