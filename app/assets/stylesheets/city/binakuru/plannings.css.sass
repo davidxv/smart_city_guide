@@ -30,16 +30,17 @@
         float: left
         height: auto
         background-color: white
-        width: 100%
         position: absolute
-        z-index: 0
         padding-bottom: 20px
+        margin-left: 7%
+        width: 93.5%
+
         .interest_points
           display: inline-block
           float: left
-          margin-left: 40px
           position: relative
-          width: 94.12%
+          margin-left: 32px
+          width: 95.12%
       .planning_date
         @include dates_filter
         background-color: $color1
@@ -48,7 +49,7 @@
         left: 73px
         position: absolute
         resize: none
-        left: -32px
+        left: 32px
         top: -31px
         width: 60px
         z-index: 1
@@ -60,7 +61,7 @@
     float: right
     display: block
     height: 300px
-    width: 22.8571%
+    width: 23.6%
     margin-top: 37px
     background-color: white
     .other_info
@@ -69,7 +70,8 @@
         li 
           margin-top: 5px
           a
-            color: grey
+            @include info
+            line-height: 15px
     .img_planning
       background-image: url(toledo5.jpg) 
       background-position: center
@@ -108,3 +110,4 @@
     li
       margin-bottom: 0
       margin-top: 5px
+
