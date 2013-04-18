@@ -3,19 +3,11 @@
   <p>top travelers</p>
  
   <div class="users_front_list">
-
     <ul>
-
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-      <%= render :partial => "users/user" %>
-
+    <% top = User.all.sample(9) %>
+    <% top.each do |u| %> 
+      <%= render :partial => "users/user", :locals => { :user => u } %>
+    <% end %>
     </ul>
   
   </div>
