@@ -132,7 +132,7 @@ $(document).ready(function(e){
 
 //map mode
 $(function() {
-  $(".change_mode").click(function(){
+  $(".btn_map").click(function(){
     if ($(".info_photo").css("display") == "block") {
       $(".info_photo").css("display", "none");
     } else {
