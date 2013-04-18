@@ -1,88 +1,91 @@
-#info_city
-  @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-  height: 360px
-  .Carousel-trip
-    .item
-      img
-        @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
-        max-height: 360px
+#trips
+  #info_city
+    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    height: 360px
+    .Carousel-trip
+      .item
+        img
+          @include grid-fluid-span(9, $fluidGridColumnWidth, $fluidGridGutterWidth)
+          max-height: 360px
+          float: left
+        iframe 
+          width: 720px
+          height: 360px      
+      .carousel-caption
+        @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
         float: left
-      iframe 
-        width: 720px
-        height: 360px      
-    .carousel-caption
-      @include grid-fluid-span(3, $fluidGridColumnWidth, $fluidGridGutterWidth)
-      float: left
-      background-color: $white
-      position: static
-      height: 100%
-      height: 330px
-      h2
-        color: #9A9A9A
-        opacity: 0.8
-        margin-top: 220px
-      p.lead
-        color: $gray
-        font-size: 16px
-        display: inline-block
-  .title-trip
-    height: 188px
-    width: 188px
-    background-color: $color1
-    @include border-radius(94px)
-    @include cityName
-    position: absolute
-    z-index: 2
-    margin-top: 20px
-    margin-left: 625px
-    text-align: center
-    h1
-      margin-top: 70px
-      color: $white
-#interest_points
-  width: 68.12%
-  margin-left: 0px
-  display: inline-block
-  float: left
-  position: relative
-  .checkbox-menu
-    margin-bottom: -20px
-    float: right
-    margin-right: 60px
-    label
-      display: inline-block
-    input[type=checkbox]
-      display: none
-    input[type=checkbox] + label
-      background: #fff
-      display: inline-block
-      width: 85px
-      height: 24px
-      background: url(ico/checkedoff.png) 0px 0px no-repeat
-      text-indent: 25px
-    input[type=checkbox]:checked + label
-      background: url(ico/checked.png) 0px 0px no-repeat
-  .content-checkbox
+        background-color: $white
+        position: static
+        height: 100%
+        height: 330px
+        h2
+          color: #9A9A9A
+          opacity: 0.8
+          margin-top: 220px
+        p.lead
+          color: $gray
+          font-size: 16px
+          display: inline-block
+    .title-trip
+      height: 188px
+      width: 188px
+      background-color: $color1
+      @include border-radius(94px)
+      @include cityName
+      position: absolute
+      z-index: 2
+      margin-top: 20px
+      margin-left: 625px
+      text-align: center
+      h1
+        margin-top: 70px
+        color: $white
+  #interest_points
+    width: 68.12%
+    margin-left: 0px
     display: inline-block
     float: left
-    @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-    .content_guides
+    position: relative
+    .checkbox-menu
+      margin-bottom: -20px
+      float: right
+      margin-right: 60px
+      label
+        display: inline-block
+      input[type=checkbox]
+        display: none
+      input[type=checkbox] + label
+        background: #fff
+        display: inline-block
+        width: 85px
+        height: 24px
+        background: url(ico/checkedoff.png) 0px 0px no-repeat
+        text-indent: 25px
+      input[type=checkbox]:checked + label
+        background: url(ico/checked.png) 0px 0px no-repeat
+    .content-checkbox
       display: inline-block
-      ul
-        margin: 0px
-    .content_routes
+      float: left
+      @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+      .content_guides
+        display: inline-block
+        ul
+          margin: 0px
+      .content_routes
+        display: inline-block
+        ul
+          margin: 0px
+      .content_places
+        display: inline-block
+        ul
+          margin: 0px
+  .related
+    width: 31.88%
+    #comments-element
+
       display: inline-block
-      ul
-        margin: 0px
-    .content_places
-      display: inline-block
-      ul
-        margin: 0px
-#comments-element
-  width: 31.88%
-  display: inline-block
-  float: left
-  h4
-    text-align: center
-    margin-top: 4px
-    margin-bottom: 4px
+      float: left
+      h4
+        text-align: center
+        margin-top: 4px
+        margin-bottom: 4px

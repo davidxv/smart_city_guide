@@ -21,8 +21,12 @@
           height: auto
         input.btn
           height: 70px
-          width: 70px
-          @include border-radius(35px)
+          width: 70px              
+
+          @include border-top-left-radius(20px)
+          @include border-top-right-radius(20px)
+          @include border-bottom-right-radius(0px)
+          @include border-bottom-left-radius(20px)
           background-color: $color1
           color: $white
           background-image: none

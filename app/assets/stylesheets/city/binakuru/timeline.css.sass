@@ -99,7 +99,6 @@
 								text-align: left
 							&:last-child
 								text-align: right
-
 							a					
 								color: $grayLight
 								&:hover
@@ -120,6 +119,7 @@
 						color: $white
 						font-family: $LatoItalic
 
+
 				div.new_comment
 					@include center-block
 					@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
@@ -139,78 +139,20 @@
 							@include center-block
 							@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
 							resize: none
+
+							padding-bottom: 25px
 						textarea:active
 							height: auto
 						input.btn
+							margin-top: -25px
+							margin-left: auto
+							margin-right: auto
+							display: block
 							height: 70px
 							width: 70px
 							@include border-radius(35px)
 							background-color: $color1
 							color: $white
-							background-image: none
-							margin-left: 8px
+							background-image: none							
 							font-size: 12px
 
-
-
-
-				.comments
-					padding-top: 20px
-					.activity
-						@include center-block
-						@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-					.media
-						border-bottom: none
-						background-color: #fcfcfc
-						padding: 10px
-						.avatar
-							.media-object
-								a
-									img
-										@include border-top-left-radius(15px)
-										@include border-top-right-radius(15px)
-										@include border-bottom-right-radius(0px)
-										@include border-bottom-left-radius(15px)
-										width: 30px
-										height: 30px
-
-						header.media-heading
-							display: inline-block
-							float: left
-							width: 80%
-							margin: 0
-							padding-top: 16px
-							h6
-								font-family: $Lato
-								font-size: 12px
-								margin-top: 0px
-								line-height: 15px
-								a
-									font-size: 14px
-						.media-body
-							@include center-block
-							@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
-							.objects
-								display: inline-block
-								font-family: $OpenSans
-								font-size: 12px
-								line-height: 15px
-							
-							.actions
-								margin-top: 0px
-								ul
-									display: none
-								.post_time_ago
-									position: absolute
-									bottom: 5px
-									right: 5px
-									height: 20px
-									@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
-									@include border-radius(0px)
-									background-color: transparent
-									background-image: none
-									p
-										font-size: 12px
-										text-align: right
-										color: $grayLight
-										font-family: $LatoItalic
