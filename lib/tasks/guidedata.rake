@@ -108,6 +108,7 @@ namespace :db do
 
         demo = Actor.find_by_slug('demo')
         Place.create  :title          => "Plaza Zocodover",
+                      :description    => "Plaza de Zocodover (Zocodover Square) is the main square of Toledo, and its very heart. It was the ancient Arabian market (zocodover means \"place of animals\"). It's an ideal place to take a break after visiting the Alcazar or the Cathedral and also a hub for catching the bus or riding a tourist train or just take a seat a watch the life goes by... This square is near the highest point of the old city, in the north-east corner, just a few metres from the Alcazar. There are a number of cafes, and the buildings above appear to be mainly offices. Traditional markets, such as the famous \"Martes\" (Tuesday market) still take place in this square. Great bullfights, fiestas and macabre executions have also taken place here. During the Muslim era this was the location of the old cattle market (\"Tulaytula\") built on top of the ruins of the Roman wall.",
                       :streetAddress  => "Plaza Zocodover",
                       :locality       => "Toledo",
                       :region         => "Castile-La Mancha",
@@ -124,6 +125,7 @@ namespace :db do
                       :relation_ids   => Array(Relation::Public.instance.id)
 
         Place.create  :title          => "Cathedral of Toledo",
+                      :description    => "The Primate Cathedral of Saint Mary of Toledo (Spanish: Catedral Primada Santa María de Toledo) is a Roman Catholic cathedral in Toledo, Spain, see of the Metropolitan Archdiocese of Toledo. The cathedral of Toledo is one of the three 13th-century High Gothic cathedrals in Spain and is considered, in the opinion of some authorities, to be the magnum opus[1] of the Gothic style in Spain. It was begun in 1226 under the rule of Ferdinand III and the last Gothic contributions were made in the 15th century when, in 1493, the vaults of the central nave were finished during the time of the Catholic Monarchs. It was modeled after the Bourges Cathedral, although its five naves plan is a consequence of the constructors' intention to cover all of the sacred space of the former city mosque with the cathedral, and of the former sahn with the cloister. It also combines some characteristics of the Mudéjar style, mainly in the cloister, and with the presence of multifoiled arches in the triforium. The spectacular incorporation of light and the structural achievements of the ambulatory vaults are some of its more remarkable aspects. It is built with white limestone from the quarries of Olihuelas, near Toledo.",
                       :streetAddress  => "Calle Cardenal Cisneros",
                       :locality       => "Toledo",
                       :region         => "Castile-La Mancha",
@@ -140,6 +142,7 @@ namespace :db do
                       :relation_ids   => Array(Relation::Public.instance.id)
 
         Place.create  :title          => "Alcazar of Toledo",
+                      :description    => "The Alcázar of Toledo is a stone fortification located in the highest part of Toledo, Spain. Once used as a Roman palace in the 3rd century, it was restored under Charles I and Philip II of Spain in the 1540s. In 1521, Hernán Cortés was received by Charles I at the Alcázar, following Cortes' conquest of the Aztecs. Spanish Civil War During the Spanish Civil War, Colonel José Moscardó Ituarte held the building against overwhelming Spanish Republican forces in the Siege of the Alcázar. The incident became a central piece of Spanish Nationalist lore, especially the story of Moscardó's son Luis. The Republicans took 16-year old Luis hostage, and demanded that the Alcázar be surrendered or they would kill him. Luis told his father, \"Surrender or they will shoot me.\" His father replied, \"Then commend your soul to God, shout 'Viva Cristo Rey' and die like a hero.",
                       :streetAddress  => "Calle del General Moscardó, 4",
                       :locality       => "Toledo",
                       :region         => "Castile-La Mancha",
