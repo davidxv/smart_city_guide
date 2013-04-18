@@ -58,6 +58,60 @@
         input
         @include center-block
         margin-top: 30px
+
+
+    .trip_Z
+      z-index: 4
+      @include border-top-left-radius(8px)
+      @include border-top-right-radius(8px)
+      @include border-bottom-right-radius(8px)
+      @include border-bottom-left-radius(8px)
+      background-color: $color1
+      width: 2%
+      height: 3%
+      float: left
+      margin-top: 20%
+      margin-left: 70%
+
+
+    .trip_x
+      z-index: 5
+      @include border-top-left-radius(8px)
+      @include border-top-right-radius(8px)
+      @include border-bottom-right-radius(8px)
+      @include border-bottom-left-radius(8px)
+      background-color: $color1
+      width: 2%
+      height: 3%
+      float: left
+      margin-top: 5%
+      margin-left: 90%
+
+      .trip_y
+      z-index: 6
+      @include border-top-left-radius(8px)
+      @include border-top-right-radius(8px)
+      @include border-bottom-right-radius(8px)
+      @include border-bottom-left-radius(8px)
+      background-color: $color1
+      width: 2%
+      height: 3%
+      float: right
+      margin-top: 10%
+      margin-left: 20%
+
+      .trip_w
+      z-index: 7
+      @include border-top-left-radius(8px)
+      @include border-top-right-radius(8px)
+      @include border-bottom-right-radius(8px)
+      @include border-bottom-left-radius(8px)
+      background-color: $color1
+      width: 2%
+      height: 3%
+      float: left
+      margin-top: 20%
+      margin-left: 70%
       
 
 
@@ -86,16 +140,31 @@
         @include view
 
   #users
-    background-color: $color1
+    
     width: 31.8%
     height: auto
     float: left
-    .users_front_list  
+    .top_travelers
+      height: 30px
+      .topt
+
+        font-family: $LatoLight
+        font-size: 20px
+        color: $color1
+        text-align: center
+        input
+        @include center-block
+        margin-top: 15px
+
+    .users_front_list
+      
+   
+
       ul
         padding: 0
 
         li.avatar
-          margin-bottom: 20px
+          margin-bottom: 40px
           margin-right: 20px
           display: inline-block
           width: 70px
@@ -115,7 +184,7 @@
   border-radius: 5px 5px 5px 5px
   height: 24px
   margin-top: 10px
-  width: 90px
+  width: 95px
   @include mapMode
 
   a 
