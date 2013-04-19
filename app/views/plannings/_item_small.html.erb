@@ -1,5 +1,17 @@
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('toledo_rio3.jpeg') %>
+<li class="" rel="tooltip" title=<%= Trip.first.guides.first.title %> data-original-title="Hi">
+	<%= link_to thumb_for(Trip.first.guides.first.main_picture, '500'), Trip.first.guides.first %>
+</li>
+<li class="" rel="tooltip" title=<%= Trip.first.places[0].title %> data-original-title="Hi">
+	<%= link_to thumb_for(Trip.first.places[0].main_picture, '500'), Trip.first.places[0]%>
+</li>
+<li class="" rel="tooltip" title=<%= Trip.first.places[2].title %> data-original-title="Hi">
+	<%= link_to thumb_for(Trip.first.places[2].main_picture, '500'), Trip.first.places[2]%>
+</li>
+<li class="" rel="tooltip" title=<%= Trip.first.routes.first.title %> data-original-title="Hi">
+	<%= link_to thumb_for(Trip.first.routes.first.main_picture, '500'), Trip.first.routes.first %>
+</li>
+<li class="" rel="tooltip" title=<%= Trip.first.places[1].title %> data-original-title="Hi">
+	<%= link_to thumb_for(Trip.first.places[1].main_picture, '500'), Trip.first.places[1]%>
 </li>
 <li class="" rel="tooltip" title="name" data-original-title="Hi">
 	<%= image_tag('san_juan.jpg') %>
@@ -9,22 +21,4 @@
 </li>
 <li class="" rel="tooltip" title="name" data-original-title="Hi">
 	<%= image_tag('catedral3.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('alcazar4.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('adolfo.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('picaro.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('ruta_toledo.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('alcazar_biblioteca.jpg') %>
-</li>
-<li class="" rel="tooltip" title="name" data-original-title="Hi">
-	<%= image_tag('san_juan_reyes.jpg') %>
 </li>
