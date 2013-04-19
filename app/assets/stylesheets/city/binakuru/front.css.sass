@@ -33,10 +33,11 @@
 
 
   .front-map
+
     position: relative
     width: 100%
     height: 550px
-    background: url("mapa-mundo.jpg")
+    background: url("worldmap.jpg")
     .inspire_Z
       z-index: 2
       @include border-top-left-radius(40px)
@@ -140,7 +141,7 @@
         @include view
 
   #users
-    
+    background-color: white
     width: 31.8%
     height: auto
     float: left
@@ -155,6 +156,17 @@
         input
         @include center-block
         margin-top: 15px
+    .app_front
+      .topx
+
+        font-family: $LatoLight
+        font-size: 20px
+        color: $color1
+        text-align: center
+        input
+        @include center-block
+        margin-top: 15px
+
 
     .users_front_list
       
