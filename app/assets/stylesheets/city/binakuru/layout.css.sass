@@ -38,3 +38,44 @@ footer
       margin-top: 70px
     .f2
       margin-left: 165px
+
+.timelineDiary
+  @include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  @include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  margin-top: 20px
+  .caption_img
+    @include border-top-left-radius(40px)
+    @include border-top-right-radius(40px)
+    @include border-bottom-right-radius(40px)
+    @include border-bottom-left-radius(40px)
+    margin-left: 48px
+    position: absolute
+    top: 52px
+    z-index: 1
+    background-color: $color1
+    width: 40px
+    height: 40px
+    p 
+      margin-top: 20%
+      @include dates_filter
+      text-align: center
+  img
+    display: inline-block
+    width: 94px !important
+    display: block
+    height: 102px !important
+    float: left
+    @include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
+  .thumb
+  .text
+    @include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    @include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+    display: inline-block
+    h6
+      @include objectsTitle
+    .description
+      p
+        width: 100%
+        word-wrap: break-word
+        @include objectsDescription
