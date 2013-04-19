@@ -16,7 +16,7 @@
       <div id="popover_content_wrapper" style="display: none">
         <div><%= render partial: 'devise/sessions/form' %></div>
       </div>
-      <a href="./new.html" class="navregister">register</a>
+      <a href=<%= user_omniauth_authorize_path(:fiware) %> class="navregister">register</a>
       <div class="asistfloat">
         <div class="search-nav ">
           <%= form_tag search_path, method: 'get', class: "navbar-search " do %>
