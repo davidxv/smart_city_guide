@@ -19,11 +19,16 @@
         width: 94px
         height: 102px
         text-align: center
-        background-color: $color2
+        
         .diary_item
           z-index: 0
           position: absolute
           width: 100%
+          background-image: url(/assets/diary.png) 
+          height: 100%
+          background-size: cover
+          img 
+            height: 102px
         .caption_img
           @include border-top-left-radius(40px)
           @include border-top-right-radius(40px)
@@ -36,10 +41,18 @@
           background-color: $color1
           width: 40px
           height: 40px
+          p 
+            margin-top: 20%
+            @include dates_filter
         .planning_item
           z-index: 0
           position: absolute
           width: 100%
+          background-image: url(/assets/planning.png)
+          background-size: cover
+          height: 100%
+          img 
+            height: 102px
 #wall
   float: left
   width: 643px    
