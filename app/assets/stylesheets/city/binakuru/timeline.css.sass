@@ -1,121 +1,187 @@
-.activities
-	@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
-	background-color: $white
-	margin-top: 50px
-	.timeline
-		@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-		display: inline-block
-		position: relative
-		margin-top: 45px
-		.media
-			border-bottom: 1px dashed $gray
+#user
+	.activities
+		@include grid-fluid-span(8, $fluidGridColumnWidth, $fluidGridGutterWidth)
+		background-color: $white
+		margin-top: 50px
+		float: left
+		.timeline
+			@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+			display: inline-block
 			position: relative
-			.avatar
+			margin-top: 45px
+			.media
+				border-bottom: 1px dashed $gray
+				position: relative
+				.avatar
 
-				.media-object
-					img
-						@include border-top-left-radius(20px)
-						@include border-top-right-radius(20px)
-						@include border-bottom-right-radius(0px)
-						@include border-bottom-left-radius(20px)
-						width: 40px
-						height: 40px
-			header.media-heading
-				margin-top: 20px
-				a
-					font-family: $LatoLight
-					font-size: 25px
-
-				.x
-					display: block
-					margin-right: 5px
-					-webkit-transition: all 1s ease-in-out
-					-moz-transition: all 1s ease-in-out
-					-o-transition: all 1s ease-in-out
-					-ms-transition: all 1s ease-in-out
-					transition: all 1s ease-in-out
-					a
-						font-stretch: extra-expanded
-						font-size: 15px
-						font-family: $Lato
-						&:hover
-							color: $red
-					&:hover
-						-webkit-transform: rotate(90deg) 
-						-moz-transform: rotate(90deg) 
-						-o-transform: rotate(90deg) 
-						-ms-transform: rotate(90deg) 
-						transform: rotate(90deg) 
-
-			.media-body
-				@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-				.objects
-					display: block
-					height: auto
-					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-					.picture
-						@include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
-						@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
-						margin-top: 20px
+					.media-object
 						img
+							@include border-top-left-radius(20px)
+							@include border-top-right-radius(20px)
+							@include border-bottom-right-radius(0px)
+							@include border-bottom-left-radius(20px)
+							width: 40px
+							height: 40px
+				header.media-heading
+					margin-top: 20px
+					a
+						font-family: $LatoLight
+						font-size: 25px
+
+					.x
+						display: block
+						margin-right: 5px
+						-webkit-transition: all 1s ease-in-out
+						-moz-transition: all 1s ease-in-out
+						-o-transition: all 1s ease-in-out
+						-ms-transition: all 1s ease-in-out
+						transition: all 1s ease-in-out
+						a
+							font-stretch: extra-expanded
+							font-size: 15px
+							font-family: $Lato
+							&:hover
+								color: $red
+						&:hover
+							-webkit-transform: rotate(90deg) 
+							-moz-transform: rotate(90deg) 
+							-o-transform: rotate(90deg) 
+							-ms-transform: rotate(90deg) 
+							transform: rotate(90deg) 
+
+				.media-body
+					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+					.objects
+						display: block
+						height: auto
+						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						.picture
+							@include grid-fluid-span(11, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							margin-top: 20px
+							img
+
+								display: block
+								float: left
+								@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+
+							.thumb
+							.text
+								@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+								@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
+								display: inline-block
+								h6
+									@include objectsTitle
+								.description
+									p
+										width: 100%
+										word-wrap: break-word
+										@include objectsDescription
+					.actions
+						margin-top: 20px
+						clear: both
+						display: block
+						@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+						.to_like
+							i
+								display: none
+						ul
+							padding-top: 15px
 
 							display: block
-							float: left
-							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							margin-left: auto
+							margin-right: auto
+							@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
+							li
+								float: left
+								display: inline
+								width: 33.3%
+								text-align: center
+								&:first-child
+									text-align: left
+								&:last-child
+									text-align: right
+								a					
+									color: $grayLight
+									&:hover
+										color: $color1
 
-						.thumb
-						.text
-							@include grid-fluid-span(5, $fluidGridColumnWidth, $fluidGridGutterWidth)
-							@include grid-fluid-offset(1, $fluidGridColumnWidth, $fluidGridGutterWidth)
-							display: inline-block
-							h6
-								@include objectsTitle
-							.description
-								p
-									width: 100%
-									word-wrap: break-word
-									@include objectsDescription
-				.actions
-					margin-top: 20px
-					clear: both
-					display: block
-					@include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
-					.to_like
-						i
-							display: none
-					ul
-						padding-top: 15px
-
-						display: block
+					.post_time_ago
+						position: absolute
+						bottom: 5px
+						right: 5px
+						height: 70px
+						width: 70px
+						@include border-radius(35px)
+						background-color: $color1
+						background-image: none
+						p
+							margin: none
+							font-size: 12px
+							text-align: center
+							color: $white
+							font-family: $LatoItalic
+					
+					.comments
+						clear: both
+						@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
 						margin-left: auto
 						margin-right: auto
-						@include grid-fluid-span(6, $fluidGridColumnWidth, $fluidGridGutterWidth)
-						li
-							float: left
-							display: inline
-							width: 33.3%
-							text-align: center
-							&:first-child
-								text-align: left
-							&:last-child
-								text-align: right
-							a					
-								color: $grayLight
-								&:hover
-									color: $color1
+						display: block
+						.media
+							margin-left: 5px
+							border-bottom: none
+							.avatar
+								.media-object
+									a
+										img
+											@include border-top-left-radius(20px)
+											@include border-top-right-radius(20px)
+											@include border-bottom-right-radius(0px)
+											@include border-bottom-left-radius(20px)
+											width: 40px
+											height: 40px
+							.media-heading
+								display: inline-block
+								float: left
+								width: 80%
+								margin: 0
+								h6
+									font-family: $Lato
+									font-size: 14px
+									margin-top: 0px
+									line-height: 18px
+							.media-body
+								display: inline-block
+								float: left
+								@include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
+								.objects
+									display: inline-block
+									font-family: $OpenSans
+									font-size: 12px
+									line-height: 15px
+								.actions
+									margin-bottom: -10px
+									margin-top: 0
+									.post_time_ago
+										text-align: right
+										margin-top: -10px
+										font-size: 11px
+										font-family: $LatoLightItalic
+										color: $gray
+										background-color: transparent
+										background-image: none
+										@include border-radius(0)
+										padding: 5px
+										p
 
-				.post_time_ago
-					position: absolute
-					bottom: 5px
-					right: 5px
-					height: 70px
-					width: 70px
-					@include border-radius(35px)
-					background-color: $color1
-					background-image: none
-					p
-						font-size: 12px
-						text-align: center
-						color: $white
-						font-family: $LatoItalic
+											color: $gray !important
 
+									.to_like
+										display: none
+									.audience
+										display: none
+									.audience-tooltip
+										display: none
+									.to_share
+										display: none

@@ -39,8 +39,12 @@
 .comments
   clear: both
   @include grid-fluid-span(12, $fluidGridColumnWidth, $fluidGridGutterWidth)
+  margin-left: auto
+  margin-right: auto
+  display: block
   .media
-    border-bottom: 1px dashed $gray
+    margin-left: 5px
+    border-bottom: 1px dashed $grayLighter
     .avatar
       .media-object
         a
@@ -51,7 +55,6 @@
             @include border-bottom-left-radius(20px)
             width: 40px
             height: 40px
-
     .media-heading
       display: inline-block
       float: left
@@ -63,17 +66,15 @@
         margin-top: 0px
         line-height: 15px
     .media-body
+
       display: inline-block
       float: left
-      width: 80%
+      @include grid-fluid-span(10, $fluidGridColumnWidth, $fluidGridGutterWidth)
       .objects
-
         display: inline-block
         font-family: $OpenSans
         font-size: 12px
         line-height: 15px
-
-        
       .actions
         margin-bottom: -10px
         .post_time_ago
@@ -81,7 +82,7 @@
           margin-top: -10px
           font-size: 11px
           font-family: $LatoLightItalic
-          color: $black
+          color: $gray
         .to_like
           display: none
         .audience
