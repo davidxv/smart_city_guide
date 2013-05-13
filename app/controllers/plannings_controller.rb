@@ -1,6 +1,10 @@
 class PlanningsController < ApplicationController
   include SocialStream::Controllers::Objects
 
+  # belongs_to_subjects :optional => true
+
+  before_filter :profile_subject!, :only => :index
+
   def new
     @planning = Planning.new planning_params
   end

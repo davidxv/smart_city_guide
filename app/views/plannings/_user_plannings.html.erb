@@ -1,0 +1,18 @@
+<div>
+  <div class="img_planning"></div>
+  <div class="title_planning"><a><%= planning.title %></a></div>
+  <div class="other_info">
+    <ul>
+      <% if planning.start_date != nil %>
+        <li><a href="">Date: From <%= planning.start_date %> to <%= planning.end_date %></a></li>
+      <% else %>
+        <li><a href="">Date: No dates yet</a></li>
+      <% end %>
+      <% if planning.duration != nil %>
+        <li><a href="">Duration: <%= planning.duration %> days</a></li>
+      <% end %>
+      <li><a href="">Cities: Toledo</a></li>
+      <li><a href="">Members: Carol, Juan Carlos, Adriana, Víctor</a></li>
+    </ul>
+  </div>
+</div>

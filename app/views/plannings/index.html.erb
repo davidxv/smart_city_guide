@@ -4,15 +4,9 @@
 <div id="title_section"><p>plannings</p></div>
 <div id="planning">
   <div class="planning_info">
-    <div class="img_planning"></div>
-    <div class="title_planning"><a>Toledo Oct2013</a></div>
-    <div class="other_info">
-      <ul>
-        <li><a href="">Date: From 13Apr to 20Apr</a></li>
-        <li><a href="">Cities: Toledo</a></li>
-        <li><a href="">Members: Carol, Juan Carlos, Adriana, Víctor</a></li>
-      </ul>
-    </div>
+    <% @plannings.each do |p| %>
+      <%= render :partial => "user_plannings", :locals => {:planning => p} %>
+    <% end %>
   </div>
   <div class="menu_views">
     <ul>
