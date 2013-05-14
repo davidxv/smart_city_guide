@@ -1,0 +1,16 @@
+<% planning.duration.times do |num| %>
+  <div class="planning_day row">
+    <%#= planning.content["#{num + 1}"] %>
+    <div class="planning_date"><p>Day <%= num + 1 %></p></div>
+    <div class="planning_city">
+      <div class="interest_points">
+        <div class="content-checkbox">
+          <% planning.content["#{num + 1}"].each do |item| %>
+            <%= render :partial => "#{item['type'].pluralize}/item", :locals => { item['type'].classify.safe_constantize.model_name.i18n_key => item['type'].classify.safe_constantize.find(item['id']) } %>
+            <% end %>
+        </div>
+        <%#= render :partial => "plannings/interest_points", :locals => { :trip => Trip.first }  %>
+      </div>
+    </div>
+  </div>
+<% end %>

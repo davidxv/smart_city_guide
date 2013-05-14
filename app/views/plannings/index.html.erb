@@ -16,23 +16,10 @@
       <li><a href="">calendar</a></li>
     </ul>
   </div>
-  <div class="planning_content">
-    <div class="planning_day row">
-      <div class="planning_date"><p>Day 1</p></div>
-      <div class="planning_city">
-        <div class="interest_points">
-          <%= render :partial => "plannings/interest_points", :locals => { :trip => Trip.first }  %>
-        </div>
-      </div>
+  <% if @plannings.length > 0 %>
+    <div class="planning_content">
+      <%= render :partial => "planning_content" , :locals => {:planning => @plannings.first} %>
     </div>
-    <div class="planning_day row">
-      <div class="planning_date"><p>Day 2</p></div>
-      <div class="planning_city">
-        <div class="interest_points">
-          <%= render :partial => "plannings/interest_points", :locals => { :trip => Trip.first }  %>
-        </div>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>
 

@@ -293,8 +293,8 @@ namespace :db do
                           :start_date     => Date.yesterday,
                           :end_date       => Date.tomorrow,
                           :duration       => 3,
-                          :items          => "[{'type':'guide','id':'2'},{'type':'place','id':'1'},{'type':'place','id':'3'},{'type':'route','id':'3'},{'type':'guide','id':'1'}]",
-                          :days           => "['1':[{'type':'place','id':'3'},{'type':'route','id':'3'}],'2':[{'type':'guide','id':'1'},{'type':'place','id':'1'}],'3':[{'type':'guide','id':'2'}]]"
+                          :items          => '[{"type":"guide","id":"2"},{"type":"place","id":"1"},{"type":"place","id":"3"},{"type":"route","id":"3"},{"type":"guide","id":"1"}]',
+                          :days           => '{"1":[{"type":"place","id":"3"},{"type":"route","id":"3"}],"2":[{"type":"guide","id":"1"},{"type":"place","id":"1"}],"3":[{"type":"guide","id":"2"}]}'
 
         Planning.create   :title          => "First time to Madrid",
                           :author_id      => demo.id,
@@ -304,8 +304,8 @@ namespace :db do
                           :start_date     => "",
                           :end_date       => "",
                           :duration       => 1,
-                          :items          => "[{'type':'place','id':'2'},{'type':'route','id':'1'}]",
-                          :days           => "['1':[{'type':'route','id':'1'},{'type':'place','id':'2'}]]"
+                          :items          => '[{"type":"place","id":"2"},{"type":"route","id":"1"}]',
+                          :days           => '{"1":[{"type":"route","id":"1"},{"type":"place","id":"2"}]}'
 
         plannings_stop = Time.now
         puts '  -> ' + (plannings_stop - plannings_start).round(4).to_s + 's'
