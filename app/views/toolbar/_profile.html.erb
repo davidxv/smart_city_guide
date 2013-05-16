@@ -21,77 +21,68 @@
           <ul>
             <li>
               <a href="">
-                <%= contact_to subject %>
-                <%= javascript_tag do %>
-                $(function() {
-                SocialStream.Contact.show();
-              });
-              <% end %>
-            </a>
-          </li>
-          <li><a href="">Age: 25</a></li>   <!--VER EDAD-->
-          <li><a href="">Madrid</a></li>   <!--VER CIUDAD-->
-          <li><a href="">23 following/48 followers</a></li>
-        </ul>
-      </div>
-      <div class="toolbar_back">
-      </div>
-
-    </li>
-    <li class="">
-      <div class="toolbar_front">
-        <a href="">Favourites</a>     <!--IR A FAVORITOS-->
-      </div>
-      <div class="toolbar_back">
-      </div>
-
-    </li>
-
-    
-
-
-    <% if SocialStream.repository_models.present? %>
-    <li class="">
-      <div class="toolbar_front">
-        <%= link_to [ subject, :repository ] do %>
-        <%= t 'repository.title' %>
-        <% end %>
-      </div>
-      <div class="toolbar_back">
-      </div>
-
-    </li>
-    <% end %>
-
-    <li class="">
-      <div class="toolbar_front">
-        <a href="">Events</a> <!--LINK A EVENTOS-->
-      </div>
-      <div class="toolbar_back">
-      </div>
-
-    </li>
-
-
-    <li class="">
-      <div class="toolbar_contacts">
-        <div class="toolbar_front">
-          <%= link_to t('contact.other'), [ profile_subject, Contact.new ] %>
+                <%= contact_button subject %>
+              </a>
+            </li>
+            <li><a href="">Age: 25</a></li>   <!--VER EDAD-->
+            <li><a href="">Madrid</a></li>   <!--VER CIUDAD-->
+            <li><a href="">23 following/48 followers</a></li>
+          </ul>
         </div>
-        <div class="toolbar_back"></div>
-      </div>
-      <div class="toolbar_messages">
+        <div class="toolbar_back">
+        </div>
+      </li>
+      <li class="">
         <div class="toolbar_front">
-          <%= link_to new_message_path(:receiver => subject.slug) do %>
-          <%= t 'mailboxer.send' %>
+          <a href="">Favourites</a>     <!--IR A FAVORITOS-->
+        </div>
+        <div class="toolbar_back">
+        </div>
+      </li>
+
+
+      <% if SocialStream.repository_models.present? %>
+      <li class="">
+        <div class="toolbar_front">
+          <%= link_to [ subject, :repository ] do %>
+          <%= t 'repository.title' %>
           <% end %>
         </div>
-        <div class="toolbar_back"></div>
-      </div>
+        <div class="toolbar_back">
+        </div>
 
-    </li>
+      </li>
+      <% end %>
 
-  </ul>
+      <li class="">
+        <div class="toolbar_front">
+          <a href="">Events</a> <!--LINK A EVENTOS-->
+        </div>
+        <div class="toolbar_back">
+        </div>
 
-</div>
+      </li>
+
+
+      <li class="">
+        <div class="toolbar_contacts">
+          <div class="toolbar_front">
+            <%= link_to t('contact.other'), [ profile_subject, Contact.new ] %>
+          </div>
+          <div class="toolbar_back"></div>
+        </div>
+        <div class="toolbar_messages">
+          <div class="toolbar_front">
+            <%= link_to new_message_path(:receiver => subject.slug) do %>
+            <%= t 'mailboxer.send' %>
+            <% end %>
+          </div>
+          <div class="toolbar_back"></div>
+        </div>
+
+      </li>
+
+    </ul>
+
+  </div>
 </section>
