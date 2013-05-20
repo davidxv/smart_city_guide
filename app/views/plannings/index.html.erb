@@ -17,7 +17,7 @@
     </ul>
   </div>
   <% if @plannings.length > 0 %>
-    <div class="planning_content">
+    <div id="planning_content" class="planning_content">
       <%= render :partial => "planning_content" , :locals => {:planning => @plannings.first} %>
     </div>
   <% end %>
