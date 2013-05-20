@@ -1,100 +1,26 @@
 <section class="toolbar_profile" class="">
   <div class="toolbar_content">
     <ul>
-      <li class="diaries">
-        <div class="toolbar_front ">
-          <a href="">Toledo Oct13</a>
-        </div>
-        <div class="toolbar_back toolbar_diaries">
-        </div>
-  <!--       <div class="user">
-          <%#= render partial: 'toolbar/logo',
-                     locals: { subject: subject } %>
+      <% @plannings.each do |planning| %>
+        <li class="diaries">
+          <%= link_to(planning, remote: true) do %>
+            <div class="toolbar_front ">
+              <div class="description"><%= planning.title %></div>
+            </div>
+            <div class="toolbar_back toolbar_diaries">
+            </div>
+          <% end %>
+        </li>
+      <% end %>
 
-          <div class="contact-button">
-            <%#= contact_to subject %>
-
-            <%#= javascript_tag do %>
-  <!             $(function() {
-                SocialStream.Contact.show();
-              }); -->
-            <%# end %>
-  <!--         </div>
-        <%#= content_for :toolbar_menu do %>
-        
-        </div> --> 
-      </li>
-      <li class="diaries">    
-        <div class="toolbar_front">
-          <a href="">empty</a>
-        </div>
-        <div class="toolbar_back">
-        </div>
-        <%#= link_to [ subject, :profile ], class: "btn-blue" do  %>
-         <!--  <i class='icon_tool16-info'></i> --> <%#= t 'menu.information' %>
-        <%# end %>
-      </li>
-      <li class="diaries">
-        <div class="toolbar_front">
-          <a href="">empty</a>
-        </div>
-        <div class="toolbar_back">
-        </div>
-        <%#= render partial: 'toolbar/groups' %>
-      </li>
-
-      <%# if current_subject.present? && subject != current_subject %>
+      <% (8 - @plannings.length).times do %>
         <li class="diaries">
           <div class="toolbar_front">
-            <a href="">empty</a>
+            <div class="description">empty</div>
           </div>
-          <div class="toolbar_back">
-          </div>
-          <%#= link_to new_message_path(:receiver => subject.slug), class: "btn-blue" do %>
-            <!-- <i class='icon_navbar-message-blue'></i> --> <%#= t 'send' %>
-          <%# end %>
+          <div class="toolbar_back"></div>
         </li>
-      <%# end %>
-      <li class="diaries">
-        <div class="toolbar_front">
-          <a href="">empty</a>
-        </div>
-        <div class="toolbar_back">
-        </div>
-        <%#= link_to [ subject, :profile ], class: "btn-blue" do  %>
-          <!-- <i class='icon_navbar-contacts'></i> --> <%#= t 'menu.contacts' %>
-        <%# end %>
-      </li>
-
-      <%# if SocialStream.repository_models.present? %>
-        <li class="diaries">
-            <div class="toolbar_front">
-              <a href="">empty</a>
-            </div>
-            <div class="toolbar_back"></div>
-          <%#= link_to [ subject, :repository ], class: "btn-blue"  do %>
-            <%#= image_tag 'icons/resources.png' %> <%#= t 'repository.title' %>
-          <%# end %>
-        </li>
-      <%# end %>
-
-        <li class="diaries">
-            <div class="toolbar_front">
-              <a href="">empty</a>
-            </div>
-            <div class="toolbar_back"></div>
-        </li>
-        <li class="diaries">
-            <div class="toolbar_front">
-              <a href="">empty</a>
-            </div>
-            <div class="toolbar_back"></div>
-        </li>       
+      <% end %>
     </ul>
-  <%# end %>
-
-  <%#= render partial: 'toolbar/menu' %>
-
-  <%#= render partial: 'toolbar/contacts', locals: { subject: subject } %>
   </div>
 </section>

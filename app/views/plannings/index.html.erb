@@ -4,9 +4,7 @@
 <div id="title_section"><p>plannings</p></div>
 <div id="planning">
   <div class="planning_info">
-    <% @plannings.each do |p| %>
-      <%= render :partial => "user_plannings", :locals => {:planning => p} %>
-    <% end %>
+    <%= render :partial => "user_plannings", :locals => {:planning => @plannings.first} %>
   </div>
   <div class="menu_views">
     <ul>
